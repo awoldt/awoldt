@@ -93,7 +93,7 @@ const Projects = () => {
         }}
       >
         <a
-          href={"https://typesnap.com/"}
+          href={"https://typesnap-vercel.vercel.app/"}
           rel="noreferrer"
           target="_blank"
           style={{ textDecoration: "none", color: "black" }}
@@ -126,7 +126,7 @@ const Projects = () => {
         }}
       >
         <a
-          href={"https://weather-app-wwihfud4yq-ue.a.run.app/"}
+          href={"https://weather-app-blue-two.vercel.app/"}
           rel="noreferrer"
           target="_blank"
           style={{ textDecoration: "none", color: "black" }}
@@ -159,7 +159,7 @@ const Projects = () => {
         }}
       >
         <a
-          href={"https://onlinechartmaker.com/"}
+          href={"https://online-chart-maker.vercel.app/"}
           rel="noreferrer"
           target="_blank"
           style={{ textDecoration: "none", color: "black" }}
@@ -228,7 +228,7 @@ const Projects = () => {
         }}
       >
         <a
-          href={"https://music-kj4czce67q-ue.a.run.app/"}
+          href={"https://spotify-dashboard-ruby.vercel.app/"}
           rel="noreferrer"
           target="_blank"
           style={{ textDecoration: "none", color: "black" }}
@@ -261,7 +261,7 @@ const Projects = () => {
         }}
       >
         <a
-          href={"https://tweets-pmvuezwtla-ue.a.run.app/"}
+          href={"https://tweets-filter.vercel.app/"}
           rel="noreferrer"
           target="_blank"
           style={{ textDecoration: "none", color: "black" }}
