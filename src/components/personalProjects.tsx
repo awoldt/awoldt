@@ -9,6 +9,41 @@ const Projects = () => {
       borderRadius: '10px'
     }}
   >
+     <Col
+      xs={12}
+      md={6}
+      lg={4}
+      style={{
+        padding: "25px",
+        marginBottom: "15px",
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: "white",
+          padding: "20px",
+          border: "3px solid black",
+          height: "90%",
+        }}
+      >
+        <a
+          href={"https://stockwasp.com/"}
+          rel="noreferrer"
+          target="_blank"
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          <Image
+            src="/stockwasp.ico"
+            style={{ marginRight: "10px", marginBottom: "10px" }}
+          />
+          <span style={{ fontWeight: "bold" }}>StockWasp</span>
+          <p>
+            Realtime stock price and news web application
+          </p>
+       
+        </a>
+      </div>
+    </Col>
     <Col
       xs={12}
       md={6}
