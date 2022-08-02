@@ -1,11 +1,12 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useLayoutEffect, useState } from "react";
-import Tech from "./technologies";
-import FullStackIcons from "./fullstackIcons";
+import Tech from "./templates/technologies";
+import FullStackIcons from "./templates/fullstackIcons";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const [ptagSize, setPtagSize] = useState<string>("");
   const [backdrop, setBackdrop] = useState<string>("");
 
   useLayoutEffect(() => {
@@ -14,7 +15,9 @@ export default function Home() {
 
     if (initialWindowWitdth >= 768) {
       setBackdrop("url(/waves.svg)");
+      setPtagSize("22px");
     } else {
+      setPtagSize("17px");
       setBackdrop("url(/waves-sm.svg)");
     }
 
@@ -22,8 +25,10 @@ export default function Home() {
       const w = window.innerWidth;
       if (w >= 768) {
         setBackdrop("url(/waves.svg)");
+        setPtagSize("22px");
       } else {
         setBackdrop("url(/waves-sm.svg)");
+        setPtagSize("17px");
       }
     });
   }, []);
@@ -53,12 +58,12 @@ export default function Home() {
             Awoldt
           </h1>
 
-          <p style={{fontSize: '23px'}}>
+          <p style={{ fontSize: ptagSize }}>
             My name is Alex and I'm a Full Stack Web Developer from Charlotte NC
           </p>
           <Button
             style={{
-              marginRight: '5px',
+              marginRight: "5px",
               marginBottom: "25px",
               borderRadius: "10px",
             }}
@@ -88,7 +93,7 @@ export default function Home() {
           <Button
             variant={"light"}
             style={{
-              marginLeft: '5px',
+              marginLeft: "5px",
               marginBottom: "25px",
               borderRadius: "10px",
             }}
@@ -113,26 +118,34 @@ export default function Home() {
               <span>LinkedIn</span>
             </a>
           </Button>
-          <Link to="/projects" title="View all projects" style={{textDecoration: 'none'}}>
-              <Button style={{ borderRadius: "10px", display: 'block'}} variant="danger" className="mx-auto">
-                Projects{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  className="bi bi-boxes"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
-                </svg>
-              </Button>
-            </Link>
+          <Link
+            to="/projects"
+            title="View all projects"
+            style={{ textDecoration: "none" }}
+          >
+            <Button
+              style={{ borderRadius: "10px", display: "block" }}
+              variant="danger"
+              className="mx-auto"
+            >
+              Projects{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                className="bi bi-boxes"
+                viewBox="0 0 16 16"
+              >
+                <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
+              </svg>
+            </Button>
+          </Link>
         </motion.div>
         <motion.div animate={{ y: [-1000, 0], opacity: [0, 1] }}>
           <Row style={{ marginTop: "100px" }} className="text-center">
             <Col lg={5} style={{ padding: "0px" }}>
-              <p style={{fontSize: '23px'}}>
+              <p style={{ fontSize: ptagSize }}>
                 JavaScript is my main language and is where I excel. I got
                 started making basic HTML pages that had no interactivity to
                 them. After that, I moved on to implementing vanilla JavaScript
@@ -144,7 +157,7 @@ export default function Home() {
             </Col>
             <Col lg={2}></Col>
             <Col lg={5} style={{ padding: "0px" }}>
-              <p style={{fontSize: '23px'}}>
+              <p style={{ fontSize: ptagSize }}>
                 I have a deep understanding of both front-end and back-end
                 development. I started learning Express.js and how web servers
                 work, the concept of HTTP requests, and the basics of working
@@ -158,7 +171,7 @@ export default function Home() {
 
         <motion.div animate={{ y: [-1500, 0], opacity: [0, 1] }}>
           <Row className="text-center mt-5 justify-content-center mb-5">
-            <p style={{ maxWidth: "800px", fontSize: '23px'}}>
+            <p style={{ maxWidth: "800px", fontSize: ptagSize }}>
               I pick up concepts very quickly and can adapt to using any tech
               stack needed. I have extensive experience with OOP programming and
               focus on concepts before implementation.
@@ -207,8 +220,6 @@ export default function Home() {
               </svg>
             </p>
           </Row>
-
-          
         </motion.div>
       </Container>
     </Container>
