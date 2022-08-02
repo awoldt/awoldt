@@ -13,11 +13,11 @@ export default function Projects() {
       <h1>Personal Projects</h1>
       <p style={{ maxWidth: "750px", fontSize: "23px" }} className="mx-auto">
         Here are a few of the projects I have worked on that helped establish
-        the skills I now have. With every new project, my main goal is
-        to learn at least one new thing.
+        the skills I now have. With every new project, my main goal is to learn
+        at least one new thing.
       </p>
 
-      <Button className="mb-5" style={{borderRadius: '10px'}}>
+      <Button className="mb-5" style={{ borderRadius: "10px" }}>
         <Link
           to="/"
           title="Return to homepage"
@@ -55,7 +55,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/stockwasp_capture.png"
+              src="/stockwasp_capture.PNG"
               alt="stockwasp logo"
               className="img-fluid mb-4"
               width={"100%"}
@@ -121,7 +121,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/wordlebin_capture.png"
+              src="/wordlebin_capture.PNG"
               alt="wordlebin logo"
               className="img-fluid mb-4"
               width={"100%"}
@@ -180,7 +180,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/badrapapi_capture.png"
+              src="/badrapapi_capture.PNG"
               alt="badrapapi logo"
               className="img-fluid mb-4"
               width={"100%"}
@@ -244,7 +244,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/music_capture.png"
+              src="/music_capture.PNG"
               alt="spotify dashboard logo"
               className="img-fluid mb-4"
               width={"100%"}
@@ -315,7 +315,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/tweet_capture.png"
+              src="/tweet_capture.PNG"
               alt="tweet filter logo"
               className="img-fluid mb-4"
               width={"100%"}
@@ -380,7 +380,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/typesnap_capture.png"
+              src="/typesnap_capture.PNG"
               alt="typesnap logo"
               className="img-fluid mb-4"
               width={"100%"}
@@ -443,7 +443,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/weather_capture.png"
+              src="/weather_capture.PNG"
               alt="weather app logo"
               className="img-fluid mb-4"
               width={"100%"}
@@ -509,7 +509,7 @@ export default function Projects() {
             }}
           >
             <img
-              src="/chart_capture.png"
+              src="/chart_capture.PNG"
               alt="chart app logo"
               className="img-fluid mb-4"
               width={"100%"}
