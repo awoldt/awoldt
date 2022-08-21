@@ -47,8 +47,8 @@ export default function Projects() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="25"
+            height="25"
             fill="currentColor"
             className="bi bi-house"
             viewBox="0 0 16 16"
