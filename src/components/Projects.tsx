@@ -127,6 +127,16 @@ export default function Projects() {
         />
       </Row>
       <Row className="justify-content-center">
+      <Project
+        img={"/badrapapi_capture.PNG"}
+        icon={"/badrapapi.ico"}
+        name={"BadRapApi"}
+        about={
+          "Rest API for the worst rap lyrics of all time from all your favorite artists"
+        }
+        url={"https://badrapapi.com/"}
+        gitUrl={"https://github.com/awoldt/BadRapApi"}
+      />
         <Project
           img={"/chart_capture.PNG"}
           icon={"/charts.ico"}
@@ -138,6 +148,7 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Chart-Maker"}
         />
       </Row>
+     
     </Container>
   );
 }
