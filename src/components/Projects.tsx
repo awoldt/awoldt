@@ -86,14 +86,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Wordlebin"}
         />
         <Project
-          img={"/badrapapi_capture.PNG"}
-          icon={"/badrapapi.ico"}
-          name={"BadRapApi"}
-          about={
-            "Rest API for the worst rap lyrics of all time from all your favorite artists"
-          }
-          url={"https://badrapapi.com/"}
-          gitUrl={"https://github.com/awoldt/BadRapApi"}
+          img={"/weather_capture.PNG"}
+          icon={"/weather.ico"}
+          name={"Weather App"}
+          about={"Get the current weather forecast for any city in the world"}
+          url={"https://weather-app-blue-two.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Weather-App"}
         />
       </Row>
       <Row>
@@ -129,14 +127,6 @@ export default function Projects() {
         />
       </Row>
       <Row className="justify-content-center">
-        <Project
-          img={"/weather_capture.PNG"}
-          icon={"/weather.ico"}
-          name={"Weather App"}
-          about={"Get the current weather forecast for any city in the world"}
-          url={"https://weather-app-blue-two.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Weather-App"}
-        />
         <Project
           img={"/chart_capture.PNG"}
           icon={"/charts.ico"}
