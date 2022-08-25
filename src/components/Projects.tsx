@@ -127,16 +127,16 @@ export default function Projects() {
         />
       </Row>
       <Row className="justify-content-center">
-      <Project
-        img={"/badrapapi_capture.PNG"}
-        icon={"/badrapapi.ico"}
-        name={"BadRapApi"}
-        about={
-          "Rest API for the worst rap lyrics of all time from all your favorite artists"
-        }
-        url={"https://badrapapi.com/"}
-        gitUrl={"https://github.com/awoldt/BadRapApi"}
-      />
+        <Project
+          img={"/badrapapi_capture.PNG"}
+          icon={"/badrapapi.ico"}
+          name={"BadRapApi"}
+          about={
+            "Rest API for the worst rap lyrics of all time from all your favorite artists"
+          }
+          url={"https://badrapapi.com/"}
+          gitUrl={"https://github.com/awoldt/BadRapApi"}
+        />
         <Project
           img={"/chart_capture.PNG"}
           icon={"/charts.ico"}
@@ -147,8 +147,15 @@ export default function Projects() {
           url={"https://online-chart-maker.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Chart-Maker"}
         />
+        <Project
+          img={"/onlinespeedtypingtest.png"}
+          icon={"/onlinetypingtest.ico"}
+          name={"Typing Test"}
+          about={"Lightweight speed typing test web app"}
+          url={"https://onlinespeedtypingtest.com/"}
+          gitUrl={"https://github.com/awoldt/OnlineSpeedTypingTest"}
+        />
       </Row>
-     
     </Container>
   );
 }

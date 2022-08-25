@@ -30,7 +30,13 @@ export default function project({
           className="img-fluid mb-4"
           width={"100%"}
         />
-        <img width={"40"} src={icon} style={{ marginRight: "10px" }} />
+        <img
+          width={"40"}
+          height={"40"}
+          src={icon}
+          className="mx-auto"
+          style={{ marginRight: "10px", display: "block" }}
+        />
         <h2 style={{ display: "inline-block" }}>{name}</h2>
         <p>{about}</p>
         <Row className="text-center pt-3">
