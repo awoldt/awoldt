@@ -156,7 +156,7 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/OnlineSpeedTypingTest"}
         />
         <Project
-          img={"/html_capture.png"}
+          img={"/html_capture.PNG"}
           icon={"/html.ico"}
           name={"HTML Template"}
           about={"HTML 5 template to help jumpstart your next project"}
