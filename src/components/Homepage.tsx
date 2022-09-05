@@ -66,6 +66,8 @@ export default function Home() {
               marginRight: "5px",
               borderTopRightRadius: "0px",
               borderBottomRightRadius: "0px",
+              borderTopLeftRadius: "10px",
+              borderBottomLeftRadius: "10px",
             }}
             variant={"light"}
           >
@@ -154,8 +156,8 @@ export default function Home() {
               display: "block",
               borderBottomRightRadius: "10px",
               borderBottomLeftRadius: "10px",
-              borderTopLeftRadius: '0px',
-              borderTopRightRadius: '0px',
+              borderTopLeftRadius: "0px",
+              borderTopRightRadius: "0px",
               marginTop: "5px",
             }}
             variant={"light"}
