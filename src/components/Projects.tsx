@@ -86,12 +86,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Wordlebin"}
         />
         <Project
-          img={"/weather_capture.PNG"}
-          icon={"/weather.ico"}
-          name={"Weather App"}
-          about={"Get the current weather forecast for any city in the world"}
-          url={"https://weather-app-blue-two.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Weather-App"}
+          img={"/chat.PNG"}
+          icon={"/chat.svg"}
+          name={"Chat App"}
+          about={"Send messages to friends over websocket connection"}
+          url={"https://frontend-3e7sr4g6ia-uc.a.run.app/"}
+          gitUrl={"https://github.com/awoldt/Chat-App"}
         />
       </Row>
       <Row>
@@ -128,6 +128,14 @@ export default function Projects() {
       </Row>
       <Row className="justify-content-center">
         <Project
+          img={"/weather_capture.PNG"}
+          icon={"/weather.ico"}
+          name={"Weather App"}
+          about={"Get the current weather forecast for any city in the world"}
+          url={"https://weather-app-blue-two.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Weather-App"}
+        />
+        <Project
           img={"/badrapapi_capture.PNG"}
           icon={"/badrapapi.ico"}
           name={"BadRapApi"}
@@ -154,14 +162,6 @@ export default function Projects() {
           about={"Lightweight speed typing test web app"}
           url={"https://onlinespeedtypingtest.com/"}
           gitUrl={"https://github.com/awoldt/OnlineSpeedTypingTest"}
-        />
-        <Project
-          img={"/html_capture.PNG"}
-          icon={"/html.ico"}
-          name={"HTML Template"}
-          about={"HTML 5 template to help jumpstart your next project"}
-          url={"https://htmlplate.com/"}
-          gitUrl={"https://github.com/awoldt/HTML-Boilerplate"}
         />
       </Row>
     </Container>
