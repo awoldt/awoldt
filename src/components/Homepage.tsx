@@ -159,6 +159,7 @@ export default function Home() {
               borderTopLeftRadius: "0px",
               borderTopRightRadius: "0px",
               marginTop: "5px",
+              width: '115.52px'
             }}
             variant={"light"}
             className="mx-auto"
