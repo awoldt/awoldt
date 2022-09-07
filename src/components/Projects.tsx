@@ -80,10 +80,10 @@ export default function Projects() {
         <Project
           img={"/wordlebin_capture.PNG"}
           icon={"/wordlebin_icon.ico"}
-          name={"Wordlebin"}
+          name={"Unlimited Wordle"}
           about={"Unlimited word version of the popular game Wordle"}
-          url={"https://wordlebin.com/"}
-          gitUrl={"https://github.com/awoldt/Wordlebin"}
+          url={"https://production-pja23flz7a-uc.a.run.app/"}
+          gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
           img={"/chat.PNG"}
