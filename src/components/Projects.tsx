@@ -86,12 +86,14 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
-          img={"/chat.PNG"}
-          icon={"/chat.svg"}
-          name={"Chat App"}
-          about={"Send messages to friends over websocket connection"}
-          url={"https://frontend-3e7sr4g6ia-uc.a.run.app/"}
-          gitUrl={"https://github.com/awoldt/Chat-App"}
+          img={"/github_dashboard_capture.PNG"}
+          icon={"/githubdashboard.ico"}
+          name={"GitHub Dashboard"}
+          about={
+            "Visualize repository and commit data for any public GitHub username"
+          }
+          url={"https://github-dashboard-qogmmillka-uc.a.run.app/"}
+          gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
       </Row>
       <Row>
@@ -116,14 +118,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Tweets-Filter"}
         />
         <Project
-          img={"/typesnap_capture.PNG"}
-          icon={"/typesnap.ico"}
-          name={"Typesnap"}
-          about={
-            "Online speed typing test that measures your words per minute score"
-          }
-          url={"https://typesnap-vercel.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Typesnap"}
+          img={"/chat.PNG"}
+          icon={"/chat.svg"}
+          name={"Chat App"}
+          about={"Send messages to friends over websocket connection"}
+          url={"https://frontend-3e7sr4g6ia-uc.a.run.app/"}
+          gitUrl={"https://github.com/awoldt/Chat-App"}
         />
       </Row>
       <Row className="justify-content-center">
@@ -146,22 +146,14 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/BadRapApi"}
         />
         <Project
-          img={"/chart_capture.PNG"}
-          icon={"/charts.ico"}
-          name={"Chart Maker"}
+          img={"/typesnap_capture.PNG"}
+          icon={"/typesnap.ico"}
+          name={"React Typing Test"}
           about={
-            "Easily create bar, line, and radar charts. Simple UI and powerful tools"
+            "Online speed typing test that measures your words per minute score"
           }
-          url={"https://online-chart-maker.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Chart-Maker"}
-        />
-        <Project
-          img={"/onlinespeedtypingtest.png"}
-          icon={"/onlinetypingtest.ico"}
-          name={"Typing Test"}
-          about={"Lightweight speed typing test web app"}
-          url={"https://onlinespeedtypingtest.com/"}
-          gitUrl={"https://github.com/awoldt/OnlineSpeedTypingTest"}
+          url={"https://typesnap-vercel.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Typesnap"}
         />
       </Row>
     </Container>
