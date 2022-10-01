@@ -1,23 +1,27 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useRef } from "react";
 import Tech from "./templates/technologies";
 import FullStackIcons from "./templates/fullstackIcons";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import "../Homepage.css"
+import "../Homepage.css";
 
 export default function Home() {
   const [ptagSize, setPtagSize] = useState<string>("");
   const [backdrop, setBackdrop] = useState<string>("");
+
+  const awoldtHeader = useRef<HTMLHeadingElement>(null);
 
   useLayoutEffect(() => {
     document.body.style.backgroundColor = "#001220";
     const initialWindowWitdth = window.innerWidth;
 
     if (initialWindowWitdth >= 768) {
+      awoldtHeader.current!.style.fontSize = "100px";
       setBackdrop("url(/waves.svg)");
       setPtagSize("22px");
     } else {
+      awoldtHeader.current!.style.fontSize = "50px";
       setPtagSize("17px");
       setBackdrop("url(/waves-sm.svg)");
     }
@@ -25,9 +29,11 @@ export default function Home() {
     window.addEventListener("resize", () => {
       const w = window.innerWidth;
       if (w >= 768) {
+        awoldtHeader.current!.style.fontSize = "100px";
         setBackdrop("url(/waves.svg)");
         setPtagSize("22px");
       } else {
+        awoldtHeader.current!.style.fontSize = "50px";
         setBackdrop("url(/waves-sm.svg)");
         setPtagSize("17px");
       }
@@ -54,8 +60,9 @@ export default function Home() {
             style={{
               fontSize: "100px",
               display: "block",
-              fontFamily: 'Silkscreen-Regular'
+              fontFamily: "Silkscreen-Regular",
             }}
+            ref={awoldtHeader}
           >
             Awoldt
           </h1>
