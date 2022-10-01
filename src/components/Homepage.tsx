@@ -4,6 +4,7 @@ import Tech from "./templates/technologies";
 import FullStackIcons from "./templates/fullstackIcons";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import "../Homepage.css"
 
 export default function Home() {
   const [ptagSize, setPtagSize] = useState<string>("");
@@ -53,6 +54,7 @@ export default function Home() {
             style={{
               fontSize: "100px",
               display: "block",
+              fontFamily: 'Silkscreen-Regular'
             }}
           >
             Awoldt
@@ -205,28 +207,16 @@ export default function Home() {
         <motion.div animate={{ y: [-1500, 0], opacity: [0, 1] }}>
           <Row className="text-center mt-5 justify-content-center mb-5">
             <p style={{ maxWidth: "800px", fontSize: ptagSize }}>
-            Golang and JavaScript are the two programming languages I enjoy working with
+              Golang and JavaScript are the two programming languages I enjoy
+              working with
             </p>
             <Row>
               <Col>
-              <img src="go-icon.svg"/>
-                
-                <span
-                  style={{ display: "block", fontWeight: "bold" }}
-                  className="text-secondary"
-                >
-                  Golang
-                </span>
+                <img src="go-icon.svg" />
               </Col>
 
               <Col>
                 <img src="/js-icon.svg" />
-                <span
-                  style={{ display: "block", fontWeight: "bold" }}
-                  className="text-secondary"
-                >
-                  JavaScript
-                </span>
               </Col>
             </Row>
           </Row>
