@@ -29,6 +29,7 @@ export default function project({
           alt={name + " logo"}
           className="img-fluid mb-4"
           width={"100%"}
+       
         />
         <img
           width={"40"}

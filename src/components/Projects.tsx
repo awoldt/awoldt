@@ -75,7 +75,7 @@ export default function Projects() {
             "Realtime stock price and news data along with insider trading records"
           }
           url={"https://stockwasp.com/"}
-          gitUrl={undefined}
+          gitUrl={"https://github.com/awoldt/StockWasp"}
         />
         <Project
           img={"/wordlebin_capture.PNG"}
