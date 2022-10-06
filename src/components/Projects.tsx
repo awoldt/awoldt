@@ -28,7 +28,6 @@ export default function Projects() {
 
   return (
     <Container className="text-center pt-5">
-      <h1>Personal Projects</h1>
       <p style={{ maxWidth: "750px", fontSize: ptagSize }} className="mx-auto">
         Here are a few of the projects I have worked on that helped establish
         the skills I now have. With every new project, my main goal is to learn
@@ -43,7 +42,7 @@ export default function Projects() {
         <Link
           to="/"
           title="Return to homepage"
-          style={{ color: "white", textDecoration: "none" }}
+          style={{ color: "white", textDecoration: "none", fontWeight: 'bold'}}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +89,7 @@ export default function Projects() {
           icon={"/githubdashboard.ico"}
           name={"GitHub Dashboard"}
           about={
-            "Visualize repository and commit data for any public GitHub username"
+            "Get any public repository details along with recent commits"
           }
           url={"https://github-dashboard-qogmmillka-uc.a.run.app/"}
           gitUrl={"https://github.com/awoldt/github-dashboard"}

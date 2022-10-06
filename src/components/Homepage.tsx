@@ -136,7 +136,11 @@ export default function Home() {
             style={{ textDecoration: "none" }}
           >
             <Button
-              style={{ borderRadius: "10px", display: "block" }}
+              style={{
+                borderRadius: "10px",
+                display: "block",
+                fontWeight: "bold",
+              }}
               variant="danger"
               className="mx-auto mt-4"
             >
@@ -158,44 +162,22 @@ export default function Home() {
           <Row style={{ marginTop: "100px" }} className="text-center">
             <Col lg={5} style={{ padding: "0px" }}>
               <p style={{ fontSize: ptagSize }}>
-                JavaScript is my main language and is where I excel. I got
-                started making basic HTML pages that had no interactivity to
-                them. After that, I moved on to implementing vanilla JavaScript
-                to these pages, which is where my interest in coding and web
-                development took off. Some of the different technologies I'm
-                proficient in are:
+                JavaScript is my favorite language and where I excel. I got
+                started implementing JS to basic HTML pages and developed an
+                interest in coding and web development soon after. Some of the
+                different technologies I'm proficient in are:
               </p>
               <Tech />
             </Col>
             <Col lg={2}></Col>
             <Col lg={5} style={{ padding: "0px" }}>
               <p style={{ fontSize: ptagSize }}>
-                I have a deep understanding of both front-end and back-end
-                development. I started learning Express.js and how web servers
-                work, the concept of HTTP requests, and the basics of working
-                with a database. Once I was knowledgeable in back-end code, I
-                learned how to implement efficient and clean front-end code.
+                I have a deep understanding of both frontend and backend
+                development. I focus more on writing clean and performant code rather
+                than rushing products out of the door.
               </p>
               <FullStackIcons />
             </Col>
-          </Row>
-        </motion.div>
-
-        <motion.div animate={{ y: [-1500, 0], opacity: [0, 1] }}>
-          <Row className="text-center mt-5 justify-content-center mb-5">
-            <p style={{ maxWidth: "800px", fontSize: ptagSize }}>
-              Golang and JavaScript are the two programming languages I enjoy
-              working with
-            </p>
-            <Row>
-              <Col>
-                <img src="go-icon.svg" />
-              </Col>
-
-              <Col>
-                <img src="/js-icon.svg" />
-              </Col>
-            </Row>
           </Row>
         </motion.div>
       </Container>
