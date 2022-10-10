@@ -158,14 +158,14 @@ export default function Home() {
             </Button>
           </Link>
         </motion.div>
-        <motion.div animate={{ y: [-1000, 0], opacity: [0, 1] }}>
+        <motion.div animate={{ y: [500, 0], opacity: [0, 1] }}>
           <Row style={{ marginTop: "100px" }} className="text-center">
             <Col lg={5} style={{ padding: "0px" }}>
               <p style={{ fontSize: ptagSize }}>
                 JavaScript is my favorite language and where I excel. I got
                 started implementing JS to basic HTML pages and developed an
-                interest in coding and web development soon after. Some of the
-                different technologies I'm proficient in are:
+                interest in web development soon after. Some of the different
+                technologies I'm proficient in are:
               </p>
               <Tech />
             </Col>
@@ -173,8 +173,8 @@ export default function Home() {
             <Col lg={5} style={{ padding: "0px" }}>
               <p style={{ fontSize: ptagSize }}>
                 I have a deep understanding of both frontend and backend
-                development. I focus more on writing clean and performant code rather
-                than rushing products out of the door.
+                development. I focus more on writing clean and performant code
+                rather than rushing things out of the door.
               </p>
               <FullStackIcons />
             </Col>

@@ -1,4 +1,4 @@
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 export default function project({
   img,
@@ -26,10 +26,9 @@ export default function project({
       >
         <img
           src={img}
-          alt={name + " logo"}
+          alt={name + " screen capture"}
           className="img-fluid mb-4"
           width={"100%"}
-       
         />
         <img
           width={"40"}
@@ -37,17 +36,25 @@ export default function project({
           src={icon}
           className="mx-auto"
           style={{ marginRight: "10px", display: "block" }}
+          alt={name + " icon"}
         />
         <h2 style={{ display: "inline-block" }}>{name}</h2>
         <p>{about}</p>
+        <hr></hr>
         <Row className="text-center pt-3">
           <Col>
-            <a href={url} target="blank" style={{ textDecoration: "none" }}>
+            <a
+              href={url}
+              target="blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none", fontSize: "18px" }}
+              title="Visit official site"
+            >
               Visit{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="18"
+                height="18"
                 fill="currentColor"
                 className="bi bi-box-arrow-up-right"
                 viewBox="0 0 16 16"
@@ -66,11 +73,11 @@ export default function project({
 
           {gitUrl! && (
             <Col>
-              <a href={gitUrl} target="_blank">
+              <a href={gitUrl} target="_blank" title="View project source code" rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
+                  width="35"
+                  height="35"
                   fill="white"
                   className="bi bi-github"
                   viewBox="0 0 16 16"
