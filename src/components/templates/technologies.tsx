@@ -164,7 +164,7 @@ const Tech = () => {
       </Col>
 
       <a
-        href="https://www.credly.com/earner/earned/badge/3a42aaad-f3b4-4cb6-8ad5-4750a2a7e921"
+        href="https://www.credly.com/badges/3a42aaad-f3b4-4cb6-8ad5-4750a2a7e921/public_url"
         target={"_blank"}
         rel="noreferrer"
         title="AWS Certified Cloud Practitioner badge"
