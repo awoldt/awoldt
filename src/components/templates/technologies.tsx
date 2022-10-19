@@ -171,7 +171,7 @@ const Tech = () => {
         style={{ textDecoration: "none", marginTop: "5px" }}
       >
         <img
-          src="/awscert.png"
+          src="/aws-certification.png"
           style={{ width: "50px", height: "50px" }}
           className="img-fluid"
         />
