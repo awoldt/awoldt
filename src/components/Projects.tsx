@@ -42,7 +42,7 @@ export default function Projects() {
         <Link
           to="/"
           title="Return to homepage"
-          style={{ color: "white", textDecoration: "none", fontWeight: 'bold'}}
+          style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -88,9 +88,7 @@ export default function Projects() {
           img={"/github_dashboard_capture.PNG"}
           icon={"/githubdashboard.ico"}
           name={"GitHub Dashboard"}
-          about={
-            "Get any public repository details along with recent commits"
-          }
+          about={"Get any public repository details along with recent commits"}
           url={"https://github-dashboard-qogmmillka-uc.a.run.app/"}
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
@@ -117,12 +115,14 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Tweets-Filter"}
         />
         <Project
-          img={"/chat.PNG"}
-          icon={"/chat.svg"}
-          name={"Chat App"}
-          about={"Send messages to friends over websocket connection"}
-          url={"https://frontend-3e7sr4g6ia-uc.a.run.app/"}
-          gitUrl={"https://github.com/awoldt/Chat-App"}
+          img={"/chart_capture.PNG"}
+          icon={"/chart.ico"}
+          name={"Chart Maker"}
+          about={
+            "Easily create bar, line, and radar charts and save them to computer"
+          }
+          url={"https://online-chart-maker.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Chart-Maker"}
         />
       </Row>
       <Row className="justify-content-center">
@@ -152,7 +152,7 @@ export default function Projects() {
             "Online speed typing test that measures your words per minute score"
           }
           url={"https://typesnap-vercel.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Typesnap"}
+          gitUrl={"https://github.com/awoldt/React-Typing-Test"}
         />
       </Row>
     </Container>
