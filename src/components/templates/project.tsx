@@ -16,12 +16,13 @@ export default function project({
   gitUrl: string | undefined;
 }) {
   return (
-    <Col style={{ padding: "25px" }} lg={4} sm={12}>
+    <Col style={{ padding: "25px"}} xl={4} lg={6} sm={12}>
       <div
         style={{
           padding: "25px",
           backgroundColor: "#012847",
           borderRadius: "10px",
+          border: '10px solid #011e36'
         }}
       >
         <img

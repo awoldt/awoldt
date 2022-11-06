@@ -46,26 +46,20 @@ export default function Projects() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="16"
+            height="16"
             fill="currentColor"
-            className="bi bi-house"
+            className="bi bi-caret-left-fill"
             viewBox="0 0 16 16"
           >
-            <path
-              fillRule="evenodd"
-              d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
-            />
-            <path
-              fillRule="evenodd"
-              d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
-            />
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
           </svg>{" "}
           Return Home
         </Link>
       </Button>
       <hr></hr>
-      <Row className="mt-2">
+
+      <Row className="justify-content-center">
         <Project
           img={"/stockwasp_capture.PNG"}
           icon={"/stockwasp.ico"}
@@ -87,13 +81,14 @@ export default function Projects() {
         <Project
           img={"/github_dashboard_capture.PNG"}
           icon={"/githubdashboard.ico"}
-          name={"GitHub Dashboard"}
-          about={"Get any public repository details along with recent commits"}
+          name={"Repo Dashboard"}
+          about={
+            "Get any public GitHub repository details along with recent commits"
+          }
           url={"https://github-dashboard-qogmmillka-uc.a.run.app/"}
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
-      </Row>
-      <Row>
+
         <Project
           img={"/music_capture.PNG"}
           icon={"/music.ico"}
@@ -124,8 +119,7 @@ export default function Projects() {
           url={"https://online-chart-maker.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Chart-Maker"}
         />
-      </Row>
-      <Row className="justify-content-center">
+
         <Project
           img={"/weather_capture.PNG"}
           icon={"/weather.ico"}
