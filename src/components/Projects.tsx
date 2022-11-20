@@ -71,12 +71,28 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/StockWasp"}
         />
         <Project
+          img={"/social_capture.PNG"}
+          icon={"/social-logo.svg"}
+          name={"Social Platform Hub"}
+          about={"Connect your favorite platforms and post to each with ease"}
+          url={"https://social-media-hub.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Social-Media-Hub"}
+        />
+        <Project
           img={"/wordlebin_capture.PNG"}
           icon={"/wordlebin_icon.ico"}
           name={"Unlimited Wordle"}
           about={"Unlimited word version of the popular game Wordle"}
           url={"https://production-pja23flz7a-uc.a.run.app/"}
           gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
+        />
+        <Project
+          img={"/typesnap_capture.PNG"}
+          icon={"/typesnap.ico"}
+          name={"Typing Test"}
+          about={"Online speed typing test that measures your WPM"}
+          url={"https://typesnap-vercel.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/React-Typing-Test"}
         />
         <Project
           img={"/github_dashboard_capture.PNG"}
@@ -88,7 +104,16 @@ export default function Projects() {
           url={"https://github-dashboard-qogmmillka-uc.a.run.app/"}
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
-
+        <Project
+          img={"/badrapapi_capture.PNG"}
+          icon={"/badrapapi.ico"}
+          name={"BadRapApi"}
+          about={
+            "Rest API for the worst rap lyrics of all time from all your favorite artists"
+          }
+          url={"https://badrapapi.com/"}
+          gitUrl={"https://github.com/awoldt/BadRapApi"}
+        />
         <Project
           img={"/music_capture.PNG"}
           icon={"/music.ico"}
@@ -118,35 +143,6 @@ export default function Projects() {
           }
           url={"https://online-chart-maker.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Chart-Maker"}
-        />
-
-        <Project
-          img={"/weather_capture.PNG"}
-          icon={"/weather.ico"}
-          name={"Weather App"}
-          about={"Get the current weather forecast for any city in the world"}
-          url={"https://weather-app-blue-two.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Weather-App"}
-        />
-        <Project
-          img={"/badrapapi_capture.PNG"}
-          icon={"/badrapapi.ico"}
-          name={"BadRapApi"}
-          about={
-            "Rest API for the worst rap lyrics of all time from all your favorite artists"
-          }
-          url={"https://badrapapi.com/"}
-          gitUrl={"https://github.com/awoldt/BadRapApi"}
-        />
-        <Project
-          img={"/typesnap_capture.PNG"}
-          icon={"/typesnap.ico"}
-          name={"React Typing Test"}
-          about={
-            "Online speed typing test that measures your words per minute score"
-          }
-          url={"https://typesnap-vercel.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/React-Typing-Test"}
         />
       </Row>
     </Container>
