@@ -87,6 +87,14 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
+          img={"/tictactoe_capture.png"}
+          icon={"/tictactoe.svg"}
+          name={"Tic Tac Toe"}
+          about={"Simple tic tac toe game. Play against friends."}
+          url={"https://tic-tac-toe-seven-wine.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
+        />
+        <Project
           img={"/typesnap_capture.PNG"}
           icon={"/typesnap.ico"}
           name={"Typing Test"}
@@ -124,16 +132,7 @@ export default function Projects() {
           url={"https://spotify-dashboard-ruby.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Music-Dashboard"}
         />
-        <Project
-          img={"/tweet_capture.PNG"}
-          icon={"/search.ico"}
-          name={"Tweets Filter"}
-          about={
-            "Returns most recent 100 tweets from any user sorted by most likes with Twitter API"
-          }
-          url={"https://tweets-filter.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Tweets-Filter"}
-        />
+
         <Project
           img={"/chart_capture.PNG"}
           icon={"/chart.ico"}
