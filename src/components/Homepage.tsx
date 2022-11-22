@@ -85,6 +85,7 @@ export default function Home() {
               target={"_blank"}
               rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "black" }}
+              title="View all my code on GitHub"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,6 +115,7 @@ export default function Home() {
               target={"_blank"}
               rel="noopener noreferrer"
               style={{ textDecoration: "none", color: "black" }}
+              title="Visit my LinkedIn profile"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -130,11 +132,7 @@ export default function Home() {
             </a>
           </Button>
 
-          <Link
-            to="/projects"
-            title="View all projects"
-            style={{ textDecoration: "none" }}
-          >
+          <Link to="/projects" style={{ textDecoration: "none" }}>
             <Button
               style={{
                 borderRadius: "10px",
@@ -164,15 +162,13 @@ export default function Home() {
             className="text-center"
           >
             <Col lg={5} style={{ padding: "10px", marginTop: "25px" }}>
-              <p style={{ fontSize: ptagSize}}>
+              <p style={{ fontSize: ptagSize }}>
                 JavaScript is my favorite language and where I excel. I got
                 started implementing JS to basic HTML pages and developed an
                 interest in web development soon after. Some of the different
                 technologies I'm proficient in are:
               </p>
               <Tech />
-
-              
             </Col>
             <Col lg={2}></Col>
             <Col lg={5} style={{ padding: "10px", marginTop: "25px" }}>

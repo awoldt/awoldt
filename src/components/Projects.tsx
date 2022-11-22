@@ -90,7 +90,7 @@ export default function Projects() {
           img={"/tictactoe_capture.png"}
           icon={"/tictactoe.svg"}
           name={"Tic Tac Toe"}
-          about={"Simple tic tac toe game. Play against friends."}
+          about={"Simple tic tac toe game to play against friends with"}
           url={"https://tic-tac-toe-seven-wine.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
         />
