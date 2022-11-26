@@ -71,12 +71,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/StockWasp"}
         />
         <Project
-          img={"/social_capture.PNG"}
-          icon={"/social-logo.svg"}
-          name={"Social Platform Hub"}
-          about={"Connect your favorite platforms and post to each with ease"}
-          url={"https://social-media-hub.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Social-Media-Hub"}
+          img={"/tictactoe_capture.png"}
+          icon={"/tictactoe.svg"}
+          name={"Tic Tac Toe"}
+          about={"Simple tic tac toe game to play against friends with"}
+          url={"https://tic-tac-toe-seven-wine.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
         />
         <Project
           img={"/wordlebin_capture.PNG"}
@@ -87,12 +87,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
-          img={"/tictactoe_capture.png"}
-          icon={"/tictactoe.svg"}
-          name={"Tic Tac Toe"}
-          about={"Simple tic tac toe game to play against friends with"}
-          url={"https://tic-tac-toe-seven-wine.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
+          img={"/social_capture.PNG"}
+          icon={"/social-logo.svg"}
+          name={"Social Platform Hub"}
+          about={"Connect your favorite platforms and post to each with ease"}
+          url={"https://social-media-hub.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Social-Media-Hub"}
         />
         <Project
           img={"/typesnap_capture.PNG"}
