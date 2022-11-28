@@ -71,20 +71,20 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/StockWasp"}
         />
         <Project
+          img={"/wordlebin_capture.PNG"}
+          icon={"/wordlebin_icon.ico"}
+          name={"Unlimited Wordle"}
+          about={"Unlimited word version of the popular game Wordle"}
+          url={"https://unlimited-wordle.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
+        />
+        <Project
           img={"/tictactoe_capture.png"}
           icon={"/tictactoe.svg"}
           name={"Tic Tac Toe"}
           about={"Simple tic tac toe game to play against friends with"}
           url={"https://tic-tac-toe-seven-wine.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
-        />
-        <Project
-          img={"/wordlebin_capture.PNG"}
-          icon={"/wordlebin_icon.ico"}
-          name={"Unlimited Wordle"}
-          about={"Unlimited word version of the popular game Wordle"}
-          url={"https://production-pja23flz7a-uc.a.run.app/"}
-          gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
           img={"/social_capture.PNG"}
