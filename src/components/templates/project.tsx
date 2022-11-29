@@ -16,13 +16,13 @@ export default function project({
   gitUrl: string | undefined;
 }) {
   return (
-    <Col style={{ padding: "25px"}} xl={4} lg={6} sm={12}>
+    <Col style={{ padding: "25px" }} xl={4} lg={6} sm={12}>
       <div
         style={{
           padding: "25px",
           backgroundColor: "#012847",
           borderRadius: "10px",
-          border: '10px solid #011e36'
+          border: "10px solid #011e36",
         }}
       >
         <img
@@ -49,7 +49,6 @@ export default function project({
               target="blank"
               rel="noreferrer"
               style={{ textDecoration: "none", fontSize: "18px" }}
-              title="Visit official site"
             >
               Visit{" "}
               <svg
@@ -74,7 +73,12 @@ export default function project({
 
           {gitUrl! && (
             <Col>
-              <a href={gitUrl} target="_blank" title="View project source code" rel="noreferrer">
+              <a
+                href={gitUrl}
+                target="_blank"
+                title="View project source code"
+                rel="noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"

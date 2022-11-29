@@ -109,7 +109,7 @@ export default function Projects() {
           about={
             "Get any public GitHub repository details along with recent commits"
           }
-          url={"https://github-dashboard-qogmmillka-uc.a.run.app/"}
+          url={"https://git-hub-dashboard.vercel.app/"}
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
         <Project
