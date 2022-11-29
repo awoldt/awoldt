@@ -124,7 +124,7 @@ export default function Projects() {
         />
         <Project
           img={"/music_capture.PNG"}
-          icon={"/music.ico"}
+          icon={"/music_icon.ico"}
           name={"Spotify Dashboard"}
           about={
             "Visualize your Spotify account's listening stats with Spotify API"
