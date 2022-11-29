@@ -87,12 +87,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
         />
         <Project
-          img={"/social_capture.PNG"}
-          icon={"/social-logo.svg"}
-          name={"Social Platform Hub"}
-          about={"Connect your favorite platforms and post to each with ease"}
-          url={"https://social-media-hub.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Social-Media-Hub"}
+          img={"/weather_capture.PNG"}
+          icon={"/weather.ico"}
+          name={"Weather Search"}
+          about={"Get realtime weather data for any city in the world"}
+          url={"https://weather-app-blue-two.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Weather-App"}
         />
         <Project
           img={"/typesnap_capture.PNG"}
@@ -101,16 +101,6 @@ export default function Projects() {
           about={"Online speed typing test that measures your WPM"}
           url={"https://typesnap-vercel.vercel.app/"}
           gitUrl={"https://github.com/awoldt/React-Typing-Test"}
-        />
-        <Project
-          img={"/github_dashboard_capture.PNG"}
-          icon={"/githubdashboard.ico"}
-          name={"Repo Dashboard"}
-          about={
-            "Get any public GitHub repository details along with recent commits"
-          }
-          url={"https://git-hub-dashboard.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
         <Project
           img={"/badrapapi_capture.PNG"}
@@ -123,6 +113,16 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/BadRapApi"}
         />
         <Project
+          img={"/github_dashboard_capture.PNG"}
+          icon={"/githubdashboard.ico"}
+          name={"Repo Dashboard"}
+          about={
+            "Get any public GitHub repository details along with recent commits"
+          }
+          url={"https://git-hub-dashboard.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/github-dashboard"}
+        />
+        <Project
           img={"/music_capture.PNG"}
           icon={"/music.ico"}
           name={"Spotify Dashboard"}
@@ -132,16 +132,15 @@ export default function Projects() {
           url={"https://spotify-dashboard-ruby.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Music-Dashboard"}
         />
-
         <Project
-          img={"/chart_capture.PNG"}
-          icon={"/chart.ico"}
-          name={"Chart Maker"}
+          img={"/social_capture.PNG"}
+          icon={"/social-logo.svg"}
+          name={"Social Platform Hub"}
           about={
-            "Easily create bar, line, and radar charts and save them to computer"
+            "Connect your Discord, Reddit, and Twitter accounts and post to each with ease"
           }
-          url={"https://online-chart-maker.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Chart-Maker"}
+          url={"https://social-media-hub.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Social-Media-Hub"}
         />
       </Row>
     </Container>
