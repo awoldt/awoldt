@@ -60,6 +60,16 @@ export default function Projects() {
       <hr></hr>
 
       <Row className="justify-content-center">
+      <Project
+          img={"/badlyrics_capture.PNG"}
+          icon={"/badlyrics.ico"}
+          name={"LyricDump"}
+          about={
+            "Collection of the worst song lyrics of all time from all your favorite artists"
+          }
+          url={"https://lyricdump.com/"}
+          gitUrl={"https://github.com/awoldt/LyricDump"}
+        />
         <Project
           img={"/stockwasp_capture.PNG"}
           icon={"/stockwasp.ico"}
@@ -101,16 +111,6 @@ export default function Projects() {
           about={"Online speed typing test that measures your WPM"}
           url={"https://typesnap-vercel.vercel.app/"}
           gitUrl={"https://github.com/awoldt/React-Typing-Test"}
-        />
-        <Project
-          img={"/badrapapi_capture.PNG"}
-          icon={"/badrapapi.ico"}
-          name={"BadRapApi"}
-          about={
-            "Rest API for the worst rap lyrics of all time from all your favorite artists"
-          }
-          url={"https://badrapapi.com/"}
-          gitUrl={"https://github.com/awoldt/BadRapApi"}
         />
         <Project
           img={"/github_dashboard_capture.PNG"}
