@@ -60,7 +60,7 @@ export default function Projects() {
       <hr></hr>
 
       <Row className="justify-content-center">
-      <Project
+        <Project
           img={"/badlyrics_capture.PNG"}
           icon={"/badlyrics.ico"}
           name={"LyricDump"}
@@ -105,12 +105,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Weather-App"}
         />
         <Project
-          img={"/typesnap_capture.PNG"}
-          icon={"/typesnap.ico"}
-          name={"Typing Test"}
-          about={"Online speed typing test that measures your WPM"}
-          url={"https://typesnap-vercel.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/React-Typing-Test"}
+          img={"/tweets_capture.PNG"}
+          icon={"/tweets.ico"}
+          name={"Tweets Filter"}
+          about={"Search any public Twitter profile and filter tweets"}
+          url={"https://tweets-filter.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Tweets-Filter"}
         />
         <Project
           img={"/github_dashboard_capture.PNG"}
@@ -133,14 +133,12 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Music-Dashboard"}
         />
         <Project
-          img={"/social_capture.PNG"}
-          icon={"/social-logo.svg"}
-          name={"Social Platform Hub"}
-          about={
-            "Connect your Discord, Reddit, and Twitter accounts and post to each with ease"
-          }
-          url={"https://social-media-hub.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Social-Media-Hub"}
+          img={"/typesnap_capture.PNG"}
+          icon={"/typesnap.ico"}
+          name={"Typing Test"}
+          about={"Online speed typing test that measures your WPM"}
+          url={"https://typesnap-vercel.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/React-Typing-Test"}
         />
       </Row>
     </Container>
