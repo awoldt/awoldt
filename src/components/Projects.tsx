@@ -58,18 +58,8 @@ export default function Projects() {
         </Link>
       </Button>
       <hr></hr>
-
+      
       <Row className="justify-content-center">
-        <Project
-          img={"/badlyrics_capture.PNG"}
-          icon={"/badlyrics.ico"}
-          name={"LyricDump"}
-          about={
-            "Collection of the worst song lyrics of all time from all your favorite artists"
-          }
-          url={"https://lyricdump.com/"}
-          gitUrl={"https://github.com/awoldt/LyricDump"}
-        />
         <Project
           img={"/stockwasp_capture.PNG"}
           icon={"/stockwasp.ico"}
@@ -89,12 +79,33 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
+          img={"/github_dashboard_capture.PNG"}
+          icon={"/githubdashboard.ico"}
+          name={"Repo Dashboard"}
+          about={
+            "Get any public GitHub repository details along with recent commits"
+          }
+          url={"https://git-hub-dashboard.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/github-dashboard"}
+        />
+
+        <Project
           img={"/tictactoe_capture.png"}
           icon={"/tictactoe.svg"}
           name={"Tic Tac Toe"}
           about={"Simple tic tac toe game to play against friends with"}
           url={"https://tic-tac-toe-seven-wine.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
+        />
+        <Project
+          img={"/badlyrics_capture.PNG"}
+          icon={"/badlyrics.ico"}
+          name={"LyricDump"}
+          about={
+            "Collection of the worst song lyrics of all time from all your favorite artists"
+          }
+          url={"https://lyricdump.com/"}
+          gitUrl={"https://github.com/awoldt/LyricDump"}
         />
         <Project
           img={"/weather_capture.PNG"}
@@ -112,16 +123,7 @@ export default function Projects() {
           url={"https://tweets-filter.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tweets-Filter"}
         />
-        <Project
-          img={"/github_dashboard_capture.PNG"}
-          icon={"/githubdashboard.ico"}
-          name={"Repo Dashboard"}
-          about={
-            "Get any public GitHub repository details along with recent commits"
-          }
-          url={"https://git-hub-dashboard.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/github-dashboard"}
-        />
+
         <Project
           img={"/music_capture.PNG"}
           icon={"/music_icon.ico"}
