@@ -67,8 +67,15 @@ export default function Home() {
             Awoldt
           </h1>
 
-          <p style={{ fontSize: ptagSize, marginBottom: "25px", maxWidth: '500px'}} className="mx-auto">
-            My name is Alex Breckwoldt and I'm a Full Stack Developer from
+          <p
+            style={{
+              fontSize: ptagSize,
+              marginBottom: "25px",
+              maxWidth: "500px",
+            }}
+            className="mx-auto"
+          >
+            My name is Alex and I'm a Full Stack Developer from
             Charlotte NC. I enjoy coding in my freetime and love learning new
             technologies and frameworks.
           </p>
@@ -140,7 +147,6 @@ export default function Home() {
                 borderRadius: "10px",
                 display: "block",
                 fontWeight: "bold",
-                fontSize: "18px",
               }}
               variant="danger"
               className="mx-auto mt-4"

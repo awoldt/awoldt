@@ -58,18 +58,8 @@ export default function Projects() {
         </Link>
       </Button>
       <hr></hr>
-      
+
       <Row className="justify-content-center">
-        <Project
-          img={"/stockwasp_capture.PNG"}
-          icon={"/stockwasp.ico"}
-          name={"Stockwasp"}
-          about={
-            "Realtime stock price and news data along with insider trading records"
-          }
-          url={"https://stockwasp.com/"}
-          gitUrl={"https://github.com/awoldt/StockWasp"}
-        />
         <Project
           img={"/wordlebin_capture.PNG"}
           icon={"/wordlebin_icon.ico"}
@@ -88,7 +78,6 @@ export default function Projects() {
           url={"https://git-hub-dashboard.vercel.app/"}
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
-
         <Project
           img={"/tictactoe_capture.png"}
           icon={"/tictactoe.svg"}
@@ -96,6 +85,24 @@ export default function Projects() {
           about={"Simple tic tac toe game to play against friends with"}
           url={"https://tic-tac-toe-seven-wine.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
+        />
+        <Project
+          img={"/weather_capture.PNG"}
+          icon={"/weather.ico"}
+          name={"Weather Search"}
+          about={"Get realtime weather data for any city in the world"}
+          url={"https://weather-app-blue-two.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Weather-App"}
+        />
+        <Project
+          img={"/stockwasp_capture.PNG"}
+          icon={"/stockwasp.ico"}
+          name={"Stockwasp"}
+          about={
+            "Realtime stock price and news data along with insider trading records"
+          }
+          url={"https://stockwasp.com/"}
+          gitUrl={"https://github.com/awoldt/StockWasp"}
         />
         <Project
           img={"/badlyrics_capture.PNG"}
@@ -107,14 +114,7 @@ export default function Projects() {
           url={"https://lyricdump.com/"}
           gitUrl={"https://github.com/awoldt/LyricDump"}
         />
-        <Project
-          img={"/weather_capture.PNG"}
-          icon={"/weather.ico"}
-          name={"Weather Search"}
-          about={"Get realtime weather data for any city in the world"}
-          url={"https://weather-app-blue-two.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Weather-App"}
-        />
+
         <Project
           img={"/tweets_capture.PNG"}
           icon={"/tweets.ico"}
