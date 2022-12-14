@@ -69,6 +69,16 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
+          img={"/badlyrics_capture.PNG"}
+          icon={"/badlyrics.ico"}
+          name={"LyricDump"}
+          about={
+            "Collection of the worst song lyrics of all time from all your favorite artists"
+          }
+          url={"https://lyricdump.com/"}
+          gitUrl={"https://github.com/awoldt/LyricDump"}
+        />
+        <Project
           img={"/github_dashboard_capture.PNG"}
           icon={"/githubdashboard.ico"}
           name={"Repo Dashboard"}
@@ -95,26 +105,15 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Weather-App"}
         />
         <Project
-          img={"/stockwasp_capture.PNG"}
-          icon={"/stockwasp.ico"}
-          name={"Stockwasp"}
+          img={"/stock_capture.PNG"}
+          icon={"/stock.svg"}
+          name={"Stock App"}
           about={
             "Realtime stock price and news data along with insider trading records"
           }
-          url={"https://stockwasp.com/"}
-          gitUrl={"https://github.com/awoldt/StockWasp"}
+          url={"https://stock-app-x5qjjeqxja-ue.a.run.app/"}
+          gitUrl={"https://github.com/awoldt/Stock-App"}
         />
-        <Project
-          img={"/badlyrics_capture.PNG"}
-          icon={"/badlyrics.ico"}
-          name={"LyricDump"}
-          about={
-            "Collection of the worst song lyrics of all time from all your favorite artists"
-          }
-          url={"https://lyricdump.com/"}
-          gitUrl={"https://github.com/awoldt/LyricDump"}
-        />
-
         <Project
           img={"/tweets_capture.PNG"}
           icon={"/tweets.ico"}
