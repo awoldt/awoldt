@@ -69,16 +69,6 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Unlimited-Wordle"}
         />
         <Project
-          img={"/badlyrics_capture.PNG"}
-          icon={"/badlyrics.ico"}
-          name={"LyricDump"}
-          about={
-            "Collection of the worst song lyrics of all time from all your favorite artists"
-          }
-          url={"https://lyricdump.com/"}
-          gitUrl={"https://github.com/awoldt/LyricDump"}
-        />
-        <Project
           img={"/github_dashboard_capture.PNG"}
           icon={"/githubdashboard.ico"}
           name={"Repo Dashboard"}
@@ -95,6 +85,16 @@ export default function Projects() {
           about={"Simple tic tac toe game to play against friends with"}
           url={"https://tic-tac-toe-seven-wine.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
+        />
+        <Project
+          img={"/badlyrics_capture.PNG"}
+          icon={"/badlyrics.ico"}
+          name={"LyricDump"}
+          about={
+            "Collection of the worst song lyrics of all time from all your favorite artists"
+          }
+          url={"https://lyricdump.com/"}
+          gitUrl={"https://github.com/awoldt/LyricDump"}
         />
         <Project
           img={"/weather_capture.PNG"}

@@ -71,7 +71,7 @@ export default function Home() {
             style={{
               fontSize: ptagSize,
               marginBottom: "25px",
-              maxWidth: "500px",
+              maxWidth: "600px",
             }}
             className="mx-auto"
           >
