@@ -79,14 +79,6 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
         <Project
-          img={"/tictactoe_capture.png"}
-          icon={"/tictactoe.svg"}
-          name={"Tic Tac Toe"}
-          about={"Simple tic tac toe game to play against friends with"}
-          url={"https://tic-tac-toe-seven-wine.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
-        />
-        <Project
           img={"/badlyrics_capture.PNG"}
           icon={"/badlyrics.ico"}
           name={"LyricDump"}
@@ -97,23 +89,24 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/LyricDump"}
         />
         <Project
-          img={"/weather_capture.PNG"}
-          icon={"/weather.ico"}
-          name={"Weather Search"}
-          about={"Get realtime weather data for any city in the world"}
-          url={"https://weather-app-blue-two.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Weather-App"}
+          img={"/music_capture.PNG"}
+          icon={"/music.svg"}
+          name={"Spotify Dashboard"}
+          about={
+            "Visualize your Spotify account's listening stats with Spotify API"
+          }
+          url={"https://spotify-dashboard-ruby.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Music-Dashboard"}
         />
         <Project
-          img={"/stock_capture.PNG"}
-          icon={"/stock.svg"}
-          name={"Stock App"}
-          about={
-            "Realtime stock price and news data along with insider trading records"
-          }
-          url={"https://stock-app-x5qjjeqxja-ue.a.run.app/"}
-          gitUrl={"https://github.com/awoldt/Stock-App"}
+          img={"/tictactoe_capture.png"}
+          icon={"/tictactoe.svg"}
+          name={"Tic Tac Toe"}
+          about={"Simple tic tac toe game to play against friends with"}
+          url={"https://tic-tac-toe-seven-wine.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
         />
+
         <Project
           img={"/tweets_capture.PNG"}
           icon={"/tweets.ico"}
@@ -122,16 +115,13 @@ export default function Projects() {
           url={"https://tweets-filter.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tweets-Filter"}
         />
-
         <Project
-          img={"/music_capture.PNG"}
-          icon={"/music_icon.ico"}
-          name={"Spotify Dashboard"}
-          about={
-            "Visualize your Spotify account's listening stats with Spotify API"
-          }
-          url={"https://spotify-dashboard-ruby.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Music-Dashboard"}
+          img={"/weather_capture.PNG"}
+          icon={"/weather.ico"}
+          name={"Weather Search"}
+          about={"Get realtime weather data for any city in the world"}
+          url={"https://weather-app-blue-two.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/Weather-App"}
         />
         <Project
           img={"/typesnap_capture.PNG"}
