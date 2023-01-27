@@ -1,7 +1,7 @@
 import { Container, Row, Button } from "react-bootstrap";
 import { useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Project from "./templates/project";
+import Project from "./components/project";
 export default function Projects() {
   const [ptagSize, setPtagSize] = useState<string>("");
 
@@ -31,7 +31,8 @@ export default function Projects() {
       <p style={{ maxWidth: "750px", fontSize: ptagSize }} className="mx-auto">
         Here are a few of the projects I have worked on that helped establish
         the skills I now have. With every new project, my main goal is to learn
-        at least one new thing.
+        at least one new thing. Some of these projects get organic traffic
+        through the web and are used across the world.
       </p>
 
       <Button
@@ -77,6 +78,14 @@ export default function Projects() {
           }
           url={"https://git-hub-dashboard.vercel.app/"}
           gitUrl={"https://github.com/awoldt/github-dashboard"}
+        />
+        <Project
+          img={"/customerdb_capture.jpg"}
+          icon={"/db-icon.svg"}
+          name={"Fake Customer API"}
+          about={"Simple API to fetch randomly generated fake customer data"}
+          url={"https://customerapi-pd634dw2fa-uk.a.run.app/"}
+          gitUrl={"https://github.com/awoldt/Mock-Customer-API"}
         />
         <Project
           img={"/badlyrics_capture.PNG"}
@@ -132,6 +141,17 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/React-Typing-Test"}
         />
       </Row>
+      <p className="my-5">
+        Visit my{" "}
+        <a
+          href="https://github.com/awoldt?tab=repositories"
+          target={"_blank"}
+          rel="noopener noreferrer"
+        >
+          GitGub
+        </a>{" "}
+        to view all of my public projects
+      </p>
     </Container>
   );
 }
