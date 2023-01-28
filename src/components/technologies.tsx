@@ -4,7 +4,7 @@ const Tech = () => {
   return (
     <Row
       className="justify-content-center"
-      style={{ marginTop: "50px", marginBottom: "50px" }}
+      style={{ marginTop: "25px", marginBottom: "50px" }}
     >
       <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
         <img src="/aws-icon.svg" style={{ width: "64px", height: "64px" }} />
@@ -142,7 +142,7 @@ const Tech = () => {
           className="img-fluid"
         />
         <p
-          style={{ display: "inline", marginLeft: "10px" }}
+          style={{ display: "inline", marginLeft: "10px", fontSize: '14px'}}
           className="text-muted"
         >
           Certified AWS Cloud Practitioner

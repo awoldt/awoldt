@@ -73,12 +73,7 @@ export default function project({
 
           {gitUrl! && (
             <Col>
-              <a
-                href={gitUrl}
-                target="_blank"
-                title="View project source code"
-                rel="noreferrer"
-              >
+              <a href={gitUrl} target="_blank" rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"

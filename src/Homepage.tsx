@@ -168,8 +168,14 @@ export default function Home() {
             style={{ marginTop: "100px", marginBottom: "100px" }}
             className="text-center"
           >
-            <Col lg={5} style={{ padding: "10px", marginTop: "25px" }}>
-              <p style={{ fontSize: ptagSize, marginBottom: "50px", fontFamily: "Silkscreen-Regular",}}>
+            <Col lg={5} style={{ padding: "10px", marginBottom: "50px" }}>
+              <p
+                style={{
+                  fontSize: ptagSize,
+                  marginBottom: "25px",
+                  fontFamily: "Silkscreen-Regular",
+                }}
+              >
                 Languages
               </p>
               <img
@@ -181,9 +187,12 @@ export default function Home() {
                 style={{ width: "100px", height: "100px" }}
               />
             </Col>
-           
-            <Col lg={7} style={{ padding: "10px", marginTop: "25px", fontFamily: "Silkscreen-Regular",}}>
-              <p style={{ fontSize: ptagSize }}>
+
+            <Col
+              lg={7}
+              style={{ padding: "10px", fontFamily: "Silkscreen-Regular" }}
+            >
+              <p style={{ fontSize: ptagSize, marginBottom: "25px" }}>
                 Technologies
               </p>
               <Tech />
