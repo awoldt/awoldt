@@ -31,8 +31,7 @@ export default function Projects() {
       <p style={{ maxWidth: "750px", fontSize: ptagSize }} className="mx-auto">
         Here are a few of the projects I have worked on that helped establish
         the skills I now have. With every new project, my main goal is to learn
-        at least one new thing. Some of these projects get organic traffic
-        through the web and are used across the world.
+        at least one new thing.
       </p>
 
       <Button
@@ -80,6 +79,16 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
         <Project
+          img={"/avatargenerator_capture.PNG"}
+          icon={"/avatargenerator.svg"}
+          name={"AI Avatar Generatpr"}
+          about={
+            "Easily generate new avatars for your online profile in seconds"
+          }
+          url={"https://onlineavatargenerator.com/"}
+          gitUrl={"https://github.com/awoldt/AI-Avatar-Generator"}
+        />
+        <Project
           img={"/customerdb_capture.jpg"}
           icon={"/db-icon.svg"}
           name={"Fake Customer API"}
@@ -114,15 +123,6 @@ export default function Projects() {
           about={"Simple tic tac toe game to play against friends with"}
           url={"https://tic-tac-toe-seven-wine.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
-        />
-
-        <Project
-          img={"/tweets_capture.PNG"}
-          icon={"/tweets.ico"}
-          name={"Tweets Filter"}
-          about={"Search any public Twitter profile and filter tweets"}
-          url={"https://tweets-filter.vercel.app/"}
-          gitUrl={"https://github.com/awoldt/Tweets-Filter"}
         />
         <Project
           img={"/weather_capture.PNG"}
