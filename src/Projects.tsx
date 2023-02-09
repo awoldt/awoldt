@@ -79,7 +79,7 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/github-dashboard"}
         />
         <Project
-          img={"/avatargenerator_capture.PNG"}
+          img={"/avatargenerator_capture.JPG"}
           icon={"/avatargenerator.svg"}
           name={"AI Avatar Generatpr"}
           about={
