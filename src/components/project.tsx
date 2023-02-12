@@ -29,7 +29,8 @@ export default function project({
           src={img}
           alt={name + " screen capture"}
           className="img-fluid mb-4"
-          width={"100%"}
+          height={"150px"}
+          width={"-webkit-fill-available"}
         />
         <img
           width={"40"}

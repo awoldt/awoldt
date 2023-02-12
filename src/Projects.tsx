@@ -97,16 +97,6 @@ export default function Projects() {
           gitUrl={"https://github.com/awoldt/Mock-Customer-API"}
         />
         <Project
-          img={"/badlyrics_capture.PNG"}
-          icon={"/badlyrics.ico"}
-          name={"LyricDump"}
-          about={
-            "Collection of the worst song lyrics of all time from all your favorite artists"
-          }
-          url={"https://lyricdump.com/"}
-          gitUrl={"https://github.com/awoldt/LyricDump"}
-        />
-        <Project
           img={"/music_capture.PNG"}
           icon={"/music.svg"}
           name={"Spotify Dashboard"}
@@ -115,6 +105,14 @@ export default function Projects() {
           }
           url={"https://spotify-dashboard-ruby.vercel.app/"}
           gitUrl={"https://github.com/awoldt/Music-Dashboard"}
+        />
+        <Project
+          img={"/chatbot_capture.jpg"}
+          icon={"/chatbot.svg"}
+          name={"AI ChatBot"}
+          about={"Have human like converstaions with a bot powered by OpenAI"}
+          url={"https://ai-chatbot-iota.vercel.app/"}
+          gitUrl={"https://github.com/awoldt/AI-Chatbot"}
         />
         <Project
           img={"/tictactoe_capture.png"}
