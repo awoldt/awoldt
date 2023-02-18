@@ -1,9 +1,9 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useLayoutEffect, useState, useRef } from "react";
-import Tech from "./components/technologies";
+import Tech from "../components/technologies";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import "./Homepage.css";
+import "../styles/Homepage.css";
 
 export default function Home() {
   const [ptagSize, setPtagSize] = useState<string>("");
