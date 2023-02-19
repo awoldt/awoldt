@@ -59,6 +59,7 @@ export default function Projects() {
             href="https://github.com/awoldt?tab=repositories"
             target={"_blank"}
             rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
           >
             GitHub
           </a>{" "}
@@ -114,14 +115,12 @@ export default function Projects() {
             gitUrl={"https://github.com/awoldt/github-dashboard"}
           />
           <Project
-            img={"/avatargenerator_capture.jpg"}
-            icon={"/avatargenerator.svg"}
-            name={"AI Avatar Generator"}
-            about={
-              "Easily generate new avatars for your online profile in seconds"
-            }
-            url={"https://onlineavatargenerator.com/"}
-            gitUrl={"https://github.com/awoldt/AI-Avatar-Generator"}
+            img={"/chatbot_capture.jpg"}
+            icon={"/chatbot.svg"}
+            name={"ChatBot"}
+            about={"Have converstaions with an AI bot powered by OpenAI"}
+            url={"https://ai-chatbot-iota.vercel.app/"}
+            gitUrl={"https://github.com/awoldt/AI-Chatbot"}
           />
           <Project
             img={"/customerdb_capture.jpg"}
@@ -141,14 +140,7 @@ export default function Projects() {
             url={"https://spotify-dashboard-ruby.vercel.app/"}
             gitUrl={"https://github.com/awoldt/Music-Dashboard"}
           />
-          <Project
-            img={"/chatbot_capture.jpg"}
-            icon={"/chatbot.svg"}
-            name={"AI ChatBot"}
-            about={"Have converstaions with a bot powered by OpenAI API"}
-            url={"https://ai-chatbot-iota.vercel.app/"}
-            gitUrl={"https://github.com/awoldt/AI-Chatbot"}
-          />
+
           <Project
             img={"/tictactoe_capture.png"}
             icon={"/tictactoe.svg"}
