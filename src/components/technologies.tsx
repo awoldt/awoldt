@@ -6,8 +6,12 @@ const Tech = () => {
       className="justify-content-center"
       style={{ marginTop: "25px", marginBottom: "50px" }}
     >
-      <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
-        <img src="/aws-icon.svg" style={{ width: "64px", height: "64px" }} />
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+        <img
+          src="/aws-icon.svg"
+          style={{ width: "85px", height: "85px" }}
+          alt="AWS icon"
+        />
         <span
           style={{ display: "block", fontWeight: "bold" }}
           className="text-secondary"
@@ -15,14 +19,14 @@ const Tech = () => {
           AWS
         </span>
       </Col>
-      <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
         <svg
           stroke="currentColor"
           fill="#553C7B"
           strokeWidth="0"
           viewBox="0 0 576 512"
-          height="64"
-          width="64"
+          height="85"
+          width="85"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M333.5,201.4c0-22.1-15.6-34.3-43-34.3h-50.4v71.2h42.5C315.4,238.2,333.5,225,333.5,201.4z M517,188.6 c-9.5-30.9-10.9-68.8-9.8-98.1c1.1-30.5-22.7-58.5-54.7-58.5H123.7c-32.1,0-55.8,28.1-54.7,58.5c1,29.3-0.3,67.2-9.8,98.1 c-9.6,31-25.7,50.6-52.2,53.1v28.5c26.4,2.5,42.6,22.1,52.2,53.1c9.5,30.9,10.9,68.8,9.8,98.1c-1.1,30.5,22.7,58.5,54.7,58.5h328.7 c32.1,0,55.8-28.1,54.7-58.5c-1-29.3,0.3-67.2,9.8-98.1c9.6-31,25.7-50.6,52.1-53.1v-28.5C542.7,239.2,526.5,219.6,517,188.6z M300.2,375.1h-97.9V136.8h97.4c43.3,0,71.7,23.4,71.7,59.4c0,25.3-19.1,47.9-43.5,51.8v1.3c33.2,3.6,55.5,26.6,55.5,58.3 C383.4,349.7,352.1,375.1,300.2,375.1z M290.2,266.4h-50.1v78.4h52.3c34.2,0,52.3-13.7,52.3-39.5 C344.7,279.6,326.1,266.4,290.2,266.4z"></path>
@@ -34,25 +38,12 @@ const Tech = () => {
           Bootstrap
         </span>
       </Col>
-      <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-          <path
-            d="M40.728 20.488l2.05.035 5.57-5.57.27-2.36C44.2 8.657 38.367 6.26 31.993 6.26c-11.54 0-21.28 7.852-24.163 18.488.608-.424 1.908-.106 1.908-.106l11.13-1.83s.572-.947.862-.9A13.88 13.88 0 0 1 32 17.375c3.3.007 6.34 1.173 8.728 3.102z"
-            fill="#ea4335"
-          />
-          <path
-            d="M56.17 24.77c-1.293-4.77-3.958-8.982-7.555-12.177l-7.887 7.887c3.16 2.55 5.187 6.452 5.187 10.82v1.392c3.837 0 6.954 3.124 6.954 6.954 0 3.837-3.124 6.954-6.954 6.954H32.007L30.615 48v8.346l1.392 1.385h13.908A18.11 18.11 0 0 0 64 39.647c-.007-6.155-3.1-11.6-7.83-14.876z"
-            fill="#4285f4"
-          />
-          <path
-            d="M18.085 57.74h13.9V46.6h-13.9a6.89 6.89 0 0 1-2.862-.622l-2.007.615-5.57 5.57-.488 1.88a18 18 0 0 0 10.926 3.689z"
-            fill="#34a853"
-          />
-          <path
-            d="M18.085 21.57A18.11 18.11 0 0 0 0 39.654c0 5.873 2.813 11.095 7.166 14.403l8.064-8.064a6.96 6.96 0 0 1-4.099-6.339c0-3.837 3.124-6.954 6.954-6.954 2.82 0 5.244 1.7 6.34 4.1l8.064-8.064c-3.307-4.353-8.53-7.166-14.403-7.166z"
-            fill="#fbbc05"
-          />
-        </svg>
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+        <img
+          src="/google-cloud-icon.svg"
+          alt="Google cloud icon"
+          style={{ width: "85px", height: "85px" }}
+        />
         <span
           style={{ display: "block", fontWeight: "bold" }}
           className="text-secondary"
@@ -60,15 +51,15 @@ const Tech = () => {
           Google Cloud
         </span>
       </Col>
-      <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
         <svg
           stroke="currentColor"
           fill="#589636"
           strokeWidth="0"
           role="img"
           viewBox="0 0 24 24"
-          height="64"
-          width="64"
+          height="85"
+          width="85"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title></title>
@@ -81,12 +72,12 @@ const Tech = () => {
           MongoDB
         </span>
       </Col>
-      <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height="64"
+          height="85"
           viewBox=".5 -.2 1023 1024.1"
-          width="64"
+          width="85"
           fill="white"
         >
           <path d="m478.5.6c-2.2.2-9.2.9-15.5 1.4-145.3 13.1-281.4 91.5-367.6 212-48 67-78.7 143-90.3 223.5-4.1 28.1-4.6 36.4-4.6 74.5s.5 46.4 4.6 74.5c27.8 192.1 164.5 353.5 349.9 413.3 33.2 10.7 68.2 18 108 22.4 15.5 1.7 82.5 1.7 98 0 68.7-7.6 126.9-24.6 184.3-53.9 8.8-4.5 10.5-5.7 9.3-6.7-.8-.6-38.3-50.9-83.3-111.7l-81.8-110.5-102.5-151.7c-56.4-83.4-102.8-151.6-103.2-151.6-.4-.1-.8 67.3-1 149.6-.3 144.1-.4 149.9-2.2 153.3-2.6 4.9-4.6 6.9-8.8 9.1-3.2 1.6-6 1.9-21.1 1.9h-17.3l-4.6-2.9c-3-1.9-5.2-4.4-6.7-7.3l-2.1-4.5.2-200.5.3-200.6 3.1-3.9c1.6-2.1 5-4.8 7.4-6.1 4.1-2 5.7-2.2 23-2.2 20.4 0 23.8.8 29.1 6.6 1.5 1.6 57 85.2 123.4 185.9s157.2 238.2 201.8 305.7l81 122.7 4.1-2.7c36.3-23.6 74.7-57.2 105.1-92.2 64.7-74.3 106.4-164.9 120.4-261.5 4.1-28.1 4.6-36.4 4.6-74.5s-.5-46.4-4.6-74.5c-27.8-192.1-164.5-353.5-349.9-413.3-32.7-10.6-67.5-17.9-106.5-22.3-9.6-1-75.7-2.1-84-1.3zm209.4 309.4c4.8 2.4 8.7 7 10.1 11.8.8 2.6 1 58.2.8 183.5l-.3 179.8-31.7-48.6-31.8-48.6v-130.7c0-84.5.4-132 1-134.3 1.6-5.6 5.1-10 9.9-12.6 4.1-2.1 5.6-2.3 21.3-2.3 14.8 0 17.4.2 20.7 2z" />
@@ -99,15 +90,15 @@ const Tech = () => {
           Next.js
         </span>
       </Col>
-      <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
         <svg
           stroke="currentColor"
           fill="#61DBFB"
           strokeWidth="0"
           version="1.1"
           viewBox="0 0 34 32"
-          height="64"
-          width="64"
+          height="85"
+          width="85"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M19.314 15.987c0 1.321-1.071 2.392-2.392 2.392s-2.392-1.071-2.392-2.392c0-1.321 1.071-2.392 2.392-2.392s2.392 1.071 2.392 2.392z"></path>
@@ -120,8 +111,12 @@ const Tech = () => {
           React.js
         </span>
       </Col>
-      <Col xs={6} sm={4} style={{ marginBottom: "25px" }}>
-        <img src="/ts-icon.svg" style={{ width: "64px", height: "64px" }} />
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+        <img
+          src="/ts-icon.svg"
+          style={{ width: "85px", height: "85px" }}
+          alt="TypeScript icon"
+        />
         <span
           style={{ display: "block", fontWeight: "bold" }}
           className="text-secondary mt-2"
@@ -129,25 +124,30 @@ const Tech = () => {
           TypeScript
         </span>
       </Col>
-      <a
-        href="https://www.credly.com/badges/3a42aaad-f3b4-4cb6-8ad5-4750a2a7e921/public_url"
-        target={"_blank"}
-        rel="noreferrer"
-        title="AWS Cloud Practitioner badge"
-        style={{ textDecoration: "none", marginTop: "5px" }}
-      >
-        <img
-          src="/aws-certification.png"
-          style={{ width: "50px", height: "50px" }}
-          className="img-fluid"
-        />
-        <p
-          style={{ display: "inline", marginLeft: "10px", fontSize: '14px'}}
-          className="text-muted"
+      <div style={{ marginTop: "25px", width: "fit-content" }}>
+        <a
+          href="https://www.credly.com/badges/3a42aaad-f3b4-4cb6-8ad5-4750a2a7e921/public_url"
+          target={"_blank"}
+          rel="noreferrer"
+          title="AWS Cloud Practitioner badge"
+          style={{
+            textDecoration: "none",
+          }}
         >
-          Certified AWS Cloud Practitioner
-        </p>
-      </a>
+          <img
+            src="/aws-certification.png"
+            style={{ width: "50px", height: "50px" }}
+            className="img-fluid"
+            alt="aws certification badge"
+          />
+          <p
+            style={{ display: "inline", marginLeft: "10px", fontSize: "14px" }}
+            className="text-muted"
+          >
+            Certified AWS Cloud Practitioner
+          </p>
+        </a>
+      </div>
     </Row>
   );
 };

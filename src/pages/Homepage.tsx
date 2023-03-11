@@ -85,7 +85,11 @@ export default function Home() {
                   style={{ textDecoration: "none", color: "black" }}
                   title="View all my code on GitHub"
                 >
-                  <img src="/github-icon.svg" style={{ marginRight: "5px" }} />
+                  <img
+                    src="/github-icon.svg"
+                    style={{ marginRight: "5px" }}
+                    alt="Github icon"
+                  />
                   <span>GitHub</span>
                 </a>
               </Button>
@@ -106,6 +110,7 @@ export default function Home() {
                   <img
                     src="/linkedin-icon.svg"
                     style={{ marginRight: "5px" }}
+                    alt={"Linkedin icon"}
                   />
                   <span>LinkedIn</span>
                 </a>
@@ -125,7 +130,11 @@ export default function Home() {
                   style={{ textDecoration: "none", color: "black" }}
                   title="Email me"
                 >
-                  <img src="/email-icon.svg" style={{ marginRight: "5px" }} />
+                  <img
+                    src="/email-icon.svg"
+                    style={{ marginRight: "5px" }}
+                    alt="Email icon"
+                  />
                   <span>Contact</span>
                 </a>
               </Button>
@@ -164,40 +173,14 @@ export default function Home() {
           </Row>
         </motion.div>
         <motion.div animate={{ y: [500, 0], opacity: [0, 1] }}>
-          <Row
-            style={{ marginTop: "100px", marginBottom: "100px" }}
-            className="text-center"
+          <div
+            style={{ fontFamily: "Silkscreen-Regular", textAlign: "center", marginTop: '100px'}}
           >
-            <Col lg={5} style={{ padding: "10px", marginBottom: "50px" }}>
-              <p
-                style={{
-                  fontSize: ptagSize,
-                  marginBottom: "25px",
-                  fontFamily: "Silkscreen-Regular",
-                }}
-              >
-                Languages
-              </p>
-              <img
-                src="/js-icon.svg"
-                style={{ width: "100px", height: "100px", marginRight: "50px" }}
-              />
-              <img
-                src="/csharp-icon.svg"
-                style={{ width: "100px", height: "100px" }}
-              />
-            </Col>
-
-            <Col
-              lg={7}
-              style={{ padding: "10px", fontFamily: "Silkscreen-Regular" }}
-            >
-              <p style={{ fontSize: ptagSize, marginBottom: "25px" }}>
-                Technologies
-              </p>
-              <Tech />
-            </Col>
-          </Row>
+            <h2 style={{ fontSize: ptagSize, marginBottom: "25px" }}>
+              Technologies/Frameworks
+            </h2>
+            <Tech />
+          </div>
         </motion.div>
       </Container>
     </Container>
