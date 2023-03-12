@@ -1,3 +1,42 @@
-body,html {
-    background-color: #001220;
+@font-face {
+  font-family: Silkscreen-Regular;
+  src: url("./fonts/Silkscreen-Regular.ttf");
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body,
+html {
+  background-color: #001220;
+}
+
+@media screen and (min-width: 768px) {
+  #awoldt_header {
+    font-size: 100px;
+  }
+  #awoldt_description {
+    font-size: 22px;
+  }
+  #backdrop_container {
+    background-image: url(../../public/waves.svg);
+  }
+}
+
+@media screen and (max-width: 766px) {
+  #awoldt_header {
+    font-size: 50px;
+  }
+  #awoldt_description {
+    font-size: 17px;
+  }
+  #backdrop_container {
+    background-image: url(../../public/waves-sm.svg);
+  }
 }

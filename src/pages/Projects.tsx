@@ -1,29 +1,12 @@
-import { Container, Row, Button } from "react-bootstrap";
-import { useLayoutEffect, useState } from "react";
+import { Container, Row } from "react-bootstrap";
+import { useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import Project from "../components/project";
-export default function Projects() {
-  const [ptagSize, setPtagSize] = useState<string>("");
 
+export default function Projects() {
   useLayoutEffect(() => {
     document.body.style.backgroundColor = "#001220";
     document.body.style.color = "white";
-    const initialWindowWitdth = window.innerWidth;
-
-    if (initialWindowWitdth >= 768) {
-      setPtagSize("22px");
-    } else {
-      setPtagSize("17px");
-    }
-
-    window.addEventListener("resize", () => {
-      const w = window.innerWidth;
-      if (w >= 768) {
-        setPtagSize("22px");
-      } else {
-        setPtagSize("17px");
-      }
-    });
   }, []);
 
   return (
@@ -41,59 +24,15 @@ export default function Projects() {
         className="text-center pt-5"
         style={{ transform: "scaleY(-1)" }}
       >
-        <p
-          style={{ maxWidth: "750px", fontSize: ptagSize }}
-          className="mx-auto"
+        <Link
+          to="/"
+          title="Return home"
+          style={{
+            float: "left",
+          }}
         >
-          Here are a few of the projects I have worked on that helped establish
-          the skills I now have. With every new project, my main goal is to
-          learn at least one new thing.
-        </p>
-
-        <p
-          className="my-4 mx-auto"
-          style={{ maxWidth: "750px", fontSize: ptagSize }}
-        >
-          Visit my{" "}
-          <a
-            href="https://github.com/awoldt?tab=repositories"
-            target={"_blank"}
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            GitHub
-          </a>{" "}
-          to view all of my public projects
-        </p>
-
-        <Button
-          className="mb-5"
-          style={{ borderRadius: "10px" }}
-          variant="danger"
-        >
-          <Link
-            to="/"
-            title="Return to homepage"
-            style={{
-              color: "white",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-caret-left-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-            </svg>{" "}
-            Return Home
-          </Link>
-        </Button>
-        <hr></hr>
+          <img src="/back-arrow-icon.svg" alt="Back arrow icon" />
+        </Link>
 
         <Row className="justify-content-center">
           <Project

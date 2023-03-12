@@ -1,10 +1,11 @@
 import { Row, Col } from "react-bootstrap";
+import '../styles/Global.css'
 
 const Tech = () => {
   return (
     <Row
       className="justify-content-center"
-      style={{ marginTop: "25px", marginBottom: "50px" }}
+      style={{ marginTop: "25px", paddingBottom: '50px'}}
     >
       <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
         <img

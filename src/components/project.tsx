@@ -16,7 +16,7 @@ export default function project({
   gitUrl: string | undefined;
 }) {
   return (
-    <Col style={{ padding: "25px" }} xl={4} lg={6} sm={12}>
+    <Col style={{ padding: "25px" }} xxl={4} lg={6}>
       <div
         style={{
           padding: "25px",
