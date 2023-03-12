@@ -15,7 +15,7 @@ export default function Home() {
         paddingRight: "0px",
       }}
     >
-      <Container style={{ color: "white", animation: "fadein 2s" }}>
+      <Container style={{ color: "white", animation: "fadein 1s" }}>
         <Row className="text-center">
           <Col xl={6} style={{ marginBottom: "50px" }}>
             {" "}
