@@ -36,6 +36,14 @@ export default function Projects() {
 
         <Row className="justify-content-center">
           <Project
+            img={"/botbook_capture.jpg"}
+            icon={"/botbook_icon.svg"}
+            name={"BotBook"}
+            about={"An entire dictionary generated using OpenAI"}
+            url={"https://botbook.dev/"}
+            gitUrl={"https://github.com/awoldt/BotBook"}
+          />
+          <Project
             img={"/wordlebin_capture.PNG"}
             icon={"/wordlebin_icon.ico"}
             name={"Unlimited Wordle"}
