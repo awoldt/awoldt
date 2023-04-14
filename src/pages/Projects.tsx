@@ -71,10 +71,10 @@ export default function Projects() {
           />
           <Project
             img={"/customerdb_capture.jpg"}
-            icon={"/db-icon.svg"}
-            name={"Fake Customer API"}
+            icon={"/database-fill.svg"}
+            name={"Mock Customer API"}
             about={"Simple API to fetch randomly generated fake customer data"}
-            url={"https://customerapi-pd634dw2fa-uk.a.run.app/"}
+            url={"https://mock-customer-api.vercel.app/"}
             gitUrl={"https://github.com/awoldt/Mock-Customer-API"}
           />
           <Project

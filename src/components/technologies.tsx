@@ -1,11 +1,11 @@
 import { Row, Col } from "react-bootstrap";
-import '../styles/Global.css'
+import "../styles/Global.css";
 
 const Tech = () => {
   return (
     <Row
       className="justify-content-center"
-      style={{ marginTop: "25px", paddingBottom: '50px'}}
+      style={{ marginTop: "25px", paddingBottom: "50px" }}
     >
       <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
         <img
@@ -37,6 +37,19 @@ const Tech = () => {
           className="text-secondary"
         >
           Bootstrap
+        </span>
+      </Col>
+      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+        <img
+          src="/expressjs-icon.svg"
+          alt="express js icon"
+          style={{ width: "85px", height: "85px" }}
+        />
+        <span
+          style={{ display: "block", fontWeight: "bold" }}
+          className="text-secondary"
+        >
+          Express
         </span>
       </Col>
       <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
