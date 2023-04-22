@@ -1,13 +1,14 @@
-import { Row, Col } from "react-bootstrap";
-import "../styles/Global.css";
-
+/* eslint-disable @next/next/no-img-element */
 const Tech = () => {
   return (
-    <Row
-      className="justify-content-center"
+    <div
+      className="row justify-content-center"
       style={{ marginTop: "25px", paddingBottom: "50px" }}
     >
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <img
           src="/aws-icon.svg"
           style={{ width: "85px", height: "85px" }}
@@ -19,8 +20,11 @@ const Tech = () => {
         >
           AWS
         </span>
-      </Col>
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <svg
           stroke="currentColor"
           fill="#553C7B"
@@ -38,8 +42,11 @@ const Tech = () => {
         >
           Bootstrap
         </span>
-      </Col>
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <img
           src="/expressjs-icon.svg"
           alt="express js icon"
@@ -51,8 +58,11 @@ const Tech = () => {
         >
           Express
         </span>
-      </Col>
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <img
           src="/google-cloud-icon.svg"
           alt="Google cloud icon"
@@ -64,8 +74,11 @@ const Tech = () => {
         >
           Google Cloud
         </span>
-      </Col>
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <svg
           stroke="currentColor"
           fill="#589636"
@@ -85,8 +98,11 @@ const Tech = () => {
         >
           MongoDB
         </span>
-      </Col>
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="85"
@@ -103,8 +119,11 @@ const Tech = () => {
         >
           Next.js
         </span>
-      </Col>
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <svg
           stroke="currentColor"
           fill="#61DBFB"
@@ -124,8 +143,11 @@ const Tech = () => {
         >
           React.js
         </span>
-      </Col>
-      <Col xs={6} sm={4} lg={3} style={{ marginBottom: "25px" }}>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
         <img
           src="/ts-icon.svg"
           style={{ width: "85px", height: "85px" }}
@@ -137,7 +159,7 @@ const Tech = () => {
         >
           TypeScript
         </span>
-      </Col>
+      </div>
       <div style={{ marginTop: "25px", width: "fit-content" }}>
         <a
           href="https://www.credly.com/badges/3a42aaad-f3b4-4cb6-8ad5-4750a2a7e921/public_url"
@@ -155,14 +177,18 @@ const Tech = () => {
             alt="aws certification badge"
           />
           <p
-            style={{ display: "inline", marginLeft: "10px", fontSize: "14px" }}
-            className="text-muted"
+            style={{
+              display: "inline",
+              marginLeft: "10px",
+              fontSize: "14px",
+            }}
+            className="text-secondary"
           >
             Certified AWS Cloud Practitioner
           </p>
         </a>
       </div>
-    </Row>
+    </div>
   );
 };
 
