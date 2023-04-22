@@ -138,7 +138,7 @@ export default function Home() {
                 className="btn btn-danger"
               >
                 <a
-                  href="/projects"
+                  href={"/projects"}
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Projects <img src="/code-icon.svg" alt="code icon" />
