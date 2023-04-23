@@ -59,6 +59,9 @@ hr {
   height: 5px;
   background: #014982;
 }
+a {
+  text-decoration: none;
+}
 
 pre {
   margin-bottom: 15px;
@@ -106,4 +109,23 @@ pre {
 }
 .shareon {
   float: right;
+}
+.blog-div {
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.blog-div:hover {
+  background-color: #011e36;
+}
+.breadcrumb-item {
+  color: white !important;
+  font-family: Silkscreen-Regular;
+}
+.breadcrumb-item a {
+  color: white;
+}
+
+li::before {
+  color: #002c4f !important;
 }

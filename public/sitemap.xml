@@ -8,6 +8,9 @@
         <loc>https://awoldt.com/projects</loc>
     </url>
     <url>
+        <loc>https://awoldt.com/blog</loc>
+    </url>
+    <url>
         <loc>https://awoldt.com/blog/python-hangman</loc>
     </url>
 </urlset>

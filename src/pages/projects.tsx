@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
+import Breadcrumb from "@/components/Breadcrumb";
 import Project from "@/components/Project";
 import Head from "next/head";
 
@@ -28,15 +29,8 @@ export default function Projects() {
           className="container text-center pt-5"
           style={{ transform: "scaleY(-1)" }}
         >
-          <a
-            href="/"
-            title="Return home"
-            style={{
-              float: "left",
-            }}
-          >
-            <img src="/back-arrow-icon.svg" alt="Back arrow icon" />
-          </a>
+          <Breadcrumb page="projects"/>
+          <hr></hr>
 
           <div className="row justify-content-center">
             <Project

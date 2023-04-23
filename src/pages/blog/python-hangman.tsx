@@ -12,6 +12,7 @@ import {
 } from "@/SourceCode";
 import Head from "next/head";
 import SocialShareBtns from "@/components/SocialShareBtns";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function PythonHangman() {
   return (
@@ -49,9 +50,7 @@ export default function PythonHangman() {
       </Head>
       <div className="container pt-5 blog-container">
         <div>
-          <a id="awoldt_blog_link" href={"/"} title="Return home">
-            Awoldt
-          </a>
+          <Breadcrumb blogTitle="Python-Hangman" page="blogs" />
           <SocialShareBtns />
         </div>
 
@@ -135,9 +134,10 @@ export default function PythonHangman() {
                 </b>
               </code>{" "}
               - This is a dictionary that stores the current character a user
-              has guessed at each index of the word to guess. The keys represent the index of a string and each value
-              represents the char at said index. Look at the example below to
-              better demenstrate the purpose of this variable:
+              has guessed at each index of the word to guess. The keys represent
+              the index of a string and each value represents the char at said
+              index. Look at the example below to better demenstrate the purpose
+              of this variable:
             </p>
             <ul>
               <li>
@@ -178,9 +178,10 @@ export default function PythonHangman() {
           The reason for this is that the underscore character is used to
           showcase to the user that the character at a specific index still
           needs to be guessed. For example, if the word is &quot;hello&quot; and
-          the user has guessed &quot;learn&quot;, the spelling would be represented
-          as _e___. This is because the character <i>e</i> is the only character that
-          aligns at the same index with the word &quot;hello&quot;
+          the user has guessed &quot;learn&quot;, the spelling would be
+          represented as _e___. This is because the character <i>e</i> is the
+          only character that aligns at the same index with the word
+          &quot;hello&quot;
         </p>
         <p>
           The code below will loop for the length of the word to be guessed and
@@ -256,12 +257,15 @@ export default function PythonHangman() {
           the word before the 5th attempt.
         </p>
         <p>
-          At the start of the loop the program checks to see if the user has guessed
-          5 times. If this is true, the game is over and the user is shown the
-          word. If this is not the 5th attempt, the game is going to take input
-          from the user.
+          At the start of the loop the program checks to see if the user has
+          guessed 5 times. If this is true, the game is over and the user is
+          shown the word. If this is not the 5th attempt, the game is going to
+          take input from the user.
         </p>
-        <p>Let&apos;s take a look at the logic happening inside of the else block:</p>
+        <p>
+          Let&apos;s take a look at the logic happening inside of the else
+          block:
+        </p>
 
         <SyntaxHighlighter
           language="python"
@@ -283,8 +287,8 @@ export default function PythonHangman() {
           </code>{" "}
           variable will display how many characters the user has got correct and
           which ones still need to be guessed. For example, with the word being
-          &quot;hello&quot; and the user has guessed the word
-          &quot;hwlto&quot;, the{" "}
+          &quot;hello&quot; and the user has guessed the word &quot;hwlto&quot;,
+          the{" "}
           <code>
             <i>
               <b>current_spelling</b>
@@ -293,8 +297,8 @@ export default function PythonHangman() {
           shown would be &quot;h_l_o&quot;. This shows that the characters{" "}
           <i>h</i>,<i>l</i>, and <i>o</i> were all the correct characters at
           each specific index of the word &quot;hello&quot;. This is printed out
-          to the terminal to show the user what they&apos;ve got correct so
-          far to make it easier on each guess.
+          to the terminal to show the user what they&apos;ve got correct so far
+          to make it easier on each guess.
         </p>
         <p>
           The{" "}
@@ -304,9 +308,9 @@ export default function PythonHangman() {
             </i>
           </code>{" "}
           variable will be set to whatever the user inputs into the terminal.
-          The <i>.lower()</i> function makes sure that all inputs from the user are
-          lowercase (prevents errors such as &quot;H&quot; not being equal to
-          &quot;h&quot;)
+          The <i>.lower()</i> function makes sure that all inputs from the user
+          are lowercase (prevents errors such as &quot;H&quot; not being equal
+          to &quot;h&quot;)
         </p>
         <p>
           When the user has entered their guess the program will make sure that
@@ -332,7 +336,8 @@ export default function PythonHangman() {
         </SyntaxHighlighter>
         <p>
           This block of code is very important, it will check each character of
-          the user&apos;s guess and compare it to the current word being spelled.
+          the user&apos;s guess and compare it to the current word being
+          spelled.
         </p>
         <p>
           The first condition is checking the{" "}
@@ -403,8 +408,8 @@ export default function PythonHangman() {
             </i>
           </code>{" "}
           dictionary will have the most up-to-date spelling of the word based on
-          the user&apos;s input, only keeping track of all the characters that were
-          guessed correctly. Then the{" "}
+          the user&apos;s input, only keeping track of all the characters that
+          were guessed correctly. Then the{" "}
           <code>
             <i>
               <b>attempts</b>
@@ -418,10 +423,11 @@ export default function PythonHangman() {
         <p>
           Congrats, you just created a hangman program using Python! It simply
           loops while taking user input and compares strings with each other.
-          Feel free to add your custom logic and add more to the program. For example, you could add a prompt at the end of the while loop
-          that asks if a user would like to play again instead of having the
-          program terminate. Remember to share this page with others if you
-          found it helpful!
+          Feel free to add your custom logic and add more to the program. For
+          example, you could add a prompt at the end of the while loop that asks
+          if a user would like to play again instead of having the program
+          terminate. Remember to share this page with others if you found it
+          helpful!
         </p>
 
         <p id="source_code">
