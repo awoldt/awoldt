@@ -55,7 +55,7 @@ export default function PythonHangman() {
           <SocialShareBtns />
         </div>
 
-        <hr style={{marginTop: '25px'}}></hr>
+        <hr style={{ marginTop: "25px" }}></hr>
         <h1 className="mt-5">
           How to Build a Basic Game of Hangman with Python
         </h1>
@@ -135,9 +135,8 @@ export default function PythonHangman() {
                 </b>
               </code>{" "}
               - This is a dictionary that stores the current character a user
-              has guessed at each index of the word to guess. The keys for this
-              dictionary represent the index of a string and each value
-              represenets the char at said index. Look at the example below to
+              has guessed at each index of the word to guess. The keys represent the index of a string and each value
+              represents the char at said index. Look at the example below to
               better demenstrate the purpose of this variable:
             </p>
             <ul>
@@ -179,8 +178,8 @@ export default function PythonHangman() {
           The reason for this is that the underscore character is used to
           showcase to the user that the character at a specific index still
           needs to be guessed. For example, if the word is &quot;hello&quot; and
-          the user has gussed &quot;learn&quot;, the spelling would represented
-          as _e___. This is because the char <i>e</i> is the only character that
+          the user has guessed &quot;learn&quot;, the spelling would be represented
+          as _e___. This is because the character <i>e</i> is the only character that
           aligns at the same index with the word &quot;hello&quot;
         </p>
         <p>
@@ -222,7 +221,7 @@ export default function PythonHangman() {
           {code_4}
         </SyntaxHighlighter>
         <p>
-          Which will be represented as &quot;_____&quot;. It is blank becuase
+          Which will be represented as &quot;_____&quot;. It is blank because
           the user would not have guessed any characters when the game starts.
         </p>
         <p>
@@ -251,18 +250,18 @@ export default function PythonHangman() {
 
         <p>
           This is a basic loop that will keep the user in the game while they
-          attempt to guess the word. This is set to run forever until code
-          inside the loop breaks it. For this game the loop will break when
+          attempt to guess the word. This is set to run forever until the code
+          inside the loop breaks it. For this game, the loop will break when
           either the user has guessed 5 times or the user has correctly guessed
           the word before the 5th attempt.
         </p>
         <p>
-          At the start of the loop the program checks to see if user has guessed
+          At the start of the loop the program checks to see if the user has guessed
           5 times. If this is true, the game is over and the user is shown the
           word. If this is not the 5th attempt, the game is going to take input
           from the user.
         </p>
-        <p>Lets take a look at the logic happening inside of the else block:</p>
+        <p>Let&apos;s take a look at the logic happening inside of the else block:</p>
 
         <SyntaxHighlighter
           language="python"
@@ -276,15 +275,15 @@ export default function PythonHangman() {
           {code_6}
         </SyntaxHighlighter>
         <p>
-          On each loop the{" "}
+          On each loop, the{" "}
           <code>
             <i>
               <b>current_spelling</b>
             </i>
           </code>{" "}
           variable will display how many characters the user has got correct and
-          which ones sill need to be guessed. For example, with the word being
-          &quot;hello&quot; and the user having guessed the word
+          which ones still need to be guessed. For example, with the word being
+          &quot;hello&quot; and the user has guessed the word
           &quot;hwlto&quot;, the{" "}
           <code>
             <i>
@@ -294,7 +293,7 @@ export default function PythonHangman() {
           shown would be &quot;h_l_o&quot;. This shows that the characters{" "}
           <i>h</i>,<i>l</i>, and <i>o</i> were all the correct characters at
           each specific index of the word &quot;hello&quot;. This is printed out
-          to the terminal to show the user what they&quot;ve gotten correct so
+          to the terminal to show the user what they&apos;ve got correct so
           far to make it easier on each guess.
         </p>
         <p>
@@ -305,7 +304,7 @@ export default function PythonHangman() {
             </i>
           </code>{" "}
           variable will be set to whatever the user inputs into the terminal.
-          The <i>.lower()</i> function makes sure that all inputs from user are
+          The <i>.lower()</i> function makes sure that all inputs from the user are
           lowercase (prevents errors such as &quot;H&quot; not being equal to
           &quot;h&quot;)
         </p>
@@ -333,10 +332,10 @@ export default function PythonHangman() {
         </SyntaxHighlighter>
         <p>
           This block of code is very important, it will check each character of
-          the users guess and compare it to the current word being spelled.
+          the user&apos;s guess and compare it to the current word being spelled.
         </p>
         <p>
-          The first condition its checking the{" "}
+          The first condition is checking the{" "}
           <code>
             <i>
               <b>spelling</b>
@@ -346,13 +345,13 @@ export default function PythonHangman() {
           equal to &quot;_&quot;. The reasoning behind this is that any value
           that is equal to &quot;_&quot; means the user has not guessed the
           correct character or simply has not guessed yet (remember the program
-          at inital run will populate all values in the{" "}
+          will populate all values in the{" "}
           <code>
             <i>
               <b>spelling</b>
             </i>
           </code>{" "}
-          dictionary to &quot;_&quot;).
+          dictionary to &quot;_&quot; when it first runs).
         </p>
         <p>
           If this condition is true, that means we need to compare the character
@@ -380,7 +379,7 @@ export default function PythonHangman() {
               <b>spelling</b>
             </i>
           </code>{" "}
-          dictionary value at key{" "}
+          dictionary value at the key{" "}
           <code>
             <i>
               <b>index</b>
@@ -396,15 +395,15 @@ export default function PythonHangman() {
               <b>index </b>
             </i>
           </code>{" "}
-          variables adds 1 to keep track of the current character it needs to
-          check. At the end of this loop the{" "}
+          variables add 1 to keep track of the current character it needs to
+          check. At the end of this loop, the{" "}
           <code>
             <i>
               <b>spelling</b>
             </i>
           </code>{" "}
           dictionary will have the most up-to-date spelling of the word based on
-          the users input, only keeping track of all the characters that were
+          the user&apos;s input, only keeping track of all the characters that were
           guessed correctly. Then the{" "}
           <code>
             <i>
@@ -419,8 +418,7 @@ export default function PythonHangman() {
         <p>
           Congrats, you just created a hangman program using Python! It simply
           loops while taking user input and compares strings with each other.
-          Feel free to add your own custom logic and make it work how you would
-          like. For example, you could add a prompt at the end of the while loop
+          Feel free to add your custom logic and add more to the program. For example, you could add a prompt at the end of the while loop
           that asks if a user would like to play again instead of having the
           program terminate. Remember to share this page with others if you
           found it helpful!
