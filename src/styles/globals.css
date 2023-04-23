@@ -12,11 +12,7 @@
   }
 }
 
-body,
-html {
-  background-color: #001220;
-}
-
+/* MD AND ABOVE */
 @media screen and (min-width: 768px) {
   #awoldt_header {
     font-size: 100px;
@@ -27,8 +23,13 @@ html {
   #backdrop_container {
     background-image: url(../../public/waves.svg);
   }
+  .blog-container p {
+    font-size: 18px;
+    max-width: 1000px;
+  }
 }
 
+/* SM AND SMALLER */
 @media screen and (max-width: 766px) {
   #awoldt_header {
     font-size: 50px;
@@ -39,4 +40,70 @@ html {
   #backdrop_container {
     background-image: url(../../public/waves-sm.svg);
   }
+}
+
+body,
+html {
+  background-color: #001220;
+}
+
+h1,
+p,
+span,
+code,
+li {
+  color: white;
+}
+hr {
+  border: none;
+  height: 5px;
+  background: #014982;
+}
+
+pre {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.code-preview {
+  padding: 10px;
+  border: 10px solid #011e36;
+  background-color: #002c4f;
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+#blogs_header {
+  font-size: 90px;
+  font-family: Silkscreen-Regular;
+}
+
+.blog-preview-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.blog-preview-title {
+  display: inline-block;
+}
+
+.blog-preview-link {
+  color: white;
+}
+
+.hover-btn:hover {
+  background-color: #002c4f;
+}
+#awoldt_blog_link {
+  color: white;
+  font-family: Silkscreen-Regular;
+  font-size: 25px;
+  text-decoration: none;
+}
+.shareon {
+  float: right;
 }
