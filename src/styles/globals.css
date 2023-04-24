@@ -52,7 +52,7 @@ h2,
 p,
 span,
 code,
-li {
+li, b{
   color: white;
 }
 hr {
@@ -134,4 +134,5 @@ li::before {
 .blog-imgs {
   margin-top: 25px;
   margin-bottom: 25px;
+  width: 700px;
 }
