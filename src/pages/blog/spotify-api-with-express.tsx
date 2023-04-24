@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { js_code_1, js_code_2, js_code_3, js_code_4 } from "@/SourceCode";
+import { js_code_1, js_code_2, js_code_3, js_code_4 } from "@/sourceCode";
 import Breadcrumb from "@/components/Breadcrumb";
 import SocialShareBtns from "@/components/SocialShareBtns";
 import Head from "next/head";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import OtherBlogs from "@/components/OtherBlogs";
 
 export default function SpotifyApiWithExpress() {
   return (
@@ -541,6 +542,19 @@ export default function SpotifyApiWithExpress() {
           and finally, taking this access token and making API calls. Be sure to
           share this article if you found it helpful!
         </p>
+        <hr></hr>
+        <OtherBlogs
+          blogs={[
+            {
+              title: "How to Build a Basic Game of Hangman with Python",
+              link: "/blog/python-hangman",
+            },
+            {
+              title: "Why Nextjs is the Best JavaScript Framework",
+              link: "/blog/nextjs-best-js-framework",
+            },
+          ]}
+        />
       </div>
     </>
   );

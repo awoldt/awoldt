@@ -9,10 +9,11 @@ import {
   code_6,
   code_7,
   code_8,
-} from "@/SourceCode";
+} from "@/sourceCode";
 import Head from "next/head";
 import SocialShareBtns from "@/components/SocialShareBtns";
 import Breadcrumb from "@/components/Breadcrumb";
+import OtherBlogs from "@/components/OtherBlogs";
 
 export default function PythonHangman() {
   return (
@@ -359,6 +360,20 @@ export default function PythonHangman() {
         >
           {code_7}
         </SyntaxHighlighter>
+
+        <hr></hr>
+        <OtherBlogs
+          blogs={[
+            {
+              title: "How to Access the Spotify API using JavaScript",
+              link: "/blog/spotify-api-with-express",
+            },
+            {
+              title: "Why Nextjs is the Best JavaScript Framework",
+              link: "/blog/nextjs-best-js-framework",
+            },
+          ]}
+        />
       </div>
     </>
   );

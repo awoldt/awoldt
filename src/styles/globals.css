@@ -49,12 +49,15 @@ html {
 
 h1,
 h2,
+h3,
 p,
 span,
 code,
-li, b{
+li,
+b {
   color: white;
 }
+
 hr {
   border: none;
   height: 5px;
@@ -135,4 +138,8 @@ li::before {
   margin-top: 25px;
   margin-bottom: 25px;
   width: 700px;
+}
+
+.other-blogs-span {
+  font-family: Silkscreen-Regular;
 }

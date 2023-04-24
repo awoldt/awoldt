@@ -31,6 +31,13 @@ export default function BlogsPage() {
               href={"/blog/spotify-api-with-express"}
             />
           </li>
+          <li>
+            <BlogPreviewDiv
+              title="Why Nextjs is the Best JavaScript Framework"
+              description="Nextjs is the best full stack framework for developers who love using Reactjs"
+              href={"/blog/nextjs-best-js-framework"}
+            />
+          </li>
         </ol>
       </div>
     </>
