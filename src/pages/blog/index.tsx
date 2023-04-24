@@ -16,17 +16,22 @@ export default function BlogsPage() {
       <div className="container pt-5">
         <Breadcrumb blogTitle={null} page="blogs" />
         <hr></hr>
-        <BlogPreviewDiv
-          img="/imgs/python-hangman.png"
-          title="Build a Basic Hangman Game with Python"
-          href={"/blog/python-hangman"}
-        />
-        <BlogPreviewDiv
-          img="/imgs/spotify-api.webp"
-          title="Using Spotify API with JavaScript"
-          href={"/blog/spotify-api-with-express"}
-        />
-        
+        <ol>
+          <li>
+            <BlogPreviewDiv
+              title="Build a Basic Hangman Game with Python"
+              description="Take user input and compare it to a word that needs to be guessed"
+              href={"/blog/python-hangman"}
+            />
+          </li>
+          <li>
+            <BlogPreviewDiv
+              title="Using Spotify API with JavaScript"
+              description="Setup a basic express server and start making requests to Spotify API and accessing user data"
+              href={"/blog/spotify-api-with-express"}
+            />
+          </li>
+        </ol>
       </div>
     </>
   );
