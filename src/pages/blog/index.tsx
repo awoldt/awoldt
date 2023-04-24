@@ -21,6 +21,12 @@ export default function BlogsPage() {
           title="Build a Basic Hangman Game with Python"
           href={"/blog/python-hangman"}
         />
+        <BlogPreviewDiv
+          img="/imgs/spotify-api.webp"
+          title="Using Spotify API with JavaScript"
+          href={"/blog/spotify-api-with-express"}
+        />
+        
       </div>
     </>
   );

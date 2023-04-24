@@ -10,11 +10,11 @@ export default function BlogPreviewDiv({
   href: string;
 }) {
   return (
-    <div className="blog-div">
-      <a href={href} className="blog-preview-link">
+    <a href={href} className="blog-preview-link">
+      <div className="blog-div">
         <img src={img} className="img-fluid blog-preview-img" />
         <h2 className="blog-preview-title">{title}</h2>
-      </a>
-    </div>
+      </div>
+    </a>
   );
 }

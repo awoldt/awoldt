@@ -136,3 +136,14 @@ for char in guess:
             spelling[index] = char
 
     index += 1`;
+
+export const js_code_1 = `const express = require("express");
+const app = express();
+
+app.listen(8080, () => {
+    console.log("App is listening on port 8080!");
+});
+
+app.get("/", (req, res) => {
+    res.send("Hello");
+});`;
