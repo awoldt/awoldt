@@ -48,10 +48,11 @@ html {
 }
 
 h1,
+h2,
 p,
 span,
 code,
-li {
+li, b{
   color: white;
 }
 hr {
@@ -128,4 +129,10 @@ pre {
 
 li::before {
   color: #002c4f !important;
+}
+
+.blog-imgs {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 700px;
 }
