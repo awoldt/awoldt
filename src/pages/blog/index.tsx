@@ -1,5 +1,6 @@
 import BlogPreviewDiv from "@/components/BlogPreviewDiv";
 import Breadcrumb from "@/components/Breadcrumb";
+import Nav from "@/components/Nav";
 import Head from "next/head";
 
 export default function BlogsPage() {
@@ -14,7 +15,7 @@ export default function BlogsPage() {
         <link rel="canonical" href="https://awoldt.com/blog" />
       </Head>
       <div className="container pt-5">
-        <Breadcrumb blogTitle={null} page="blogs" />
+        <Nav page="projects" />
         <hr></hr>
         <ol>
           <li>

@@ -46,7 +46,7 @@ export default function NextjsBestJsFramework() {
       </Head>
       <div className="container pt-5 blog-container">
         <div>
-          <Breadcrumb blogTitle="Nextjs-best-js-framework" page="blogs" />
+          <Breadcrumb blogTitle="Nextjs-best-js-framework" />
           <SocialShareBtns />
         </div>
 

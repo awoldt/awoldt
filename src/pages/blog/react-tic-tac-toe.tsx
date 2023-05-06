@@ -58,7 +58,7 @@ export default function SpotifyApiWithExpress() {
       </Head>
       <div className="container pt-5 blog-container">
         <div>
-          <Breadcrumb blogTitle="react-tic-tac-toe" page="blogs" />
+          <Breadcrumb blogTitle="react-tic-tac-toe" />
           <SocialShareBtns />
         </div>
 

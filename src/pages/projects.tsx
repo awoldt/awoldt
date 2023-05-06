@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Breadcrumb from "@/components/Breadcrumb";
+import Nav from "@/components/Nav";
 import Project from "@/components/Project";
 import Head from "next/head";
 
@@ -29,7 +30,7 @@ export default function Projects() {
           className="container text-center pt-5"
           style={{ transform: "scaleY(-1)" }}
         >
-          <Breadcrumb page="projects"/>
+          <Nav page="blogs"/>
           <hr></hr>
 
           <div className="row justify-content-center">

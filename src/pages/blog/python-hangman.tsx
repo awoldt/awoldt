@@ -51,7 +51,7 @@ export default function PythonHangman() {
       </Head>
       <div className="container pt-5 blog-container">
         <div>
-          <Breadcrumb blogTitle="Python-Hangman" page="blogs" />
+          <Breadcrumb blogTitle="Python-Hangman" />
           <SocialShareBtns />
         </div>
 

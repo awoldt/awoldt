@@ -148,3 +148,33 @@ li::before {
   padding: 5px;
   background-color: #002c4f;
 }
+
+.navbar a {
+  color: white;
+  font-family: Silkscreen-Regular;
+}
+.navbar div {
+  color: white;
+  font-family: Silkscreen-Regular;
+}
+
+.navbar-brand {
+  font-size: 35px;
+  color: inherit;
+}
+.navbar-brand:hover {
+  color: white;
+}
+
+.active-page {
+  text-decoration: underline;
+  background-color: #002c4f;
+  padding: 10px;
+  border-radius: 8px;
+}
+.nonactive-page {
+  background-color: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}

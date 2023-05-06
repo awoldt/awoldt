@@ -46,7 +46,7 @@ export default function SpotifyApiWithExpress() {
       </Head>
       <div className="container pt-5 blog-container">
         <div>
-          <Breadcrumb blogTitle="spotify-api-with-express" page="blogs" />
+          <Breadcrumb blogTitle="spotify-api-with-express" />
           <SocialShareBtns />
         </div>
 
