@@ -78,6 +78,12 @@ export default function SpotifyApiWithExpress() {
             </strong>
             .
           </p>
+          <p>
+            You can check out the entire source code for this app{" "}
+            <a href={"https://github.com/awoldt/Tic-Tac-Toe"} target="_blank">
+              here
+            </a>
+          </p>
           <h2>Initiate a React Applcaition</h2>
           <p>
             The first step for this tutorial is to initiate a new React
@@ -103,10 +109,10 @@ tsconfig.json`}
           <h2>Building the Tic Tac Toe Grid</h2>
           <p>
             This is where the majority of this tutorial will focus. The grid
-            refers to the hashtag structure in which the <b>X</b>&apos;s and <b>O</b>&apos;s
-            will reside during the game. For organizational purposes, we will
-            create a new component called <i>Grid.tsx</i> that will house all
-            the logic for this grid.
+            refers to the hashtag structure in which the <b>X</b>&apos;s and{" "}
+            <b>O</b>&apos;s will reside during the game. For organizational
+            purposes, we will create a new component called <i>Grid.tsx</i> that
+            will house all the logic for this grid.
           </p>
           <img
             src="/icons/tic-tac-toe-grid.svg"
@@ -156,8 +162,8 @@ tsconfig.json`}
               </b>
               <p>
                 This variable will track which letter is placed on the board.
-                The value is initialized as &apos;X&apos;, meaning that <b>X</b> will
-                always be the first letter placed on the board.
+                The value is initialized as &apos;X&apos;, meaning that <b>X</b>{" "}
+                will always be the first letter placed on the board.
               </p>
             </li>
             <li>
@@ -264,11 +270,11 @@ tsconfig.json`}
             placement of all the <b>X</b>s and <b>O</b>s on the grid. Inside
             each element for this map are the grid&apos;s top, middle, and
             bottom rows. Each row will also be rendered to the screen during a
-            second nested loop. Each element in this second loop will be <b>X</b>, <b>O</b>,
-            or <b>null</b>. A basic square block will showcase the string value inside
-            if the value is either <b>X</b> or <b>O</b> on each loop. For
-            example, if the value of the current element is <b>X</b>, it will
-            render as this on screen:
+            second nested loop. Each element in this second loop will be{" "}
+            <b>X</b>, <b>O</b>, or <b>null</b>. A basic square block will
+            showcase the string value inside if the value is either <b>X</b> or{" "}
+            <b>O</b> on each loop. For example, if the value of the current
+            element is <b>X</b>, it will render as this on screen:
           </p>
           <img
             src="/imgs/tic-tac-toe-x.JPG"
@@ -302,8 +308,8 @@ tsconfig.json`}
             check whether there is a winner based on this new letter placement.
             The data variable (&#123;data&#125;) placed inside the div tag
             represents the letter to be placed in the current square, which can
-            be either <b>X</b>, <b>O</b>, or <b>null</b>. If data is null, nothing will be placed,
-            and it will be an empty square on the grid.
+            be either <b>X</b>, <b>O</b>, or <b>null</b>. If data is null,
+            nothing will be placed, and it will be an empty square on the grid.
           </p>
 
           <ol>
@@ -353,11 +359,11 @@ SET_GRID_DATA(x);`}
               </SyntaxHighlighter>
               <p>
                 Based on the <var>whoseTurn</var> state variable, we will place
-                an <b>X</b> or an <b>O</b> inside the square. There is a ternary operator that
-                will decide which letter to use. The <var>rowIndex</var> and{" "}
-                <var>dataIndex</var> variables are defined from the map
-                functions used to loop through all the rows of{" "}
-                <var>GRID_DATA</var>. When using the map function on an
+                an <b>X</b> or an <b>O</b> inside the square. There is a ternary
+                operator that will decide which letter to use. The{" "}
+                <var>rowIndex</var> and <var>dataIndex</var> variables are
+                defined from the map functions used to loop through all the rows
+                of <var>GRID_DATA</var>. When using the map function on an
                 iterable, an optional secondary argument can be used to return
                 the index of the element in the loop. That is what is used to
                 represent both <var>rowIndex</var> and <var>dataIndex</var> to
@@ -418,9 +424,9 @@ SET_GRID_DATA(x);`}
               <p>
                 We will not go too into depth with this function. You can go
                 through this code and see what it does. It will check all
-                possible grid combinations to see if the <b>X</b> or <b>O</b> lines up three
-                times (winning a tic tac toe game). It will also end the game if
-                there are no winners.
+                possible grid combinations to see if the <b>X</b> or <b>O</b>{" "}
+                lines up three times (winning a tic tac toe game). It will also
+                end the game if there are no winners.
               </p>
             </li>
           </ol>
@@ -556,6 +562,16 @@ SET_GRID_DATA(x);`}
 import Gameover from "./gameOver";
 import { isThereWinner } from "../functions";`}
           </SyntaxHighlighter>
+          <p>
+            Play the production ready game of this app{" "}
+            <a
+              href={"https://tic-tac-toe-seven-wine.vercel.app/"}
+              title="play tic tac toe online"
+              target="_blank"
+            >
+              here
+            </a>
+          </p>
           <p>Happy coding!</p>
         </article>
 
