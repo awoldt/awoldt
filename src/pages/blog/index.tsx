@@ -38,6 +38,13 @@ export default function BlogsPage() {
               href={"/blog/nextjs-best-js-framework"}
             />
           </li>
+          <li>
+            <BlogPreviewDiv
+              title="How to Build a Tic Tac Toe Game with Reactjs"
+              description="Learn how to build a tic tac toe game using Reactjs to play with your friends"
+              href={"/blog/react-tic-tac-toe"}
+            />
+          </li>
         </ol>
       </div>
     </>

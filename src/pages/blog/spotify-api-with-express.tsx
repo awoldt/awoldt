@@ -58,7 +58,7 @@ export default function SpotifyApiWithExpress() {
           </h1>
           <p>
             <i>
-              Note that Spotify has updated its developer website since this
+              *Note that Spotify has updated its developer website since this
               article was written. The design is different, but the concepts are
               still the same.
             </i>
@@ -247,15 +247,17 @@ export default function SpotifyApiWithExpress() {
           </p>
           <ul>
             <li>
-              <b>
-                <u>client_id</u>
-              </b>
+              <u>
+                <var>client_id</var>
+              </u>
+
               <p>Whatever your client ID is from the step above</p>
             </li>
             <li>
-              <b>
-                <u>response_type</u>
-              </b>
+              <u>
+                <var>response_type</var>
+              </u>
+
               <p>
                 Don&apos;t worry too much about what this is, just know it is
                 necessary for getting the access token. It must be set to
@@ -263,9 +265,10 @@ export default function SpotifyApiWithExpress() {
               </p>
             </li>
             <li>
-              <b>
-                <u>redirect_uri</u>
-              </b>
+              <u>
+                <var>redirect_uri</var>
+              </u>
+
               <p>
                 This is the redirect URL you added to your Spotify
                 developer&apos;s settings above must match{" "}
@@ -296,9 +299,10 @@ export default function SpotifyApiWithExpress() {
               </p>
             </li>
             <li>
-              <b>
-                <u>scope</u>
-              </b>
+              <u>
+                <var>scope</var>
+              </u>
+
               <p>
                 Scopes represent the different types of data you want to extract
                 from the user. There are many types of scopes to use here, but
@@ -395,15 +399,16 @@ export default function SpotifyApiWithExpress() {
           </p>
           <ul>
             <li>
-              <b>
-                <u>grant_type</u>
-              </b>
+              <u>
+                <var>grant_type</var>
+              </u>
+
               <p>Must be set to “authorization_code”</p>
             </li>
             <li>
-              <b>
-                <u>code</u>
-              </b>
+              <u>
+                <var>code</var>
+              </u>
               <p>
                 Code Spotify sends back to your server in the URL after the user
                 accepts/declines data usage. Extract this code from URL query
@@ -411,9 +416,10 @@ export default function SpotifyApiWithExpress() {
               </p>
             </li>
             <li>
-              <b>
-                <u>redirect_uri</u>
-              </b>
+              <u>
+                <var>redirect_uri</var>
+              </u>
+
               <p>
                 Whatever redirect URL you have used up until this point must
                 match what is saved in Spotify developer app settings
@@ -431,9 +437,10 @@ export default function SpotifyApiWithExpress() {
           </p>
           <ul>
             <li>
-              <b>
-                <u>Authorization</u>
-              </b>
+              <u>
+                <var>Authorization</var>
+              </u>
+
               <p>
                 This will be equal to a string that looks like “Basic xxx”. The
                 xxx part must be equal to a base64 encoded string that is
@@ -464,9 +471,10 @@ export default function SpotifyApiWithExpress() {
               </p>
             </li>
             <li>
-              <b>
-                <u>Content-Type</u>
-              </b>
+              <u>
+                <var>Content-Type</var>
+              </u>
+
               <p>
                 This will be simply set to “application/x-www-form-urlencoded”
               </p>
@@ -516,9 +524,10 @@ export default function SpotifyApiWithExpress() {
           </p>
           <ul>
             <li>
-              <b>
-                <u>Authorization</u>
-              </b>
+              <u>
+                <var>Authorization</var>
+              </u>
+
               <p>
                 This will be set to a string formatted as “Bearer &#123;access
                 token&#125;”. Use the access token returned from the
@@ -564,6 +573,10 @@ export default function SpotifyApiWithExpress() {
             {
               title: "Why Nextjs is the Best JavaScript Framework",
               link: "/blog/nextjs-best-js-framework",
+            },
+            {
+              title: "How to Build a Tic Tac Toe Game with Reactjs",
+              link: "/blog/react-tic-tac-toe",
             },
           ]}
         />

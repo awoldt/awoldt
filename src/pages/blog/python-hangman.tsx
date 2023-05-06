@@ -377,6 +377,10 @@ export default function PythonHangman() {
               title: "Why Nextjs is the Best JavaScript Framework",
               link: "/blog/nextjs-best-js-framework",
             },
+            {
+              title: "How to Build a Tic Tac Toe Game with Reactjs",
+              link: "/blog/react-tic-tac-toe"
+            }
           ]}
         />
       </div>

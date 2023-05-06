@@ -135,11 +135,16 @@ li::before {
 }
 
 .blog-imgs {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 700px;
 }
 
 .other-blogs-span {
   font-family: Silkscreen-Regular;
+}
+
+.terminal-code {
+  padding: 5px;
+  background-color: #002c4f;
 }

@@ -245,6 +245,10 @@ README.md`}
               title: "How to Build a Basic Game of Hangman with Python",
               link: "/blog/python-hangman",
             },
+            {
+              title: "How to Build a Tic Tac Toe Game with Reactjs",
+              link: "/blog/react-tic-tac-toe",
+            },
           ]}
         />
       </div>
