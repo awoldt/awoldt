@@ -192,7 +192,7 @@ tsconfig.json`}
                 representation of this grid shown to the end user would be:
               </p>
               <img
-                src="/imgs/tic-tac-toe-example.JPG"
+                src="/imgs/tic-tac-toe-example.jpg"
                 alt="tic tac toe board grid example"
                 className="img-fluid blog-imgs"
               />
@@ -277,13 +277,13 @@ tsconfig.json`}
             element is <b>X</b>, it will render as this on screen:
           </p>
           <img
-            src="/imgs/tic-tac-toe-x.JPG"
+            src="/imgs/tic-tac-toe-x.jpg"
             alt="tic tac toe X"
             className="img-fluid mb-3 blog-imgs"
           />
           <p>If it is null, it will redner as this on screen:</p>
           <img
-            src="/imgs/tic-tac-toe-null.JPG"
+            src="/imgs/tic-tac-toe-null.jpg"
             alt="tic tac toe empty space"
             className="img-fluid mb-3 blog-imgs"
           />
@@ -458,7 +458,7 @@ SET_GRID_DATA(x);`}
           </ol>
           <p>An example of a winning pattern would resemble this:</p>
           <img
-            src="/imgs/tic-tac-toe-winning-pattern.JPG"
+            src="/imgs/tic-tac-toe-winning-pattern.jpg"
             alt="tic tac toe winning pattern"
             className="img-fluid mb-3 blog-imgs"
             id="winning_pattern"
@@ -467,7 +467,7 @@ SET_GRID_DATA(x);`}
             While an example of a game where nobody won would resemble this:{" "}
           </p>
           <img
-            src="/imgs/tic-tac-toe-no-winner.JPG"
+            src="/imgs/tic-tac-toe-no-winner.jpg"
             alt="tic tac toe nobody won"
             className="img-fluid mb-3 blog-imgs"
           />
