@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Personal Projects",
   description:
     "Check out some of the personal projects I've done that helped establish the knowledge I now have",
-  alternates: { canonical: "https://awoldt.com/blog/projects" },
+  alternates: { canonical: "https://awoldt.com/projects" },
 };
 
 export default function Projects() {
