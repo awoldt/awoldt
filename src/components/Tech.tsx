@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-const Tech = () => {
+export default function Tech() {
   return (
     <div
       className="row justify-content-center"
@@ -163,6 +163,4 @@ const Tech = () => {
       </div>
     </div>
   );
-};
-
-export default Tech;
+}

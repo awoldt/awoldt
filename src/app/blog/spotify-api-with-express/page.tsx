@@ -1,50 +1,23 @@
-/* eslint-disable @next/next/no-img-element */
+import CodeExmaple from "../../../components/CodeExample";
 import { js_code_1, js_code_2, js_code_3, js_code_4 } from "@/sourceCode";
-import Breadcrumb from "@/components/Breadcrumb";
 import SocialShareBtns from "@/components/SocialShareBtns";
-import Head from "next/head";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
+import Image from "next/image";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Using Spotify API with JavaScript",
+  description:
+    "Learn how to get data from the Spotify API with JavaScript. This tutorial will show how to connect using Expressjs.",
+  alternates: { canonical: "https://awoldt.com/blog/spotify-api-with-express" },
+};
 
 export default function SpotifyApiWithExpress() {
   return (
-    <>
-      <Head>
-        <title>Using Spotify API with JavaScript</title>
-        <meta
-          name="description"
-          content="Learn step-by-step how to access the official spotify api using express.js"
-        />
-        <link
-          rel="canonical"
-          href="https://awoldt.com/blog/spotify-api-with-express"
-        />
-
-        <meta
-          property="og:title"
-          content="How to Access the Official Spotify API with JavaScript"
-        />
-        <meta
-          property="og:url"
-          content="https://awoldt.com/blog/spotify-api-with-express"
-        />
-
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:image"
-          content="https://awoldt.com/imgs/spotify-api.png"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
-          rel="stylesheet"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
-          defer
-        ></script>
-      </Head>
-      <div className="container pt-5 blog-container">
+    <div className="container-fluid pt-5">
+      <div className="container">
         <div>
           <Breadcrumb blogTitle="spotify-api-with-express" />
           <SocialShareBtns />
@@ -127,10 +100,12 @@ export default function SpotifyApiWithExpress() {
             Give the app whatever name you like. As you can see, I already have
             an app called music-visualizer created.
           </p>
-          <img
+          <Image
             src="/imgs/spotify-dev-dashboard.webp"
             className="img-fluid blog-imgs"
             alt="spotify developer dashboard"
+            width={600}
+            height={200}
           />
           <h2>Get Your Nodejs Server Up and Running</h2>
           <p>
@@ -139,17 +114,12 @@ export default function SpotifyApiWithExpress() {
             &quot;Hello&quot; once someone requests the root route
             (&quot;/&quot;).
           </p>
-          <SyntaxHighlighter
+          <CodeExmaple
             language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_1}
-          </SyntaxHighlighter>
+            code={js_code_1}
+            showLines={true}
+          />
+
           <p>
             Now that a web server is ready to take in requests, we can start
             working with the API. Keep your server code off to the side for now,
@@ -187,10 +157,12 @@ export default function SpotifyApiWithExpress() {
             First, the client ID can be found on the dashboard page of the app
             you created in the Spotify developer account.
           </p>
-          <img
+          <Image
             src="/imgs/spotify-clientid.webp"
             className="img-fluid blog-imgs"
             alt="spotify client id found on dashboard"
+            width={600}
+            height={200}
           />
           <p>
             Next, you need a redirect URL for Spotify to send users after
@@ -202,10 +174,12 @@ export default function SpotifyApiWithExpress() {
             </strong>
             .
           </p>
-          <img
+          <Image
             src="/imgs/spotify-edit-settings.webp"
             className="img-fluid blog-imgs"
             alt="get to application settings edit button at top right"
+            width={600}
+            height={200}
           />
           <p>
             Because we are building this app for development purposes, ALL
@@ -217,10 +191,12 @@ export default function SpotifyApiWithExpress() {
             (Throughout this article, I refer to this as redirect URL, not URI,
             but these two words can be used interchangeably).
           </p>
-          <img
+          <Image
             src="/imgs/spotify-redirect-url.webp"
             className="img-fluid blog-imgs"
             alt="changing the redirect urls in spotify developer settings"
+            width={600}
+            height={200}
           />
           <p>
             Once you have added the redirect URL, scroll to the bottom of this
@@ -326,10 +302,12 @@ export default function SpotifyApiWithExpress() {
             log into their Spotify account and accept or decline access to their
             data.
           </p>
-          <img
+          <Image
             src="/imgs/spotify-signin.webp"
             className="img-fluid blog-imgs"
             alt="spotify sign in page user is redirected to"
+            width={600}
+            height={200}
           />
           <h2>Use Response Code to Retrieve Access Token</h2>
           <p>
@@ -341,17 +319,12 @@ export default function SpotifyApiWithExpress() {
             req object and access the query property, then the code value. This
             is what your server code should look like now:
           </p>
-          <SyntaxHighlighter
+          <CodeExmaple
             language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_2}
-          </SyntaxHighlighter>
+            code={js_code_2}
+            showLines={true}
+          />
+
           <p>
             Also, note that I utilize environment variables to hide all the
             sensitive Spotify data so that I don&apos;t expose these keys to the
@@ -448,10 +421,12 @@ export default function SpotifyApiWithExpress() {
                 secret can be found in the dashboard featured in the image
                 below.
               </p>
-              <img
+              <Image
                 src="/imgs/spotify-clientdashboard-keys.webp"
                 className="img-fluid blog-imgs"
                 alt="get both the client id and the client secret from the developers dashboard"
+                width={600}
+                height={200}
               />
               <p>
                 We now must return to our Spotify developer app dashboard and
@@ -484,17 +459,12 @@ export default function SpotifyApiWithExpress() {
             Now that we have this POST request set up with all the necessary
             data, your code on the server should look like this:
           </p>
-          <SyntaxHighlighter
+          <CodeExmaple
             language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_3}
-          </SyntaxHighlighter>
+            code={js_code_3}
+            showLines={true}
+          />
+
           <p>
             The spotifyResponse variable is the response from Spotify containing
             the access token we need to make API requests for user data. Log
@@ -502,10 +472,12 @@ export default function SpotifyApiWithExpress() {
             code, this is what happens in the console after clicking sign-in on
             the root route:
           </p>
-          <img
+          <Image
             src="/imgs/spotify-response.webp"
             className="img-fluid blog-imgs"
             alt="the json formatted response spotify will send back to console"
+            width={600}
+            height={200}
           />
           <h2>Start making API requests</h2>
           <p>
@@ -536,22 +508,19 @@ export default function SpotifyApiWithExpress() {
             </li>
           </ul>
           <p>The request in your server should look like this:</p>
-          <SyntaxHighlighter
+          <CodeExmaple
             language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_4}
-          </SyntaxHighlighter>
+            code={js_code_4}
+            showLines={true}
+          />
+
           <p>The response will look like this in the console:</p>
-          <img
+          <Image
             src="/imgs/spotify-api-call.webp"
             className="img-fluid blog-imgs"
             alt="what data returned from spotify api call will look like"
+            width={600}
+            height={200}
           />
           <p>
             Congratulations, you just made your first API call to Spotify and
@@ -581,6 +550,6 @@ export default function SpotifyApiWithExpress() {
           ]}
         />
       </div>
-    </>
+    </div>
   );
 }

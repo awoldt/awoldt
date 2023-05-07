@@ -1,60 +1,35 @@
-/* eslint-disable @next/next/no-img-element */
-import { js_code_5 } from "@/sourceCode";
-import Breadcrumb from "@/components/Breadcrumb";
+import CodeExmaple from "../../../components/CodeExample";
 import SocialShareBtns from "@/components/SocialShareBtns";
-import Head from "next/head";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
+import Image from "next/image";
+import { js_code_5 } from "@/sourceCode";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Why Nextjs is the Best JavaScript Framework",
+  description:
+    "Using Nextjs has so many advantages if you want to build your site with React. Built in routing and image optimization make it easy to deploy a production ready app in no time.",
+  alternates: { canonical: "https://awoldt.com/blog/nextjs-best-js-framework" },
+};
 
 export default function NextjsBestJsFramework() {
   return (
-    <>
-      <Head>
-        <title>How to Build a Basic Game of Hangman with Python</title>
-        <meta
-          name="description"
-          content="Nextjs is the best javascript framework for building full stack applications"
-        />
-        <link
-          rel="canonical"
-          href="https://awoldt.com/blog/nextjs-best-js-framework"
-        />
-
-        <meta
-          property="og:title"
-          content="Why Nextjs is the Best JavaScript Framework"
-        />
-        <meta
-          property="og:url"
-          content="https://awoldt.com/blog/nextjs-best-js-framework"
-        />
-
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:image"
-          content="https://awoldt.com/imgs/next-js-logo.png"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
-          rel="stylesheet"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
-          defer
-        ></script>
-      </Head>
-      <div className="container pt-5 blog-container">
+    <div className="container-fluid pt-5">
+      <div className="container">
         <div>
           <Breadcrumb blogTitle="Nextjs-best-js-framework" />
           <SocialShareBtns />
         </div>
 
         <hr style={{ marginTop: "25px" }}></hr>
-        <img
+        <Image
           className="img-fluid mt-4"
           src="/imgs/next-js-logo.png"
           alt="nextjs logo"
+          width={600}
+          height={200}
         />
 
         <article>
@@ -172,17 +147,12 @@ README.md`}
             <i>http://localhost:8080/about</i> will send back the about page.
             The index.js file will look like this:
           </p>
-          <SyntaxHighlighter
+          <CodeExmaple
             language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_5}
-          </SyntaxHighlighter>
+            code={js_code_5}
+            showLines={true}
+          />
+
           <p>
             As you can see, this file is simply a react component called Home
             which is the default export of the file. Nextjs will automatically
@@ -252,6 +222,6 @@ README.md`}
           ]}
         />
       </div>
-    </>
+    </div>
   );
 }

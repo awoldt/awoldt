@@ -35,14 +35,11 @@ export const code_5 = `while True:
         for i in spelling:
             current_spelling = current_spelling + spelling[i]
         print(current_spelling)
-
         guess = input("Guess: ").lower()
-
         # GAME OVER, USER GUESSED WORD!
         if guess == word:
             print("GAME OVER. YOU WON!THE WORD WAS " + word.upper())
             break
-
         if len(guess) > len(word):
             print("error: length of guess is too many characters")
             continue
@@ -53,9 +50,7 @@ export const code_5 = `while True:
                 if spelling[index] == "_":
                     if char == word[index]:
                         spelling[index] = char
-
                 index += 1
-
     attempts += 1`;
 
 export const code_6 = `# shows current user spelling of word, highlighting all correct chars guessed
@@ -63,14 +58,11 @@ current_spelling = ""
 for i in spelling:
     current_spelling = current_spelling + spelling[i]
 print(current_spelling)
-
 guess = input("Guess: ").lower()
-
 # GAME OVER, USER GUESSED WORD!
 if guess == word:
     print("GAME OVER. YOU WON! THE WORD WAS " + word.upper())
     break
-
 if len(guess) > len(word):
     print("error: length of guess is too many characters")
     continue
@@ -81,7 +73,6 @@ else:
         if spelling[index] == "_":
             if char == word[index]:
                 spelling[index] = char
-
         index += 1`;
 
 export const code_7 = `word = "hello"
@@ -93,7 +84,6 @@ index_char = 0
 for i in range(len(word)):
     spelling.update({index_char: "_"})
     index_char += 1
-
 while True:
     if attempts == 5:
         print("GAME OVER. THE WORD WAS '" + word.upper() + "'")
@@ -104,14 +94,11 @@ while True:
         for i in spelling:
             current_spelling = current_spelling + spelling[i]
         print(current_spelling)
-
         guess = input("Guess: ").lower()
-
         # GAME OVER, USER GUESSED WORD!
         if guess == word:
             print("GAME OVER. YOU WON!THE WORD WAS " + word.upper())
             break
-
         if len(guess) > len(word):
             print("error: length of guess is too many characters")
             continue
@@ -122,9 +109,7 @@ while True:
                 if spelling[index] == "_":
                     if char == word[index]:
                         spelling[index] = char
-
                 index += 1
-
         attempts += 1
 exit()`;
 
@@ -134,16 +119,13 @@ for char in guess:
     if spelling[index] == "_":
         if char == word[index]:
             spelling[index] = char
-
     index += 1`;
 
 export const js_code_1 = `const express = require("express");
 const app = express();
-
 app.listen(8080, () => {
     console.log("App is listening on port 8080!");
 });
-
 app.get("/", (req, res) => {
     res.send("Hello");
 });`;
@@ -157,7 +139,6 @@ app.get("/", (req, res) => {
       "&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Faccount&scope=user-top-read'>Sign in</a>"
   );
 });
-
 //this is the page user is redirected to after accepting data use on spotify's website
 //it does not have to be /account, it can be whatever page you want it to be
 app.get("/account", async (req, res) => {
@@ -167,7 +148,6 @@ app.get("/account", async (req, res) => {
 
 export const js_code_3 = `const queryString = require("node:querystring");
 const axios = require("axios");
-
 app.get("/account", async (req, res) => {
   const spotifyResponse = await axios.post(
       "https://accounts.spotify.com/api/token",
@@ -188,7 +168,6 @@ app.get("/account", async (req, res) => {
 })`;
 
 export const js_code_4 = `const axios = require("axios");
-
 const data = await axios.get(
   "https://api.spotify.com/v1/me/top/tracks?limit=50",
   {
@@ -215,7 +194,6 @@ export const js_code_5 = `export default function Home() {
 export const js_code_6 = `import { useState } from "react";
 import Gameover from "./gameOver";
 import { isThereWinner } from "../functions";
-
 export default function Grid() {
   const [whoseTurn, setWhoseTurn] = useState<"X" | "O">("X"); //X is default
   const [GRID_DATA, SET_GRID_DATA] = useState<(null[] | string[])[]>([
@@ -228,7 +206,6 @@ export default function Grid() {
     null
   ); //the indexs of the squares to color after someone wins, null means nobody won
   const [totalMoves, setTotalMoves] = useState<number>(0);
-
   return (
     <>
       {!gameOver && (
@@ -249,7 +226,6 @@ export default function Grid() {
                               ? (x[rowIndex][dataIndex] = "X")
                               : (x[rowIndex][dataIndex] = "O");
                             SET_GRID_DATA(x);
-
                             //2. check to see if anybody won based on new grid
                             isThereWinner(
                               x,
@@ -332,7 +308,6 @@ export const js_code_9 = `<div className="row" style={{ maxWidth: "600px" }} id=
                       ? (x[rowIndex][dataIndex] = "X")
                       : (x[rowIndex][dataIndex] = "O");
                     SET_GRID_DATA(x);
-
                     //2. check to see if anybody won based on new grid
                     isThereWinner(
                       x,
@@ -375,7 +350,6 @@ export const js_code_11 = `<div
       ? (x[rowIndex][dataIndex] = "X")
       : (x[rowIndex][dataIndex] = "O");
     SET_GRID_DATA(x);
-
     //2. check to see if anybody won based on new grid
     isThereWinner(
       x,
@@ -535,7 +509,6 @@ export const js_code_13 = `export default function Gameover({
         >
           Game over
         </code>
-
         <button
           style={{
             marginBottom: "25px",
@@ -559,7 +532,6 @@ export const js_code_13 = `export default function Gameover({
           <img src="/icons/arrow-repeat.svg" alt="restart game icon" /> Play
           again
         </button>
-
         {winningPattern! && (
           <span
             className="text-center"
@@ -569,7 +541,6 @@ export const js_code_13 = `export default function Gameover({
           </span>
         )}
       </div>
-
       <div style={{ maxWidth: "600px" }} id="grid_row" className="row">
         {gridData.map((row: any[], rowIndex: number) => {
           return (

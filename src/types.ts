@@ -1,4 +1,4 @@
 export interface other_blogs {
-  title: string;
-  link: string;
-}
+    title: string;
+    link: string;
+  }

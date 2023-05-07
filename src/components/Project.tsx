@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+
 export default function Project({
   img,
   icon,
@@ -24,16 +25,16 @@ export default function Project({
           border: "10px solid #011e36",
         }}
       >
-        <img
+        <Image
           src={img}
           alt={name + " screen capture"}
           className="img-fluid mb-4"
-          height={"150px"}
-          width={"-webkit-fill-available"}
+          width={600}
+          height={200}
         />
-        <img
-          width={"40"}
-          height={"40"}
+        <Image
+          width={50}
+          height={50}
           src={icon}
           className="mx-auto"
           style={{ marginRight: "10px", display: "block" }}

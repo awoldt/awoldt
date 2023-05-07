@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
-import Breadcrumb from "@/components/Breadcrumb";
+import CodeExmaple from "../../../components/CodeExample";
 import SocialShareBtns from "@/components/SocialShareBtns";
-import Head from "next/head";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
+import Image from "next/image";
+
+import { Metadata } from "next";
 import {
   js_code_10,
   js_code_11,
@@ -19,44 +19,17 @@ import {
   js_code_9,
 } from "@/sourceCode";
 
+export const metadata: Metadata = {
+  title: "How to build a Tic-Tac-Toe Game with Reactjs",
+  description:
+    "Learn how to build a basic game of tic tac toe using react js and typescript. This turorial will teach you about components, props, and state.",
+  alternates: { canonical: "https://awoldt.com/blog/react-tic-tac-toe" },
+};
+
 export default function SpotifyApiWithExpress() {
   return (
-    <>
-      <Head>
-        <title>How to Build a Tic Tac Toe Game with Reactjs </title>
-        <meta
-          name="description"
-          content="Learn how to code a basic game of tic tac toe using reactjs along with typescript"
-        />
-        <link
-          rel="canonical"
-          href="https://awoldt.com/blog/react-tic-tac-toe"
-        />
-
-        <meta
-          property="og:title"
-          content="Build a Basic Game of Tic Tac Toe with Reactjs"
-        />
-        <meta
-          property="og:url"
-          content="https://awoldt.com/blog/react-tic-tac-toe"
-        />
-
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:image"
-          content="https://awoldt.com/imgs/react-tic-tac-toe.png"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
-          rel="stylesheet"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
-          defer
-        ></script>
-      </Head>
-      <div className="container pt-5 blog-container">
+    <div className="container-fluid pt-5">
+      <div className="container">
         <div>
           <Breadcrumb blogTitle="react-tic-tac-toe" />
           <SocialShareBtns />
@@ -114,25 +87,21 @@ tsconfig.json`}
             purposes, we will create a new component called <i>Grid.tsx</i> that
             will house all the logic for this grid.
           </p>
-          <img
+          <Image
             src="/icons/tic-tac-toe-grid.svg"
             alt="tic tac toe grid"
             className="img-fluid mb-4"
-            height={250}
-            width={250}
+            width={200}
+            height={200}
           />
           <p>This is what the grid component React code should look like:</p>
-          <SyntaxHighlighter
+
+          <CodeExmaple
             language="typescript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_6}
-          </SyntaxHighlighter>
+            code={js_code_6}
+            showLines={true}
+          />
+
           <p>
             This may look overwhelming initially, but we will break down what is
             happening in this component.
@@ -144,16 +113,12 @@ tsconfig.json`}
             variable does, as each state dictates what is rendered on screen at
             any given moment during the game.
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-          >
-            {js_code_7}
-          </SyntaxHighlighter>
+
+          <CodeExmaple
+            language="typescript"
+            code={js_code_7}
+            showLines={false}
+          />
 
           <ul>
             <li>
@@ -176,25 +141,24 @@ tsconfig.json`}
                 being the rows for the grid. An example structure for this
                 variable could be:
               </p>
-              <SyntaxHighlighter
-                language="javascript"
-                customStyle={{
-                  backgroundColor: "#002c4f",
-                  border: "10px solid #011e36",
-                }}
-                style={dracula}
-              >
-                {js_code_10}
-              </SyntaxHighlighter>
+
+              <CodeExmaple
+                language="typescript"
+                code={js_code_10}
+                showLines={false}
+              />
+
               <p>
                 As you can see, three separate arrays are nested inside the
                 parent array, each representing a row on the grid. A visual
                 representation of this grid shown to the end user would be:
               </p>
-              <img
+              <Image
                 src="/imgs/tic-tac-toe-example.jpg"
                 alt="tic tac toe board grid example"
                 className="img-fluid blog-imgs"
+                width={600}
+                height={200}
               />
             </li>
             <li>
@@ -234,17 +198,12 @@ tsconfig.json`}
             the <var>gameOver</var> state variable, the actual tic tac toe grid,
             or an end-game message to the user. Notice the conditional renders:
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_8}
-          </SyntaxHighlighter>
+          <CodeExmaple
+            language="typescript"
+            code={js_code_8}
+            showLines={true}
+          />
+
           <p>
             The code above checks whether the <var>gameOver</var> boolean is
             true or false. If false, it will render the grid to the screen. If
@@ -252,17 +211,12 @@ tsconfig.json`}
             each render. Let&apos;s take a look at the code for when{" "}
             <var>gameOver</var> is false (render the actual grid):
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_9}
-          </SyntaxHighlighter>
+
+          <CodeExmaple
+            language="typescript"
+            code={js_code_9}
+            showLines={true}
+          />
 
           <p>
             First, we start out mapping all the values from the{" "}
@@ -276,32 +230,31 @@ tsconfig.json`}
             <b>O</b> on each loop. For example, if the value of the current
             element is <b>X</b>, it will render as this on screen:
           </p>
-          <img
+          <Image
             src="/imgs/tic-tac-toe-x.jpg"
             alt="tic tac toe X"
             className="img-fluid mb-3 blog-imgs"
+            width={600}
+            height={200}
           />
           <p>If it is null, it will redner as this on screen:</p>
-          <img
+          <Image
             src="/imgs/tic-tac-toe-null.jpg"
             alt="tic tac toe empty space"
             className="img-fluid mb-3 blog-imgs"
+            width={600}
+            height={200}
           />
           <p>
             When a value is null, the square will contain logic for when it is
             clicked:
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {js_code_11}
-          </SyntaxHighlighter>
+          <CodeExmaple
+            language="typescript"
+            code={js_code_11}
+            showLines={true}
+          />
+
           <h3>Updating Grid Squares with onClick Event</h3>
           <p>
             The onClick event will update the <var>GRID_DATA</var> variable and
@@ -314,16 +267,12 @@ tsconfig.json`}
 
           <ol>
             <li>
-              <SyntaxHighlighter
-                language="javascript"
-                customStyle={{
-                  backgroundColor: "#002c4f",
-                  border: "10px solid #011e36",
-                }}
-                style={dracula}
-              >
-                {`const x = [...GRID_DATA];`}
-              </SyntaxHighlighter>
+              <CodeExmaple
+                language="typescript"
+                code={`const x = [...GRID_DATA];`}
+                showLines={false}
+              />
+
               <p>
                 We first will set the variable <var>x</var> to the 2D{" "}
                 <var>GRID_DATA</var> array using the spread operator. Spread
@@ -344,19 +293,15 @@ tsconfig.json`}
               </p>
             </li>
             <li>
-              <SyntaxHighlighter
-                language="javascript"
-                customStyle={{
-                  backgroundColor: "#002c4f",
-                  border: "10px solid #011e36",
-                }}
-                style={dracula}
-              >
-                {`whoseTurn === "X"
+              <CodeExmaple
+                language="typescript"
+                code={`whoseTurn === "X"
       ? (x[rowIndex][dataIndex] = "X")
       : (x[rowIndex][dataIndex] = "O");
 SET_GRID_DATA(x);`}
-              </SyntaxHighlighter>
+                showLines={false}
+              />
+
               <p>
                 Based on the <var>whoseTurn</var> state variable, we will place
                 an <b>X</b> or an <b>O</b> inside the square. There is a ternary
@@ -410,17 +355,12 @@ SET_GRID_DATA(x);`}
                 The isThereWinner function will look like this:
               </p>
 
-              <SyntaxHighlighter
-                language="javascript"
-                customStyle={{
-                  backgroundColor: "#002c4f",
-                  border: "10px solid #011e36",
-                }}
-                style={dracula}
-                showLineNumbers
-              >
-                {js_code_12}
-              </SyntaxHighlighter>
+              <CodeExmaple
+                language="typescript"
+                code={js_code_12}
+                showLines={true}
+              />
+
               <p>
                 We will not go too into depth with this function. You can go
                 through this code and see what it does. It will check all
@@ -457,19 +397,23 @@ SET_GRID_DATA(x);`}
             <li>Message stating that nobody won</li>
           </ol>
           <p>An example of a winning pattern would resemble this:</p>
-          <img
+          <Image
             src="/imgs/tic-tac-toe-winning-pattern.jpg"
             alt="tic tac toe winning pattern"
             className="img-fluid mb-3 blog-imgs"
             id="winning_pattern"
+            width={600}
+            height={200}
           />
           <p>
             While an example of a game where nobody won would resemble this:{" "}
           </p>
-          <img
+          <Image
             src="/imgs/tic-tac-toe-no-winner.jpg"
             alt="tic tac toe nobody won"
             className="img-fluid mb-3 blog-imgs"
+            width={600}
+            height={200}
           />
           <p>
             It might look like the GameOver component is doing little, but it is
@@ -478,17 +422,12 @@ SET_GRID_DATA(x);`}
             Observe the code for this component below:
           </p>
 
-          <SyntaxHighlighter
-            language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-            showLineNumbers
-          >
-            {js_code_13}
-          </SyntaxHighlighter>
+          <CodeExmaple
+            language="typescript"
+            code={js_code_13}
+            showLines={true}
+          />
+
           <p>
             Notice all the props being passed into this component. The{" "}
             <var>winningPattern</var> state variable from the parent component
@@ -498,31 +437,24 @@ SET_GRID_DATA(x);`}
             <a href="#winning_pattern">exmaple above</a> of a winning pattern,
             the <var>winningPattern</var> array would look like this:
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-          >
-            {js_code_14}
-          </SyntaxHighlighter>
+
+          <CodeExmaple
+            language="typescript"
+            code={js_code_14}
+            showLines={false}
+          />
+
           <p>
             The &quot;Play again&quot; button shown will simply set the state of
             all the variables for the grid back to default values:
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            showLineNumbers
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-          >
-            {js_code_15}
-          </SyntaxHighlighter>
+
+          <CodeExmaple
+            language="typescript"
+            code={js_code_15}
+            showLines={true}
+          />
+
           <h2>Conclusion</h2>
           <p>
             Congrats, you just created a basic tic tac toe game using React! It
@@ -534,34 +466,27 @@ SET_GRID_DATA(x);`}
             <i>GameOver.tsx</i> component. So the <i>App.tsx</i> component will
             look like this:
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            showLineNumbers
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-          >
-            {js_code_16}
-          </SyntaxHighlighter>
+
+          <CodeExmaple
+            language="typescript"
+            code={js_code_16}
+            showLines={true}
+          />
+
           <p>
             The top of the <i>Grid.tsx</i> component will have all these
             imports, remember to include them as they are needed for this game
             to function properly:
           </p>
-          <SyntaxHighlighter
-            language="javascript"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-          >
-            {`import { useState } from "react";
-import Gameover from "./gameOver";
-import { isThereWinner } from "../functions";`}
-          </SyntaxHighlighter>
+
+          <CodeExmaple
+            language="typescript"
+            code={`import { useState } from "react";
+                import Gameover from "./gameOver";
+                import { isThereWinner } from "../functions";`}
+            showLines={false}
+          />
+
           <p>
             Play the production ready game of this app{" "}
             <a
@@ -593,6 +518,6 @@ import { isThereWinner } from "../functions";`}
           ]}
         />
       </div>
-    </>
+    </div>
   );
 }
