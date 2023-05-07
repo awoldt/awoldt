@@ -2,7 +2,6 @@ import CodeExmaple from "../../../components/CodeExample";
 import SocialShareBtns from "@/components/SocialShareBtns";
 import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
-import Image from "next/image";
 import { js_code_5 } from "@/sourceCode";
 
 import { Metadata } from "next";
@@ -24,7 +23,7 @@ export default function NextjsBestJsFramework() {
         </div>
 
         <hr style={{ marginTop: "25px" }}></hr>
-        <Image
+        <img
           className="img-fluid mt-4"
           src="/imgs/next-js-logo.png"
           alt="nextjs logo"

@@ -2,7 +2,6 @@ import CodeExmaple from "../../../components/CodeExample";
 import SocialShareBtns from "@/components/SocialShareBtns";
 import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
-import Image from "next/image";
 
 import { Metadata } from "next";
 import {
@@ -87,7 +86,7 @@ tsconfig.json`}
             purposes, we will create a new component called <i>Grid.tsx</i> that
             will house all the logic for this grid.
           </p>
-          <Image
+          <img
             src="/icons/tic-tac-toe-grid.svg"
             alt="tic tac toe grid"
             className="img-fluid mb-4"
@@ -153,7 +152,7 @@ tsconfig.json`}
                 parent array, each representing a row on the grid. A visual
                 representation of this grid shown to the end user would be:
               </p>
-              <Image
+              <img
                 src="/imgs/tic-tac-toe-example.jpg"
                 alt="tic tac toe board grid example"
                 className="img-fluid blog-imgs"
@@ -230,7 +229,7 @@ tsconfig.json`}
             <b>O</b> on each loop. For example, if the value of the current
             element is <b>X</b>, it will render as this on screen:
           </p>
-          <Image
+          <img
             src="/imgs/tic-tac-toe-x.jpg"
             alt="tic tac toe X"
             className="img-fluid mb-3 blog-imgs"
@@ -238,7 +237,7 @@ tsconfig.json`}
             height={200}
           />
           <p>If it is null, it will redner as this on screen:</p>
-          <Image
+          <img
             src="/imgs/tic-tac-toe-null.jpg"
             alt="tic tac toe empty space"
             className="img-fluid mb-3 blog-imgs"
@@ -397,7 +396,7 @@ SET_GRID_DATA(x);`}
             <li>Message stating that nobody won</li>
           </ol>
           <p>An example of a winning pattern would resemble this:</p>
-          <Image
+          <img
             src="/imgs/tic-tac-toe-winning-pattern.jpg"
             alt="tic tac toe winning pattern"
             className="img-fluid mb-3 blog-imgs"
@@ -408,7 +407,7 @@ SET_GRID_DATA(x);`}
           <p>
             While an example of a game where nobody won would resemble this:{" "}
           </p>
-          <Image
+          <img
             src="/imgs/tic-tac-toe-no-winner.jpg"
             alt="tic tac toe nobody won"
             className="img-fluid mb-3 blog-imgs"

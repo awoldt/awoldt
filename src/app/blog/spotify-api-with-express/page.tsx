@@ -3,7 +3,6 @@ import { js_code_1, js_code_2, js_code_3, js_code_4 } from "@/sourceCode";
 import SocialShareBtns from "@/components/SocialShareBtns";
 import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
-import Image from "next/image";
 
 import { Metadata } from "next";
 
@@ -100,7 +99,7 @@ export default function SpotifyApiWithExpress() {
             Give the app whatever name you like. As you can see, I already have
             an app called music-visualizer created.
           </p>
-          <Image
+          <img
             src="/imgs/spotify-dev-dashboard.webp"
             className="img-fluid blog-imgs"
             alt="spotify developer dashboard"
@@ -157,7 +156,7 @@ export default function SpotifyApiWithExpress() {
             First, the client ID can be found on the dashboard page of the app
             you created in the Spotify developer account.
           </p>
-          <Image
+          <img
             src="/imgs/spotify-clientid.webp"
             className="img-fluid blog-imgs"
             alt="spotify client id found on dashboard"
@@ -174,7 +173,7 @@ export default function SpotifyApiWithExpress() {
             </strong>
             .
           </p>
-          <Image
+          <img
             src="/imgs/spotify-edit-settings.webp"
             className="img-fluid blog-imgs"
             alt="get to application settings edit button at top right"
@@ -191,7 +190,7 @@ export default function SpotifyApiWithExpress() {
             (Throughout this article, I refer to this as redirect URL, not URI,
             but these two words can be used interchangeably).
           </p>
-          <Image
+          <img
             src="/imgs/spotify-redirect-url.webp"
             className="img-fluid blog-imgs"
             alt="changing the redirect urls in spotify developer settings"
@@ -302,7 +301,7 @@ export default function SpotifyApiWithExpress() {
             log into their Spotify account and accept or decline access to their
             data.
           </p>
-          <Image
+          <img
             src="/imgs/spotify-signin.webp"
             className="img-fluid blog-imgs"
             alt="spotify sign in page user is redirected to"
@@ -421,7 +420,7 @@ export default function SpotifyApiWithExpress() {
                 secret can be found in the dashboard featured in the image
                 below.
               </p>
-              <Image
+              <img
                 src="/imgs/spotify-clientdashboard-keys.webp"
                 className="img-fluid blog-imgs"
                 alt="get both the client id and the client secret from the developers dashboard"
@@ -472,7 +471,7 @@ export default function SpotifyApiWithExpress() {
             code, this is what happens in the console after clicking sign-in on
             the root route:
           </p>
-          <Image
+          <img
             src="/imgs/spotify-response.webp"
             className="img-fluid blog-imgs"
             alt="the json formatted response spotify will send back to console"
@@ -515,7 +514,7 @@ export default function SpotifyApiWithExpress() {
           />
 
           <p>The response will look like this in the console:</p>
-          <Image
+          <img
             src="/imgs/spotify-api-call.webp"
             className="img-fluid blog-imgs"
             alt="what data returned from spotify api call will look like"
