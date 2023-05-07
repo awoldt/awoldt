@@ -1,8 +1,15 @@
 "use client";
-
-
 export default function SocialShareBtns() {
-    return (
+  return (
+    <>
+      <link
+        href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+        rel="stylesheet"
+      />
+      <script
+        src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
+        defer
+      ></script>
       <div className="shareon">
         <a
           className="facebook"
@@ -48,5 +55,6 @@ export default function SocialShareBtns() {
           }}
         ></div>
       </div>
-    );
-  }
+    </>
+  );
+}

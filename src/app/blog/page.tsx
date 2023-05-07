@@ -13,7 +13,7 @@ export default function BlogsPage() {
   return (
     <div className="container-fluid pt-5" style={{ backgroundColor: "green" }}>
       <div className="container">
-        <Nav page="projects" />
+        <Nav page="blogs" />
         <hr></hr>
         <div className="p-3">
           <h1>Blogs</h1>

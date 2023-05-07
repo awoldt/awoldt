@@ -47,7 +47,8 @@ html {
   background-color: #001220;
 }
 
-.container-fluid, .container {
+.container-fluid,
+.container {
   background-color: #001220 !important;
 }
 main {
@@ -58,7 +59,6 @@ h1,
 h2,
 h3,
 p,
-span,
 code,
 li,
 b {
@@ -141,6 +141,8 @@ pre {
 }
 .breadcrumb-item a {
   color: white;
+  text-decoration: none ;
+
 }
 
 li::before {
@@ -150,7 +152,6 @@ li::before {
 .blog-imgs {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 700px;
 }
 
 .other-blogs-span {
@@ -241,10 +242,16 @@ li::before {
   margin: auto;
   margin-top: 25px;
   font-family: Silkscreen-Regular !important;
+  color: white !important;
 }
 
 #tech_frame_banner {
   font-family: Silkscreen-Regular !important;
   text-align: center;
   margin-top: 75px;
+}
+
+.code-example-div {
+  background-color: #002c4f !important;
+  border: 10px solid #011e36 !important;
 }

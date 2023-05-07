@@ -1,11 +1,6 @@
 "use client";
-
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
-import py from "react-syntax-highlighter/dist/esm/languages/hljs/python";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
-SyntaxHighlighter.registerLanguage("javascript", js);
-SyntaxHighlighter.registerLanguage("python", py);
 
 export default function CodeExmaple({
   language,
@@ -18,11 +13,8 @@ export default function CodeExmaple({
 }) {
   return (
     <SyntaxHighlighter
-      language={language}
-      customStyle={{
-        backgroundColor: "#002c4f",
-        border: "10px solid #011e36",
-      }}
+      className="code-example-div"
+      language="python"
       showLineNumbers={showLines}
       style={dracula}
     >

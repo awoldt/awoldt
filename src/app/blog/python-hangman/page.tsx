@@ -1,4 +1,3 @@
-
 import CodeExmaple from "../../../components/CodeExample";
 import {
   code_1,
@@ -14,9 +13,18 @@ import SocialShareBtns from "@/components/SocialShareBtns";
 import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "How to Build a Hangman Game with Python",
+  description:
+    "Learn how to build a game of hangman in python. This program is very easy to follow and can teach you fundamentals of python. ",
+  alternates: { canonical: "https://awoldt.com/blog/python-hangman" },
+};
+
 export default function PythonHangman() {
   return (
-    <div className="container-fluid pt-5 blog-container">
+    <div className="container-fluid pt-5">
       <div className="container">
         <div>
           <Breadcrumb blogTitle="Python-Hangman" />
@@ -135,21 +143,14 @@ export default function PythonHangman() {
           </p>
           <p>
             The code below will loop for the length of the word to be guessed
-            and set each value of the{" "}
-            <i>
-              <b>spelling</b>
-            </i>{" "}
-            dictionary to &quot;_&quot;:
+            and set each value of the <var>spelling</var> dictionary to
+            &quot;_&quot;:
           </p>
 
           <CodeExmaple language="python" code={code_3} showLines={true} />
 
           <p>
-            This will result in{" "}
-            <i>
-              <b>spelling</b>
-            </i>{" "}
-            to be set as:
+            This will result in <var>spelling</var> to be set as:
           </p>
 
           <CodeExmaple language="python" code={code_4} showLines={false} />
@@ -161,11 +162,8 @@ export default function PythonHangman() {
           <p>
             Before we go any further, all of the code above is to set all the
             variables needed for the program to work, along with populating each
-            value of the{" "}
-            <i>
-              <b>spelling</b>
-            </i>{" "}
-            dictionary to &quot;_&quot;. Nothing too crazy.
+            value of the <var>spelling</var> dictionary to &quot;_&quot;.
+            Nothing too crazy.
           </p>
           <hr></hr>
           <p>Next, lets focus on this block of code: </p>
