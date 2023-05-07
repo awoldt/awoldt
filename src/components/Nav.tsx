@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+
 export default function Nav({ page }: { page: "projects" | "blogs" }) {
   return (
     <nav className="navbar">
@@ -6,14 +7,14 @@ export default function Nav({ page }: { page: "projects" | "blogs" }) {
         {page === "projects" && (
           <>
             <a className="navbar-brand" href={"/"} title="Return home">
-              <img
+              <Image
                 src="favicon.svg"
                 alt="Logo"
                 width="35"
                 height="35"
-                className="d-inline-block align-text-top mt-2"
+                className="d-inline-block align-text-top"
               />
-              Awoldt
+              <span>Awoldt</span>
             </a>
 
             <div className="d-flex">
@@ -27,7 +28,7 @@ export default function Nav({ page }: { page: "projects" | "blogs" }) {
         {page === "blogs" && (
           <>
             <a className="navbar-brand" href={"/"} title="Return home">
-              <img
+              <Image
                 src="favicon.svg"
                 alt="Logo"
                 width="35"

@@ -47,6 +47,13 @@ html {
   background-color: #001220;
 }
 
+.container-fluid, .container {
+  background-color: #001220 !important;
+}
+main {
+  padding: 0px !important;
+}
+
 h1,
 h2,
 h3,
@@ -55,7 +62,7 @@ span,
 code,
 li,
 b {
-  color: white;
+  color: white !important;
 }
 
 hr {
@@ -87,6 +94,11 @@ pre {
   font-family: Silkscreen-Regular;
 }
 
+#awoldt_description {
+  margin-bottom: 25px;
+  padding-top: 25px;
+}
+
 .blog-preview-img {
   width: 100px;
   height: 100px;
@@ -100,6 +112,7 @@ pre {
 
 .blog-preview-link {
   color: white;
+  text-decoration: none;
 }
 
 .hover-btn:hover {
@@ -159,11 +172,11 @@ li::before {
 }
 
 .navbar-brand {
-  font-size: 35px;
+  font-size: 25px !important;
   color: inherit;
 }
 .navbar-brand:hover {
-  color: white;
+  color: white !important;
 }
 
 .active-page {
@@ -177,4 +190,61 @@ li::before {
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+#backdrop_container {
+  background-size: cover;
+  padding-top: 400px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#main_container {
+  color: white;
+  animation: fadein 0.5s;
+}
+
+#awoldt_header {
+  font-family: Silkscreen-Regular;
+}
+
+#github_link_btn {
+  margin-right: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#linkedin_link_btn {
+  border-radius: 0px;
+  margin-right: 5px;
+}
+
+#email_link_btn {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.prof-social-link {
+  text-decoration: none;
+  color: black;
+}
+
+.prof-social-icon {
+  margin-right: 5px;
+}
+
+.prof-personal-link {
+  width: 166.165px;
+  margin: auto;
+  margin-top: 25px;
+  font-family: Silkscreen-Regular !important;
+}
+
+#tech_frame_banner {
+  font-family: Silkscreen-Regular !important;
+  text-align: center;
+  margin-top: 75px;
 }

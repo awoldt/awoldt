@@ -1,5 +1,5 @@
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
+import CodeExmaple from "../../../components/CodeExample";
 import {
   code_1,
   code_2,
@@ -10,46 +10,14 @@ import {
   code_7,
   code_8,
 } from "@/sourceCode";
-import Head from "next/head";
 import SocialShareBtns from "@/components/SocialShareBtns";
 import Breadcrumb from "@/components/Breadcrumb";
 import OtherBlogs from "@/components/OtherBlogs";
 
 export default function PythonHangman() {
   return (
-    <>
-      <Head>
-        <title>How to Build a Basic Game of Hangman with Python</title>
-        <meta
-          name="description"
-          content="Learn step-by-step how to write a basic python program that lets users play hangman."
-        />
-        <link rel="canonical" href="https://awoldt.com/blog/python-hangman" />
-
-        <meta
-          property="og:title"
-          content="Building a Basic Game of Hangman with Python"
-        />
-        <meta
-          property="og:url"
-          content="https://awoldt.com/blog/python-hangman"
-        />
-
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:image"
-          content="https://awoldt.com/imgs/python-hangman.png"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
-          rel="stylesheet"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js"
-          defer
-        ></script>
-      </Head>
-      <div className="container pt-5 blog-container">
+    <div className="container-fluid pt-5 blog-container">
+      <div className="container">
         <div>
           <Breadcrumb blogTitle="Python-Hangman" />
           <SocialShareBtns />
@@ -73,17 +41,8 @@ export default function PythonHangman() {
           </p>
 
           <p>First off, let&apos;s start with this block of code:</p>
-          <SyntaxHighlighter
-            language="python"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            showLineNumbers
-            style={dracula}
-          >
-            {code_1}
-          </SyntaxHighlighter>
+          <CodeExmaple language="python" code={code_1} showLines={true} />
+
           <p>
             Here is a breakdown of what these variables represent and what this
             code will do:
@@ -144,16 +103,11 @@ export default function PythonHangman() {
                     The current word the user needs to guess is hello.{" "}
                     <var>spelling</var> will look like this:{" "}
                   </p>
-                  <SyntaxHighlighter
+                  <CodeExmaple
                     language="python"
-                    customStyle={{
-                      backgroundColor: "#002c4f",
-                      border: "10px solid #011e36",
-                    }}
-                    style={dracula}
-                  >
-                    {code_2}
-                  </SyntaxHighlighter>
+                    code={code_2}
+                    showLines={false}
+                  />
                 </li>
               </ul>
             </li>
@@ -188,17 +142,8 @@ export default function PythonHangman() {
             dictionary to &quot;_&quot;:
           </p>
 
-          <SyntaxHighlighter
-            language="python"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-            showLineNumbers
-          >
-            {code_3}
-          </SyntaxHighlighter>
+          <CodeExmaple language="python" code={code_3} showLines={true} />
+
           <p>
             This will result in{" "}
             <i>
@@ -207,16 +152,8 @@ export default function PythonHangman() {
             to be set as:
           </p>
 
-          <SyntaxHighlighter
-            language="python"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-          >
-            {code_4}
-          </SyntaxHighlighter>
+          <CodeExmaple language="python" code={code_4} showLines={false} />
+
           <p>
             Which will be represented as &quot;_____&quot;. It is blank because
             the user would not have guessed any characters when the game starts.
@@ -233,17 +170,7 @@ export default function PythonHangman() {
           <hr></hr>
           <p>Next, lets focus on this block of code: </p>
 
-          <SyntaxHighlighter
-            language="python"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-            showLineNumbers
-          >
-            {code_5}
-          </SyntaxHighlighter>
+          <CodeExmaple language="python" code={code_5} showLines={true} />
 
           <p>
             This loop will keep the user in the game while they attempt to guess
@@ -262,17 +189,8 @@ export default function PythonHangman() {
             block:
           </p>
 
-          <SyntaxHighlighter
-            language="python"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-            showLineNumbers
-          >
-            {code_6}
-          </SyntaxHighlighter>
+          <CodeExmaple language="python" code={code_6} showLines={true} />
+
           <p>
             On each loop, the <var>current_spelling</var> variable will display
             how many characters the user has got correct and which ones still
@@ -297,17 +215,8 @@ export default function PythonHangman() {
             variable. If not, there is another loop that will execute:
           </p>
 
-          <SyntaxHighlighter
-            language="python"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-            showLineNumbers
-          >
-            {code_8}
-          </SyntaxHighlighter>
+          <CodeExmaple language="python" code={code_8} showLines={true} />
+
           <p>
             This code block is critical. It will check each character of the
             user&apos;s guess and compare it to the current word being spelled.
@@ -353,17 +262,8 @@ export default function PythonHangman() {
           <p id="source_code">
             <b>Here is the source code in its entirety:</b>
           </p>
-          <SyntaxHighlighter
-            language="python"
-            customStyle={{
-              backgroundColor: "#002c4f",
-              border: "10px solid #011e36",
-            }}
-            style={dracula}
-            showLineNumbers
-          >
-            {code_7}
-          </SyntaxHighlighter>
+
+          <CodeExmaple language="python" code={code_7} showLines={true} />
         </article>
 
         <hr></hr>
@@ -379,11 +279,11 @@ export default function PythonHangman() {
             },
             {
               title: "How to Build a Tic Tac Toe Game with Reactjs",
-              link: "/blog/react-tic-tac-toe"
-            }
+              link: "/blog/react-tic-tac-toe",
+            },
           ]}
         />
       </div>
-    </>
+    </div>
   );
 }
