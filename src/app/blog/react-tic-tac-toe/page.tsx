@@ -96,7 +96,7 @@ tsconfig.json`}
           <p>This is what the grid component React code should look like:</p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_6}
             showLines={true}
           />
@@ -114,7 +114,7 @@ tsconfig.json`}
           </p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_7}
             showLines={false}
           />
@@ -142,7 +142,7 @@ tsconfig.json`}
               </p>
 
               <CodeExmaple
-                language="typescript"
+                language="javascript"
                 code={js_code_10}
                 showLines={false}
               />
@@ -198,7 +198,7 @@ tsconfig.json`}
             or an end-game message to the user. Notice the conditional renders:
           </p>
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_8}
             showLines={true}
           />
@@ -212,7 +212,7 @@ tsconfig.json`}
           </p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_9}
             showLines={true}
           />
@@ -249,7 +249,7 @@ tsconfig.json`}
             clicked:
           </p>
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_11}
             showLines={true}
           />
@@ -267,7 +267,7 @@ tsconfig.json`}
           <ol>
             <li>
               <CodeExmaple
-                language="typescript"
+                language="javascript"
                 code={`const x = [...GRID_DATA];`}
                 showLines={false}
               />
@@ -293,7 +293,7 @@ tsconfig.json`}
             </li>
             <li>
               <CodeExmaple
-                language="typescript"
+                language="javascript"
                 code={`whoseTurn === "X"
       ? (x[rowIndex][dataIndex] = "X")
       : (x[rowIndex][dataIndex] = "O");
@@ -355,7 +355,7 @@ SET_GRID_DATA(x);`}
               </p>
 
               <CodeExmaple
-                language="typescript"
+                language="javascript"
                 code={js_code_12}
                 showLines={true}
               />
@@ -422,7 +422,7 @@ SET_GRID_DATA(x);`}
           </p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_13}
             showLines={true}
           />
@@ -438,7 +438,7 @@ SET_GRID_DATA(x);`}
           </p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_14}
             showLines={false}
           />
@@ -449,7 +449,7 @@ SET_GRID_DATA(x);`}
           </p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_15}
             showLines={true}
           />
@@ -467,7 +467,7 @@ SET_GRID_DATA(x);`}
           </p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={js_code_16}
             showLines={true}
           />
@@ -479,10 +479,10 @@ SET_GRID_DATA(x);`}
           </p>
 
           <CodeExmaple
-            language="typescript"
+            language="javascript"
             code={`import { useState } from "react";
-                import Gameover from "./gameOver";
-                import { isThereWinner } from "../functions";`}
+import Gameover from "./gameOver";
+import { isThereWinner } from "../functions";`}
             showLines={false}
           />
 
