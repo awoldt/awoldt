@@ -10,22 +10,6 @@ export default function Tech() {
         style={{ marginBottom: "25px" }}
       >
         <img
-          src="/icons/aws-icon.svg"
-          style={{ width: "85px", height: "85px" }}
-          alt="AWS icon"
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary"
-        >
-          AWS
-        </span>
-      </div>
-      <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
-      >
-        <img
           src="/icons/bootstrap-icon.svg"
           style={{ width: "85px", height: "85px" }}
           alt="bootstrap icon"
@@ -99,6 +83,22 @@ export default function Tech() {
           className="text-secondary mt-2"
         >
           Next.js
+        </span>
+      </div>
+      <div
+        className="col-xs-6 col-lg-3 col-sm-4"
+        style={{ marginBottom: "25px" }}
+      >
+        <img
+          src="/icons/postgres-icon.svg"
+          style={{ width: "85px", height: "85px" }}
+          alt="postgres elephant icon"
+        />
+        <span
+          style={{ display: "block", fontWeight: "bold" }}
+          className="text-secondary"
+        >
+          PostgreSQL
         </span>
       </div>
       <div
