@@ -80,18 +80,6 @@ export default function Home() {
                     />
                   </div>
                 </a>
-
-                <a href={"/blog"}>
-                  <div className="btn hover-btn prof-personal-link">
-                    <span>Blogs</span>{" "}
-                    <Image
-                      src="/icons/file-richtext.svg"
-                      alt="project icon"
-                      width={20}
-                      height={20}
-                    />
-                  </div>
-                </a>
               </div>
             </div>
             <div className="col-xl-6">

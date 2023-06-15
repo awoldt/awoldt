@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     <div className="container-fluid">
       <div className="container text-center pt-5">
-        <Nav page="projects" />
+        <Nav />
         <hr></hr>
 
         <h1 className="text-center">Personal Projects</h1>

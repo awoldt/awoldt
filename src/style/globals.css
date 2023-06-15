@@ -23,10 +23,6 @@
   #backdrop_container {
     background-image: url(../../public/waves.svg);
   }
-  .blog-container p {
-    font-size: 18px;
-    max-width: 1000px;
-  }
 }
 
 /* SM AND SMALLER */
@@ -89,73 +85,30 @@ pre {
   color: white;
 }
 
-#blogs_header {
-  font-size: 90px;
-  font-family: Silkscreen-Regular;
-}
-
 #awoldt_description {
   margin-bottom: 25px;
   padding-top: 25px;
 }
 
-.blog-preview-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.blog-preview-title {
-  display: inline-block;
-}
-
-.blog-preview-link {
-  color: white;
-  text-decoration: none;
-}
-
 .hover-btn:hover {
   background-color: #002c4f;
 }
-#awoldt_blog_link {
-  color: white;
-  font-family: Silkscreen-Regular;
-  font-size: 25px;
-  text-decoration: none;
-}
+
 .shareon {
   float: right;
 }
-.blog-div {
-  padding: 20px;
-  cursor: pointer;
-  border-radius: 8px;
-}
-.blog-div:hover {
-  background-color: #011e36;
-}
+
 .breadcrumb-item {
   color: white !important;
   font-family: Silkscreen-Regular;
 }
 .breadcrumb-item a {
   color: white;
-  text-decoration: none ;
-
+  text-decoration: none;
 }
 
 li::before {
   color: #002c4f !important;
-}
-
-.blog-imgs {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.other-blogs-span {
-  font-family: Silkscreen-Regular;
 }
 
 .terminal-code {
