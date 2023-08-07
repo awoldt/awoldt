@@ -40,13 +40,14 @@ export default function Projects() {
 
         <div className="row justify-content-center">
           <Project
-            img={"/imgs/botbook_capture.jpg"}
-            icon={"/icons/botbook_icon.svg"}
-            name={"BotBook"}
-            about={"An entire dictionary generated using OpenAI"}
-            url={"https://botbook.dev/"}
-            gitUrl={"https://github.com/awoldt/BotBook"}
+            img={"/imgs/tictactoe_capture.png"}
+            icon={"/icons/tictactoe.svg"}
+            name={"Tic Tac Toe"}
+            about={"Simple tic tac toe game to play against friends with"}
+            url={"https://tic-tac-toe-seven-wine.vercel.app/"}
+            gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
           />
+
           <Project
             img={"/imgs/wordlebin_capture.PNG"}
             icon={"/icons/wordlebin_icon.ico"}
@@ -66,20 +67,12 @@ export default function Projects() {
             gitUrl={"https://github.com/awoldt/github-dashboard"}
           />
           <Project
-            img={"/imgs/chatbot_capture.jpg"}
-            icon={"/icons/chatbot.svg"}
-            name={"ChatBot"}
-            about={"Have converstaions with an AI bot powered by OpenAI"}
-            url={"https://ai-chatbot-iota.vercel.app/"}
-            gitUrl={"https://github.com/awoldt/AI-Chatbot"}
-          />
-          <Project
-            img={"/imgs/customerdb_capture.jpg"}
-            icon={"/icons/database-fill.svg"}
-            name={"Mock Customer API"}
-            about={"Simple API to fetch randomly generated fake customer data"}
-            url={"https://mock-customer-api.vercel.app/"}
-            gitUrl={"https://github.com/awoldt/Mock-Customer-API"}
+            img={"/imgs/avatar-generator.png"}
+            icon={"/icons/avatar-generator.svg"}
+            name={"OnlineAvatarGenerator"}
+            about={"Easily generate a random avatar using OpenAI API"}
+            url={"https://onlineavatargenerator.com/"}
+            gitUrl={"https://github.com/awoldt/Avatar-Generator"}
           />
           <Project
             img={"/imgs/music_capture.PNG"}
@@ -93,13 +86,22 @@ export default function Projects() {
           />
 
           <Project
-            img={"/imgs/tictactoe_capture.png"}
-            icon={"/icons/tictactoe.svg"}
-            name={"Tic Tac Toe"}
-            about={"Simple tic tac toe game to play against friends with"}
-            url={"https://tic-tac-toe-seven-wine.vercel.app/"}
-            gitUrl={"https://github.com/awoldt/Tic-Tac-Toe"}
+            img={"/imgs/botbook_capture.jpg"}
+            icon={"/icons/botbook_icon.svg"}
+            name={"BotBook"}
+            about={"An entire dictionary generated using OpenAI"}
+            url={"https://prod-sxtsagjcpa-uk.a.run.app/"}
+            gitUrl={"https://github.com/awoldt/BotBook"}
           />
+          <Project
+            img={"/imgs/chatbot_capture.jpg"}
+            icon={"/icons/chatbot.svg"}
+            name={"ChatBot"}
+            about={"Have converstaions with an AI bot powered by OpenAI"}
+            url={"https://ai-chatbot-iota.vercel.app/"}
+            gitUrl={"https://github.com/awoldt/AI-Chatbot"}
+          />
+
           <Project
             img={"/imgs/weather_capture.PNG"}
             icon={"/icons/weather.ico"}
