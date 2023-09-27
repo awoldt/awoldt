@@ -86,12 +86,14 @@ export default function Projects() {
           />
 
           <Project
-            img={"/imgs/botbook_capture.jpg"}
-            icon={"/icons/botbook_icon.svg"}
-            name={"BotBook"}
-            about={"An entire dictionary generated using OpenAI"}
-            url={"https://prod-sxtsagjcpa-uk.a.run.app/"}
-            gitUrl={"https://github.com/awoldt/BotBook"}
+            img={"/imgs/devmail.png"}
+            icon={"/icons/devmail.ico"}
+            name={"DevMail"}
+            about={
+              "Email API Without the Hassle. Send basic text emails with POST requests."
+            }
+            url={"https://devmailapi.com/"}
+            gitUrl={"https://github.com/awoldt/DevMail"}
           />
           <Project
             img={"/imgs/chatbot_capture.jpg"}

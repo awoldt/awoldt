@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+/* eslint-disable @next/next/no-img-element */
 export default function Project({
   img,
   icon,
@@ -25,14 +24,14 @@ export default function Project({
           border: "10px solid #011e36",
         }}
       >
-        <Image
+        <img
           src={img}
           alt={name + " screen capture"}
           className="img-fluid mb-4"
           width={600}
           height={200}
         />
-        <Image
+        <img
           width={50}
           height={50}
           src={icon}
