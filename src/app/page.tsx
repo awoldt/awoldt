@@ -96,7 +96,7 @@ export default function Home() {
           </div>
 
           <div id="tech_frame_banner">
-            <h2 style={{ marginBottom: "25px" }}>Technologies/Frameworks</h2>
+            <h2 style={{ marginBottom: "25px" }}>Skills</h2>
             <Tech />
           </div>
         </>

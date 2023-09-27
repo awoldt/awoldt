@@ -1,140 +1,116 @@
 /* eslint-disable @next/next/no-img-element */
 export default function Tech() {
   return (
-    <div
-      className="row justify-content-center"
-      style={{ marginTop: "25px", paddingBottom: "50px" }}
-    >
+    <>
       <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
+        className="row justify-content-center"
+        style={{ marginTop: "25px", paddingBottom: "50px" }}
       >
-        <img
-          src="/icons/aws-icon.svg"
-          style={{ width: "85px", height: "85px" }}
-          alt="aws icon"
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary"
+        <div
+          className="col-xs-6 col-lg-3 col-sm-4"
+          style={{ marginBottom: "25px" }}
         >
-          AWS
-        </span>
+          <img
+            src="/icons/aws-icon.svg"
+            style={{ width: "85px", height: "85px" }}
+            alt="aws icon"
+          />
+          <span
+            style={{ display: "block", fontWeight: "bold" }}
+            className="text-secondary"
+          >
+            AWS
+          </span>
+        </div>
+        <div
+          className="col-xs-6 col-lg-3 col-sm-4"
+          style={{ marginBottom: "25px" }}
+        >
+          <img
+            src="/icons/c-sharp-icon.svg"
+            alt="C# icon"
+            style={{ width: "85px", height: "85px" }}
+          />
+          <span
+            style={{ display: "block", fontWeight: "bold" }}
+            className="text-secondary"
+          >
+            C#
+          </span>
+        </div>
+        <div
+          className="col-xs-6 col-lg-3 col-sm-4"
+          style={{ marginBottom: "25px" }}
+        >
+          <img
+            src="/icons/google-cloud-icon.svg"
+            alt="Google Cloud icon"
+            style={{ width: "85px", height: "85px" }}
+          />
+          <span
+            style={{ display: "block", fontWeight: "bold" }}
+            className="text-secondary"
+          >
+            Google Cloud
+          </span>
+        </div>
+        <div
+          className="col-xs-6 col-lg-3 col-sm-4"
+          style={{ marginBottom: "25px" }}
+        >
+          <img
+            src="/icons/js-icon.svg"
+            alt="JavaScript icon"
+            style={{ width: "85px", height: "85px" }}
+          />
+          <span
+            style={{ display: "block", fontWeight: "bold" }}
+            className="text-secondary"
+          >
+            JavaScript
+          </span>
+        </div>
+        <div
+          className="col-xs-6 col-lg-3 col-sm-4"
+          style={{ marginBottom: "25px" }}
+        >
+          <img
+            src="/icons/nextjs-icon.svg"
+            alt="Next js icon"
+            style={{ width: "85px", height: "85px", marginBottom: "5px" }}
+          />
+          <span
+            style={{ display: "block", fontWeight: "bold" }}
+            className="text-secondary"
+          >
+            Next JS
+          </span>
+        </div>
+        <div
+          className="col-xs-6 col-lg-3 col-sm-4"
+          style={{ marginBottom: "25px" }}
+        >
+          <img
+            src="/icons/reactjs-icon.svg"
+            alt="React js icon"
+            style={{ width: "85px", height: "85px" }}
+          />
+          <span
+            style={{ display: "block", fontWeight: "bold" }}
+            className="text-secondary"
+          >
+            React
+          </span>
+        </div>
       </div>
       <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
+        style={{
+          marginTop: "25px",
+          width: "fit-content",
+          margin: "auto",
+          marginBottom: "75px",
+        }}
       >
-        <img
-          src="/icons/expressjs-icon.svg"
-          alt="express js icon"
-          style={{ width: "85px", height: "85px" }}
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary"
-        >
-          Express
-        </span>
-      </div>
-      <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
-      >
-        <img
-          src="/icons/firebase-icon.svg"
-          style={{ width: "85px", height: "85px" }}
-          alt="firebase icon"
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary"
-        >
-          Firebase
-        </span>
-      </div>
-      <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
-      >
-        <img
-          src="/icons/google-cloud-icon.svg"
-          alt="Google cloud icon"
-          style={{ width: "85px", height: "85px" }}
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary"
-        >
-          Google Cloud
-        </span>
-      </div>
-      <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
-      >
-        <img
-          src="/icons/mongodb-icon.svg"
-          alt="mongodb icon"
-          style={{ width: "85px", height: "85px" }}
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary mt-2"
-        >
-          MongoDB
-        </span>
-      </div>
-      <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
-      >
-        <img
-          src="/icons/nextjs-icon.svg"
-          alt="nextjs icon"
-          style={{ width: "85px", height: "85px" }}
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary mt-2"
-        >
-          Next.js
-        </span>
-      </div>
-
-      <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
-      >
-        <img
-          src="/icons/reactjs-icon.svg"
-          alt="reactjs icon"
-          style={{ width: "85px", height: "85px" }}
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary mt-2"
-        >
-          React.js
-        </span>
-      </div>
-      <div
-        className="col-xs-6 col-lg-3 col-sm-4"
-        style={{ marginBottom: "25px" }}
-      >
-        <img
-          src="/icons/ts-icon.svg"
-          style={{ width: "85px", height: "85px" }}
-          alt="TypeScript icon"
-        />
-        <span
-          style={{ display: "block", fontWeight: "bold" }}
-          className="text-secondary mt-2"
-        >
-          TypeScript
-        </span>
-      </div>
-      <div style={{ marginTop: "25px", width: "fit-content" }}>
         <a
           href="https://www.credly.com/badges/3a42aaad-f3b4-4cb6-8ad5-4750a2a7e921/public_url"
           target={"_blank"}
@@ -162,6 +138,6 @@ export default function Tech() {
           </p>
         </a>
       </div>
-    </div>
+    </>
   );
 }
