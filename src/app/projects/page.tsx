@@ -17,11 +17,11 @@ export default function Projects() {
         <Nav />
         <hr></hr>
 
-        <h1 className="text-center">Personal Projects</h1>
-        <p className="text-center">
+        <h1 className="text-center" id="personal_projects_header">Personal Projects</h1>
+        <p className="text-center" id="personal_projects_description">
           Here are some of the projects I&apos;ve worked on that have
           established the knowledge I now have. With every new project, my main
-          goal is to learn something new and improve my skills. A complete list
+          goal is to learn something new and improve my skills. <br></br><br></br>A complete list
           of all my projects and source code can be found on my{" "}
           <a
             href={"https://github.com/awoldt?tab=repositories"}
@@ -35,7 +35,6 @@ export default function Projects() {
             />
             GitHub
           </a>
-          .
         </p>
 
         <div className="row justify-content-center">
@@ -85,16 +84,6 @@ export default function Projects() {
             gitUrl={"https://github.com/awoldt/Music-Dashboard"}
           />
 
-          <Project
-            img={"/imgs/devmail.png"}
-            icon={"/icons/devmail.ico"}
-            name={"DevMail"}
-            about={
-              "Email API Without the Hassle. Send basic text emails with POST requests."
-            }
-            url={"https://devmailapi.com/"}
-            gitUrl={"https://github.com/awoldt/DevMail"}
-          />
           <Project
             img={"/imgs/chatbot_capture.jpg"}
             icon={"/icons/chatbot.svg"}

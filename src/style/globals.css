@@ -12,13 +12,34 @@
   }
 }
 
-/* MD AND ABOVE */
-@media screen and (min-width: 768px) {
+/* LG AND ABOVE */
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 23px;
+  }
   #awoldt_header {
     font-size: 100px;
   }
-  #awoldt_description {
-    font-size: 22px;
+  #backdrop_container {
+    background-image: url(../../public/waves.svg);
+  }
+  #personal_projects_header {
+    margin-bottom: 25px;
+  }
+  #personal_projects_description {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+  #awoldt_header {
+    font-size: 100px;
+  }
+  p {
+    font-size: 19px;
   }
   #backdrop_container {
     background-image: url(../../public/waves.svg);
@@ -29,9 +50,6 @@
 @media screen and (max-width: 766px) {
   #awoldt_header {
     font-size: 50px;
-  }
-  #awoldt_description {
-    font-size: 17px;
   }
   #backdrop_container {
     background-image: url(../../public/waves-sm.svg);
@@ -207,4 +225,8 @@ li::before {
 .code-example-div {
   background-color: #002c4f !important;
   border: 10px solid #011e36 !important;
+}
+
+.project-div p {
+  font-size: 16px;
 }
