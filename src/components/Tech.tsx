@@ -75,6 +75,22 @@ export default function Tech() {
           style={{ marginBottom: "25px" }}
         >
           <img
+            src="/icons/mongodb.svg"
+            alt="Mongodb icon"
+            style={{ width: "85px", height: "85px", marginBottom: "5px" }}
+          />
+          <span
+            style={{ display: "block", fontWeight: "bold" }}
+            className="text-secondary"
+          >
+            Mongodb
+          </span>
+        </div>
+        <div
+          className="col-xs-6 col-lg-3 col-sm-4"
+          style={{ marginBottom: "25px" }}
+        >
+          <img
             src="/icons/nextjs-icon.svg"
             alt="Next js icon"
             style={{ width: "85px", height: "85px", marginBottom: "5px" }}

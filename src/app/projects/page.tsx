@@ -17,12 +17,15 @@ export default function Projects() {
         <Nav />
         <hr></hr>
 
-        <h1 className="text-center" id="personal_projects_header">Personal Projects</h1>
+        <h1 className="text-center" id="personal_projects_header">
+          Personal Projects
+        </h1>
         <p className="text-center" id="personal_projects_description">
           Here are some of the projects I&apos;ve worked on that have
           established the knowledge I now have. With every new project, my main
-          goal is to learn something new and improve my skills. <br></br><br></br>A complete list
-          of all my projects and source code can be found on my{" "}
+          goal is to learn something new and improve my skills. <br></br>
+          <br></br>A complete list of all my projects and source code can be
+          found on my{" "}
           <a
             href={"https://github.com/awoldt?tab=repositories"}
             target="_blank"
@@ -38,6 +41,16 @@ export default function Projects() {
         </p>
 
         <div className="row justify-content-center">
+          <Project
+            img={"/imgs/dividend.png"}
+            icon={"/icons/dividend.ico"}
+            name={"Dividend Calendar"}
+            about={
+              "View all the dividends being paid out during the current calendar year"
+            }
+            url={"https://dividome.com/"}
+            gitUrl={"https://github.com/awoldt/Dividend-Calendar"}
+          />
           <Project
             img={"/imgs/tictactoe_capture.png"}
             icon={"/icons/tictactoe.svg"}
