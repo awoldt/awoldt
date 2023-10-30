@@ -13,31 +13,18 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <div className="container-fluid">
+      <Nav page="projects" />
       <div className="container text-center pt-5">
-        <Nav />
-        <hr></hr>
-
-        <h1 className="text-center" id="personal_projects_header">
+        <h1
+          className="text-center"
+          style={{ fontFamily: "Silkscreen-Regular" }}
+        >
           Personal Projects
         </h1>
         <p className="text-center" id="personal_projects_description">
           Here are some of the projects I&apos;ve worked on that have
           established the knowledge I now have. With every new project, my main
-          goal is to learn something new and improve my skills. <br></br>
-          <br></br>A complete list of all my projects and source code can be
-          found on my{" "}
-          <a
-            href={"https://github.com/awoldt?tab=repositories"}
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            <img
-              src="/icons/github-blue.svg"
-              alt="GitHub logo"
-              style={{ marginRight: "3px" }}
-            />
-            GitHub
-          </a>
+          goal is to learn something new and improve my skills.
         </p>
 
         <div className="row justify-content-center">
@@ -123,6 +110,21 @@ export default function Projects() {
             gitUrl={"https://github.com/awoldt/React-Typing-Test"}
           />
         </div>
+        <p className="mt-5 mb-5">
+          A complete list of all my projects and source code can be found on my{" "}
+          <a
+            href={"https://github.com/awoldt?tab=repositories"}
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <img
+              src="/icons/github-blue.svg"
+              alt="GitHub logo"
+              style={{ marginRight: "3px" }}
+            />
+            GitHub
+          </a>
+        </p>
       </div>
     </div>
   );

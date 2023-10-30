@@ -1,0 +1,19 @@
+.container {
+  background-color: #00101c !important;
+}
+.container-fluid {
+  background-color: #00101c !important;
+}
+html {
+  background-color: #00101c !important;
+}
+h2 {
+  margin-top: 50px !important;
+}
+h4 {
+  margin-top: 15px !important;
+}
+img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

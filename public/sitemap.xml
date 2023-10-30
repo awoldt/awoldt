@@ -7,4 +7,10 @@
     <url>
         <loc>https://awoldt.com/projects</loc>
     </url>
+    <url>
+        <loc>https://awoldt.com/blogs</loc>
+    </url>
+    <url>
+        <loc>https://awoldt.com/blogs/spotify-api-with-javascript</loc>
+    </url>
 </urlset>

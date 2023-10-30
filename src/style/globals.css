@@ -23,9 +23,6 @@
   #backdrop_container {
     background-image: url(../../public/waves.svg);
   }
-  #personal_projects_header {
-    margin-bottom: 25px;
-  }
   #personal_projects_description {
     max-width: 1000px;
     margin: auto;
@@ -150,6 +147,9 @@ li::before {
 .navbar-brand:hover {
   color: white !important;
 }
+nav {
+  height: 58px !important;
+}
 
 .active-page {
   text-decoration: underline;
@@ -214,6 +214,9 @@ li::before {
   margin-top: 25px;
   font-family: Silkscreen-Regular !important;
   color: white !important;
+}
+.prof-personal-link:hover {
+  background-color: #002c4f !important;
 }
 
 #tech_frame_banner {
