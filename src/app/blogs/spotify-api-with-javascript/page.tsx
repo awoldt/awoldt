@@ -49,7 +49,7 @@ export default function Page() {
           <p className="text-secondary">
             Start accessing user’s Spotify account data with Node.js
           </p>
-          <ShareBtns pageUrl="https://awoldt.com/blog/spotify-api-with-javascript" />
+          <ShareBtns pageUrl="https://awoldt.com/blogs/spotify-api-with-javascript" />
         </div>
 
         <p>
