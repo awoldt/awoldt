@@ -1,4 +1,3 @@
-import AnalyticsScript from "@/components/AnalyticsScript";
 import "../style/globals.css";
 
 export default function RootLayout({
@@ -21,7 +20,6 @@ export default function RootLayout({
           integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
           crossOrigin="anonymous"
         ></script>
-        <AnalyticsScript />
       </head>
       <body>{children}</body>
     </html>
