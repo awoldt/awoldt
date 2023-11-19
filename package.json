@@ -1,27 +1,16 @@
 {
-  "name": "awoldt",
-  "version": "0.1.0",
-  "private": true,
+  "name": "awoldtv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@types/node": "20.1.0",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.1",
-    "highlight.js": "^11.9.0",
-    "next": "^14.0.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-syntax-highlighter": "^15.5.0",
-    "typescript": "5.0.4"
-  },
-  "devDependencies": {
-    "@types/react-syntax-highlighter": "^15.5.6"
+    "express": "^4.18.2"
   }
 }

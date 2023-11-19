@@ -1,0 +1,239 @@
+@font-face {
+  font-family: Silkscreen-Regular;
+  src: url("./fonts/Silkscreen-Regular.ttf");
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* LG AND ABOVE */
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 23px;
+  }
+  #awoldt_header {
+    font-size: 100px;
+  }
+  #backdrop_container {
+    background-image: url(../../waves.svg);
+  }
+  #personal_projects_description {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+  #awoldt_header {
+    font-size: 100px;
+  }
+  p {
+    font-size: 19px;
+  }
+  #backdrop_container {
+    background-image: url(../../waves.svg);
+  }
+}
+
+/* SM AND SMALLER */
+@media screen and (max-width: 766px) {
+  #awoldt_header {
+    font-size: 50px;
+  }
+  #backdrop_container {
+    background-image: url(../../waves-sm.svg);
+  }
+}
+
+body,
+html {
+  background-color: #001220;
+}
+
+.container-fluid,
+.container {
+  background-color: #001220 !important;
+}
+main {
+  padding: 0px !important;
+}
+
+h1,
+h2,
+h3,
+p,
+code,
+li,
+b {
+  color: white !important;
+}
+
+hr {
+  border: none;
+  height: 5px;
+  background: #014982;
+}
+a {
+  text-decoration: none;
+}
+
+pre {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.code-preview {
+  padding: 10px;
+  border: 10px solid #011e36;
+  background-color: #002c4f;
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+#awoldt_description {
+  margin-bottom: 25px;
+  padding-top: 25px;
+}
+
+.hover-btn:hover {
+  background-color: #002c4f;
+}
+
+.shareon {
+  float: right;
+}
+
+.breadcrumb-item {
+  color: white !important;
+  font-family: Silkscreen-Regular;
+}
+.breadcrumb-item a {
+  color: white;
+  text-decoration: none;
+}
+
+li::before {
+  color: #002c4f !important;
+}
+
+.terminal-code {
+  padding: 5px;
+  background-color: #002c4f;
+}
+
+.navbar a {
+  color: white;
+  font-family: Silkscreen-Regular;
+}
+.navbar div {
+  color: white;
+  font-family: Silkscreen-Regular;
+}
+
+.navbar-brand {
+  font-size: 25px !important;
+  color: inherit;
+}
+.navbar-brand:hover {
+  color: white !important;
+}
+nav {
+  height: 58px !important;
+}
+
+.active-page {
+  text-decoration: underline;
+  background-color: #002c4f;
+  padding: 10px;
+  border-radius: 8px;
+}
+.nonactive-page {
+  background-color: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#backdrop_container {
+  background-size: cover;
+  padding-top: 400px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#main_container {
+  color: white;
+  animation: fadein 0.5s;
+}
+
+#awoldt_header {
+  font-family: Silkscreen-Regular;
+}
+
+#github_link_btn {
+  margin-right: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#linkedin_link_btn {
+  border-radius: 0px;
+  margin-right: 5px;
+}
+
+#email_link_btn {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.prof-social-link {
+  text-decoration: none;
+  color: black;
+}
+
+.prof-social-icon {
+  margin-right: 5px;
+}
+
+.prof-personal-link {
+  width: 166.165px;
+  margin: auto;
+  margin-top: 25px;
+  font-family: Silkscreen-Regular !important;
+  color: white !important;
+}
+.prof-personal-link:hover {
+  background-color: #002c4f !important;
+}
+
+#tech_frame_banner {
+  font-family: Silkscreen-Regular !important;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.code-example-div {
+  background-color: #002c4f !important;
+  border: 10px solid #011e36 !important;
+}
+
+.project-div p {
+  font-size: 16px;
+}
+
+.proj-card-link:hover {
+  background-color: #011e36 !important;
+}
