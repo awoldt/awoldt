@@ -76,6 +76,14 @@ b {
   color: white !important;
 }
 
+.blog-img {
+  margin: 10px 0px 50px 0px;
+}
+
+pre {
+  margin: 10px 0px 50px 0px !important;
+}
+
 hr {
   border: none;
   height: 5px;

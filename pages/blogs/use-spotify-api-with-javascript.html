@@ -97,7 +97,7 @@
         itemtype="https://schema.org/Blog"
       >
         <div style="margin-bottom: 50px">
-          <h1 style="margin-top: 75px" itemprop="about">
+          <h1 style="margin-top: 75px; font-size: 50px" itemprop="about">
             Using Spotify API with JavaScript
           </h1>
           <p class="text-secondary">
@@ -180,7 +180,7 @@
         <img
           src="/blogs/spotify-dev-dashboard.png"
           alt="spotify developer dashboard screenshot"
-          class="img-fluid"
+          class="img-fluid blog-img"
         />
         <h2>Get your Node.js server up and running</h2>
         <p>
@@ -239,7 +239,7 @@
         <img
           src="/blogs/spotify-client-id.png"
           alt="spotify application client id inside settings"
-          class="img-fluid"
+          class="img-fluid blog-img"
         />
         <p>
           The next thing you need is a redirect URL for Spotify to send users
@@ -260,7 +260,7 @@
         <img
           src="/blogs/spotify-edit-redirect-urls.png"
           alt="edit the redirect urls for your spotify application"
-          class="img-fluid"
+          class="img-fluid blog-img"
         />
         <p>
           Now that we have this out of the way, it’s time to create your own
@@ -366,7 +366,7 @@
         <img
           src="/blogs/spotify-login-screen.png"
           alt="the login screen users who want to use your app will have to sign into"
-          class="img-fluid"
+          class="img-fluid blog-img"
         />
         <h2>Use response code to retrieve access token</h2>
         <p>
@@ -434,97 +434,105 @@
           body and headers associated with it to work properly. The body must
           contain the following properties:
         </p>
-        <h3><u>Format Reqest Body</u></h3>
-        <ul style="list-style: none">
+        <ol>
           <li>
-            <h4>grant_type</h4>
-            <ul>
-              <li><p>Must be set to “authorization_code”</p></li>
-            </ul>
-          </li>
-          <li>
-            <h4>code</h4>
-            <ul>
+            <h3>Format Reqest Body</h3>
+            <ul style="list-style: none">
               <li>
-                <p>
-                  Code Spotify sends back to your server in the URL after the
-                  user accepts/declines data usage. Extract this code from URL
-                  query pictured above.
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h4>redirect_uri</h4>
-            <ul>
-              <li>
-                <p>
-                  Whatever redirect URL you have used up until this point must
-                  match what is saved in Spotify developer app settings
-                </p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p>
-          To have this request body formatted correctly, import the
-          node:querystring module. This is built into node and will be available
-          without installing any external packages.
-        </p>
-        <p>
-          Now for the headers of this POST request. There are only two
-          properties associated with the header
-        </p>
-        <h3><u>Format Reqest Headers</u></h3>
-        <ul style="list-style: none">
-          <li>
-            <h4>Authorization</h4>
-            <ul>
-              <li>
-                <p>
-                  This will be a string formatted like this &quot;Basic
-                  xxx&quot;. With an API key used in this example, the header
-                  value would be formatted as -<!-- -->
-                  <i>&quot;Authorization: Basic [YOUR_CODE]&quot;</i>
-                </p>
+                <h4>grant_type</h4>
+                <ul>
+                  <li><p>Must be set to “authorization_code”</p></li>
+                </ul>
               </li>
               <li>
-                <p>
-                  The code used in the Authorization header string is a<!-- -->
-                  <a
-                    href="https://www.base64encode.org/"
-                    title="Base 64 encode your authorization header value"
-                    target="_blank"
-                    >Base 64 encoded</a
-                  >
-                  <!-- -->string of tpye [CLIENT_ID:CLIENT_SECRET]
-                </p>
+                <h4>code</h4>
+                <ul>
+                  <li>
+                    <p>
+                      Code Spotify sends back to your server in the URL after
+                      the user accepts/declines data usage. Extract this code
+                      from URL query pictured above.
+                    </p>
+                  </li>
+                </ul>
               </li>
               <li>
-                <p>
-                  The Client Secret can be found in the same settings dashboard
-                  as described in previous steps. It will look like this:<!-- -->
-                </p>
-                <img
-                  src="/blogs/spotify-client-secret.png"
-                  alt="spotify client secret location in dashboard settings"
-                  class="img-fluid"
-                />
+                <h4>redirect_uri</h4>
+                <ul>
+                  <li>
+                    <p>
+                      Whatever redirect URL you have used up until this point
+                      must match what is saved in Spotify developer app settings
+                    </p>
+                  </li>
+                </ul>
               </li>
             </ul>
+            <p>
+              To have this request body formatted correctly, import the
+              node:querystring module. This is built into node and will be
+              available without installing any external packages.
+            </p>
+            <p>
+              Now for the headers of this POST request. There are only two
+              properties associated with the header
+            </p>
           </li>
           <li>
-            <h4>Content-Type</h4>
-            <ul>
+            <h3>Format Reqest Headers</h3>
+            <ul style="list-style: none">
               <li>
-                <p>
-                  This will be simply set to<!-- -->
-                  <i>“application/x-www-form-urlencoded”</i>
-                </p>
+                <h4>Authorization</h4>
+                <ul>
+                  <li>
+                    <p>
+                      This will be a string formatted like this &quot;Basic
+                      xxx&quot;. With an API key used in this example, the
+                      header value would be formatted as -<!-- -->
+                      <i>&quot;Authorization: Basic [YOUR_CODE]&quot;</i>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The code used in the Authorization header string is a<!-- -->
+                      <a
+                        href="https://www.base64encode.org/"
+                        title="Base 64 encode your authorization header value"
+                        target="_blank"
+                        >Base 64 encoded</a
+                      >
+                      <!-- -->string of tpye [CLIENT_ID:CLIENT_SECRET]
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The Client Secret can be found in the same settings
+                      dashboard as described in previous steps. It will look
+                      like this:<!-- -->
+                    </p>
+                    <img
+                      src="/blogs/spotify-client-secret.png"
+                      alt="spotify client secret location in dashboard settings"
+                      class="img-fluid blog-img"
+                    />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h4>Content-Type</h4>
+                <ul>
+                  <li>
+                    <p>
+                      This will be simply set to<!-- -->
+                      <i>“application/x-www-form-urlencoded”</i>
+                    </p>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
-        </ul>
+        </ol>
+
         <p>
           Now that we have this POST request set up with all the necessary data,
           your code on the server should look like this:
@@ -560,7 +568,7 @@
         <img
           src="/blogs/spotify-access-token.webp"
           alt="response from spotify api that contains access code"
-          class="img-fluid"
+          class="img-fluid blog-img"
         />
         <h2>Start making API requests</h2>
         <p>
@@ -601,7 +609,7 @@
         <img
           src="/blogs/spotify-api-console-response.webp"
           alt="what request from spotify api looks like"
-          class="img-fluid"
+          class="img-fluid blog-img"
         />
         <p style="margin-top: 100px; margin-bottom: 50px">
           🎉 Congratulations, you just made your first API call to Spotify and
