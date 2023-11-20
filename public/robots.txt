@@ -7,4 +7,4 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-Sitemap: https://awoldt.com/sitemap.xml
+Sitemap: https://awoldt.dev/sitemap.xml

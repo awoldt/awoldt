@@ -1,14 +1,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://awoldt.com</loc>
+        <loc>https://awoldt.dev</loc>
     </url>
     <url>
-        <loc>https://awoldt.com/blogs</loc>
+        <loc>https://awoldt.dev/blogs</loc>
     </url>
     <url>
-        <loc>https://awoldt.com/projects</loc>
+        <loc>https://awoldt.dev/projects</loc>
     </url>
     <url>
-        <loc>https://awoldt.com/blogs/spotify-api-with-javascript</loc>
+        <loc>https://awoldt.dev/blogs/spotify-api-with-javascript</loc>
     </url>
 </urlset>
