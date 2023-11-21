@@ -28,6 +28,9 @@
     margin: auto;
     margin-bottom: 50px;
   }
+  ul li {
+    font-size: 23px;
+  }
 }
 
 /* MD */
@@ -41,6 +44,9 @@
   #backdrop_container {
     background-image: url(../../waves.svg);
   }
+  ul li {
+    font-size: 19px;
+  }
 }
 
 /* SM AND SMALLER */
@@ -51,11 +57,18 @@
   #backdrop_container {
     background-image: url(../../waves-sm.svg);
   }
+  ul li {
+    font-size: 16px;
+  }
 }
 
 body,
 html {
   background-color: #001220;
+}
+
+.blog-info-div {
+  max-width: 650px;
 }
 
 .container-fluid,
@@ -80,8 +93,22 @@ b {
   margin: 10px 0px 50px 0px;
 }
 
+.blog-div {
+  margin-bottom: 50px;
+}
+.blog-div img {
+  width: 500px !important;
+  height: 250px !important;
+  margin-bottom: 10px;
+}
+
+ol,
+ul {
+  margin: 0px 0px 35px 0px !important;
+}
+
 pre {
-  margin: 10px 0px 50px 0px !important;
+  margin: 10px 0px 10px 0px !important;
 }
 
 hr {

@@ -13,14 +13,10 @@ app.get("/projects", (req, res) => {
 app.get("/blogs", (req, res) => {
   res.sendFile(path.join(process.cwd(), "pages", "blogs.html"));
 });
-app.get("/blogs/spotify-api-with-javascript", (req, res) => {
+
+app.get(`/blogs/:NAME`, (req, res) => {
   res.sendFile(
-    path.join(
-      process.cwd(),
-      "pages",
-      "blogs",
-      "use-spotify-api-with-javascript.html"
-    )
+    path.join(process.cwd(), "pages", "blogs", `${req.params.NAME}.html`)
   );
 });
 
