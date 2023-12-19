@@ -269,6 +269,48 @@ nav {
   font-size: 16px;
 }
 
+.proj-card-link {
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #025aa1;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100px;
+  font-weight: 900;
+  font-weight: 900;
+  margin-right: 25px;
+}
+
 .proj-card-link:hover {
   background-color: #011e36 !important;
+}
+
+#project_blocks_container div {
+  text-align: start;
+}
+
+#project_blocks_container img {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+#project_blocks_container p {
+  max-width: 950px;
+}
+
+#project_blocks_container h2 {
+  font-family: Silkscreen-Regular !important;
+}
+
+.project-block {
+  padding: 25px;
+  background-color: #012847 !important;
+  border-radius: 10px;
+  border: 10px solid #011e36;
+  margin-bottom: 50px;
 }

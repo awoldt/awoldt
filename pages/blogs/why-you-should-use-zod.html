@@ -325,113 +325,12 @@ if (!validatedObject.success) {
             Zod offers plenty of validation and transformation methods across a
             variety of data types. Validations ensure object properties are
             formatted correctly, while transformations will alter the property
-            in some way. I will show examples from the:
+            in some way. For example, zod can use the trim() method to remove
+            whitespace from the beginning and end of string. This is one of many
+            differnt features zod offers to validate your data.
           </p>
-          <ul style="list-style: none">
-            <li>
-              <h3>
-                <a href="https://zod.dev/?id=strings" target="_blank">String</a>
-              </h3>
-              <ol style="list-style: none">
-                <li>
-                  <b>trim()</b>
-                  <p>Will remove all whitespace from both ends of a string</p>
-                </li>
 
-                <li>
-                  <b>max() and min()</b>
-                  <p>
-                    Sets the max or min length of a string. max(256) would
-                    ensure the string being stored is not any longer than 256
-                    characters.
-                  </p>
-                </li>
-
-                <li>
-                  <b>email()</b>
-                  <p>Make sure the string is in valid email format</p>
-                </li>
-
-                <li>
-                  <b>regex()</b>
-                  <p>
-                    Use regular expressions to match character combinations in
-                    strings
-                  </p>
-                </li>
-
-                <li>
-                  <b>includes()</b>
-                  <p>
-                    Checks to see if a given string may be found within this
-                    string
-                  </p>
-                </li>
-
-                <li>
-                  <b>ip()</b>
-                  <p>Parses ip string and ensures IPv4 and IPv6 formats</p>
-                </li>
-              </ol>
-            </li>
-
-            <li>
-              <h3>
-                <a href="https://zod.dev/?id=numbers" target="_blank">Number</a>
-              </h3>
-              <ol style="list-style: none">
-                <li>
-                  <b>gt()</b>
-                  <p>Greater than</p>
-                </li>
-                <li>
-                  <b>lt()</b>
-                  <p>Less than</p>
-                </li>
-                <li>
-                  <b>int()</b>
-                  <p>The value must be of type int</p>
-                </li>
-                <li>
-                  <b>positive()</b>
-                  <p>The value must be greater than zero ( > 0)</p>
-                </li>
-                <li>
-                  <b>negative()</b>
-                  <p>The value must be less than zero ( < 0)</p>
-                </li>
-              </ol>
-            </li>
-
-            <li>
-              <h3>
-                <a href="https://zod.dev/?id=booleans" target="_blank"
-                  >Boolean</a
-                >
-              </h3>
-            </li>
-            <li>
-              <h3>
-                <a href="https://zod.dev/?id=dates" target="_blank">Dates</a>
-              </h3>
-            </li>
-            <li>
-              <h3>
-                <a href="https://zod.dev/?id=nullables" target="_blank"
-                  >Nullables</a
-                >
-              </h3>
-            </li>
-            <li>
-              <h3>
-                <a href="https://zod.dev/?id=objects" target="_blank"
-                  >Objects</a
-                >
-              </h3>
-            </li>
-          </ul>
-
-          <p style="margin-bottom: 50px">
+          <p style="margin-bottom: 50px; margin-top: 50px;">
             Check out
             <a href="https://zod.dev/" target="_blank"
               >Zod's official documentation</a
@@ -442,7 +341,7 @@ if (!validatedObject.success) {
           </p>
 
           <div style="margin: 50px 0px 50px 0px">
-            <h2 style="font-family: Silkscreen-Regular">More</h2>
+            <h2 style="font-family: Silkscreen-Regular">Read more</h2>
             <a href="/blogs/spotify-api-with-javascript"
               >Start accessing user’s Spotify account data with Node.js
             </a>
