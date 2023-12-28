@@ -3,18 +3,18 @@
         <loc>https://awoldt.dev</loc>
     </url>
     <url>
-        <loc>https://awoldt.dev/blogs</loc>
+        <loc>https://awoldt.dev/articles</loc>
     </url>
     <url>
         <loc>https://awoldt.dev/projects</loc>
     </url>
     <url>
-        <loc>https://awoldt.dev/blogs/spotify-api-with-javascript</loc>
+        <loc>https://awoldt.dev/articles/spotify-api-with-javascript</loc>
     </url>
     <url>
-        <loc>https://awoldt.dev/blogs/why-you-should-use-zod</loc>
+        <loc>https://awoldt.dev/articles/why-you-should-use-zod</loc>
     </url>
     <url>
-        <loc>https://awoldt.dev/blogs/how-to-make-a-calculator-with-reactjs</loc>
+        <loc>https://awoldt.dev/articles/how-to-make-a-calculator-with-reactjs</loc>
     </url>
 </urlset>

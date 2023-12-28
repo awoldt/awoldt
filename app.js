@@ -10,15 +10,24 @@ app.get("/", (req, res) => {
 app.get("/projects", (req, res) => {
   res.sendFile(path.join(process.cwd(), "pages", "projects.html"));
 });
-app.get("/blogs", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "pages", "blogs.html"));
+app.get("/articles", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "pages", "articles.html"));
 });
 
-app.get(`/blogs/:NAME`, (req, res) => {
+app.get(`/articles/:NAME`, (req, res) => {
   res.sendFile(
-    path.join(process.cwd(), "pages", "blogs", `${req.params.NAME}.html`)
+    path.join(process.cwd(), "pages", "articles", `${req.params.NAME}.html`)
   );
 });
+
+// PERMENENT REDIRECT
+app.get("/blogs", (req, res) => {
+  res.redirect(301, `/articles`);
+});
+app.get("/blogs/:ANYHTING", (req, res) => {
+  res.redirect(301, `/articles/${req.params.ANYHTING}`);
+});
+//
 
 app.listen(8080, () => {
   console.log("\nserver listening on port 8080");

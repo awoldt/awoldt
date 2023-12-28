@@ -83,7 +83,7 @@ html {
   background-color: #001220;
 }
 
-.blog-info-div {
+.article-info-div {
   max-width: 650px;
 }
 
@@ -116,14 +116,14 @@ h3 {
   margin-bottom: 10px;
 }
 
-.blog-img {
+.article-img {
   margin: 10px 0px 10px 0px;
 }
 
-.blog-div {
+.article-div {
   margin-bottom: 50px;
 }
-.blog-div img {
+.article-div img {
   width: 500px !important;
   height: 250px !important;
   margin-bottom: 10px;
