@@ -91,14 +91,10 @@
           </div>
         </div>
       </nav>
-      <div
-        class="container pt-5"
-        itemscope=""
-        itemtype="https://schema.org/Blog"
-      >
+      <div class="container pt-5">
         <main>
           <div style="margin-bottom: 50px">
-            <h1 style="margin-top: 75px; font-size: 50px" itemprop="about">
+            <h1 style="margin-top: 75px; font-size: 50px">
               Using Spotify API with JavaScript
             </h1>
             <p class="text-secondary">
@@ -191,16 +187,16 @@
             about what is sent back from the root route as we will change this
             later.
           </p>
-          <pre><code>const express = require(&quot;express&quot;);
-      const app = express();
-      
-      app.listen(8080, () =&gt; {
-        console.log(&quot;App is listening on port 8080!&quot;);
-      });
-      
-      app.get(&quot;/&quot;, (req, res) =&gt; {
-        res.send(&quot;Hello&quot;);
-      });</code></pre>
+          <pre><code class="hljs language-js">const express = require(&quot;express&quot;);
+const app = express();
+
+app.listen(8080, () =&gt; {
+  console.log(&quot;App is listening on port 8080!&quot;);
+});
+
+app.get(&quot;/&quot;, (req, res) =&gt; {
+  res.send(&quot;Hello&quot;);
+});</code></pre>
           <p>
             Now that there is a web server ready to take in requests, we can
             start working with the API. Keep your server code off to the side
@@ -358,7 +354,7 @@
             Combine all the queries above and you will get a URL that looks like
             this:
           </p>
-          <pre><code>https://accounts.spotify.com/authorize?client_id=xxx&amp;response_type=code&amp;redirect_uri=xxx&amp;scope=user-top-read</code></pre>
+          <pre><code class="hljs language-text">https://accounts.spotify.com/authorize?client_id=xxx&amp;response_type=code&amp;redirect_uri=xxx&amp;scope=user-top-read</code></pre>
           <p>
             (The xxx at client_id and redirect_uri should be replaced with the
             correct data)
@@ -384,21 +380,21 @@
             what your server code should look like now:
           </p>
           <pre><code>//this page contains the link to the spotify authorization page
-      //contains custom url queries that pertain to my specific app
-      app.get(&quot;/&quot;, (req, res) =&gt; {
-        res.send(
-          &quot;&lt;a href=&#x27;https://accounts.spotify.com/authorize?client_id=&quot; +
-            process.env.CLIENT_ID +
-            &quot;&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Faccount&amp;scope=user-top-read&#x27;&gt;Sign in&lt;/a&gt;&quot;
-        );
-      });
-      
-      //this is the page user is redirected to after accepting data use on spotify&#x27;s website
-      //it does not have to be /account, it can be whatever page you want it to be
-      app.get(&quot;/account&quot;, async (req, res) =&gt; {
-        console.log(&quot;spotify response code is &quot; + req.query.code);
-        res.send(&quot;account page&quot;);
-      });</code></pre>
+//contains custom url queries that pertain to my specific app
+app.get(&quot;/&quot;, (req, res) =&gt; {
+  res.send(
+    &quot;&lt;a href=&#x27;https://accounts.spotify.com/authorize?client_id=&quot; +
+      process.env.CLIENT_ID +
+      &quot;&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Faccount&amp;scope=user-top-read&#x27;&gt;Sign in&lt;/a&gt;&quot;
+  );
+});
+
+//this is the page user is redirected to after accepting data use on spotify&#x27;s website
+//it does not have to be /account, it can be whatever page you want it to be
+app.get(&quot;/account&quot;, async (req, res) =&gt; {
+  console.log(&quot;spotify response code is &quot; + req.query.code);
+  res.send(&quot;account page&quot;);
+});</code></pre>
           <p>
             Also, take note that I utilize environment variables to hide all the
             sensitive Spotify data so that I don’t expose these keys to the
@@ -546,26 +542,26 @@
             data, your code on the server should look like this:
           </p>
           <pre><code>const queryString = require(&quot;node:querystring&quot;);
-      const axios = require(&quot;axios&quot;);
-      
-      app.get(&quot;/account&quot;, async (req, res) =&gt; {
-        const spotifyResponse = await axios.post(
-            &quot;https://accounts.spotify.com/api/token&quot;,
-            queryString.stringify({
-              grant_type: &quot;authorization_code&quot;,
-              code: req.query.code,
-              redirect_uri: process.env.REDIRECT_URI_DECODED,
-            }),
-            {
-              headers: {
-                Authorization: &quot;Basic &quot; + process.env.BASE64_AUTHORIZATION,
-                &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
-              },
-            }
-          );
-        
-        console.log(spotifyResponse.data);
-      })</code></pre>
+const axios = require(&quot;axios&quot;);
+
+app.get(&quot;/account&quot;, async (req, res) =&gt; {
+  const spotifyResponse = await axios.post(
+      &quot;https://accounts.spotify.com/api/token&quot;,
+      queryString.stringify({
+        grant_type: &quot;authorization_code&quot;,
+        code: req.query.code,
+        redirect_uri: process.env.REDIRECT_URI_DECODED,
+      }),
+      {
+        headers: {
+          Authorization: &quot;Basic &quot; + process.env.BASE64_AUTHORIZATION,
+          &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
+        },
+      }
+    );
+  
+  console.log(spotifyResponse.data);
+})</code></pre>
           <p>
             The spotifyResponse object is the response from Spotify that
             contains the access token we need to start making API requests. Make
@@ -605,14 +601,14 @@
           <p>The request in your server should look like this:</p>
           <pre><code>const axios = require(&quot;axios&quot;);
       
-      const data = await axios.get(
-        &quot;https://api.spotify.com/v1/me/top/tracks?limit=50&quot;,
-        {
-          headers: {
-            Authorization: &quot;Bearer &quot; + {YOUR ACCESS TOKEN GOES HERE},
-          },
-        }
-      );</code></pre>
+const data = await axios.get(
+  &quot;https://api.spotify.com/v1/me/top/tracks?limit=50&quot;,
+  {
+    headers: {
+      Authorization: &quot;Bearer &quot; + {YOUR ACCESS TOKEN GOES HERE},
+    },
+  }
+);</code></pre>
           <p>The response will look like this in the console:</p>
           <img
             src="/imgs/blogs/spotify-api-console-response.webp"
@@ -629,6 +625,10 @@
           </p>
           <div style="margin: 50px 0px 50px 0px">
             <h2 style="font-family: Silkscreen-Regular">Read more</h2>
+            <a href="/blogs/how-to-make-a-calculator-with-reactjs"
+              >How to Make a Calculator App with Reactjs
+            </a>
+            <br>
             <a href="/blogs/why-you-should-use-zod"
               >Why You Should Use the Zod Library with Your Database
             </a>

@@ -92,14 +92,10 @@
           </div>
         </div>
       </nav>
-      <div
-        class="container pt-5"
-        itemscope=""
-        itemtype="https://schema.org/Blog"
-      >
+      <div class="container pt-5">
         <main>
           <div style="margin-bottom: 50px">
-            <h1 style="margin-top: 75px; font-size: 50px" itemprop="about">
+            <h1 style="margin-top: 75px; font-size: 50px">
               Why You Should Use the Zod Library with Your Database
             </h1>
             <p class="text-secondary">
@@ -159,7 +155,7 @@
           <p>The Zod validation library can be installed with the command:</p>
 
           <pre>
-            <code>npm install zod</code>
+            <code class="hljs language-text">npm install zod</code>
           </pre>
 
           <p>
@@ -177,7 +173,7 @@
           </p>
 
           <pre>
-            <code>import { z } from "zod";
+            <code class="hljs language-js">import { z } from "zod";
 
 const ProfileModel = z.object({
   bio: z.string().trim().nullable(),
@@ -221,7 +217,7 @@ const ProfileModel = z.object({
               </p>
 
               <pre>
-              <code>import { z } from "zod";
+              <code class="hljs language-js">import { z } from "zod";
   
 const ProfileModel = z.object({
   bio: z.string().trim().nullable(),
@@ -251,7 +247,7 @@ const validatedObject = ProfileModel.parse({
               </p>
 
               <pre>
-                <code>import { z } from "zod";
+                <code class="hljs language-js">import { z } from "zod";
     
 const ProfileModel = z.object({
   bio: z.string().trim().nullable(),
@@ -330,7 +326,7 @@ if (!validatedObject.success) {
             differnt features zod offers to validate your data.
           </p>
 
-          <p style="margin-bottom: 50px; margin-top: 50px;">
+          <p style="margin-bottom: 50px; margin-top: 50px">
             Check out
             <a href="https://zod.dev/" target="_blank"
               >Zod's official documentation</a
@@ -342,6 +338,10 @@ if (!validatedObject.success) {
 
           <div style="margin: 50px 0px 50px 0px">
             <h2 style="font-family: Silkscreen-Regular">Read more</h2>
+            <a href="/blogs/how-to-make-a-calculator-with-reactjs"
+              >How to Make a Calculator App with Reactjs
+            </a>
+            <br>
             <a href="/blogs/spotify-api-with-javascript"
               >Start accessing user’s Spotify account data with Node.js
             </a>

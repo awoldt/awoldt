@@ -31,6 +31,9 @@
   ul li {
     font-size: 23px;
   }
+  ol li {
+    font-size: 23px;
+  }
 }
 
 /* MD */
@@ -47,12 +50,15 @@
   ul li {
     font-size: 19px;
   }
+  ol li {
+    font-size: 19px;
+  }
 }
 
 /* SM AND SMALLER */
 @media screen and (max-width: 766px) {
   #awoldt_header {
-    font-size: 50px;
+    font-size: 75px !important;
   }
   #backdrop_container {
     background-image: url(../../waves-sm.svg);
@@ -60,6 +66,16 @@
   ul li {
     font-size: 16px;
   }
+  ol li {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 35px !important;
+  }
+}
+
+li p {
+  margin: 0px;
 }
 
 body,
@@ -75,6 +91,7 @@ html {
 .container {
   background-color: #001220 !important;
 }
+
 main {
   padding: 0px !important;
 }
@@ -89,8 +106,18 @@ b {
   color: white !important;
 }
 
+h2 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
 .blog-img {
-  margin: 10px 0px 50px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .blog-div {
@@ -107,10 +134,6 @@ ul {
   margin: 0px 0px 35px 0px !important;
 }
 
-pre {
-  margin: 10px 0px 10px 0px !important;
-}
-
 hr {
   border: none;
   height: 5px;
@@ -118,21 +141,6 @@ hr {
 }
 a {
   text-decoration: none;
-}
-
-pre {
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-
-.code-preview {
-  padding: 10px;
-  border: 10px solid #011e36;
-  background-color: #002c4f;
-  border-radius: 8px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: white;
 }
 
 #awoldt_description {
@@ -148,22 +156,8 @@ pre {
   float: right;
 }
 
-.breadcrumb-item {
-  color: white !important;
-  font-family: Silkscreen-Regular;
-}
-.breadcrumb-item a {
-  color: white;
-  text-decoration: none;
-}
-
 li::before {
   color: #002c4f !important;
-}
-
-.terminal-code {
-  padding: 5px;
-  background-color: #002c4f;
 }
 
 .navbar a {
@@ -184,19 +178,6 @@ li::before {
 }
 nav {
   height: 58px !important;
-}
-
-.active-page {
-  text-decoration: underline;
-  background-color: #002c4f;
-  padding: 10px;
-  border-radius: 8px;
-}
-.nonactive-page {
-  background-color: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 #backdrop_container {
@@ -260,11 +241,6 @@ nav {
   margin-top: 75px;
 }
 
-.code-example-div {
-  background-color: #002c4f !important;
-  border: 10px solid #011e36 !important;
-}
-
 .project-div p {
   font-size: 16px;
 }
@@ -290,6 +266,13 @@ nav {
 
 #project_blocks_container div {
   text-align: start;
+}
+
+.attribution-link {
+  font-size: 13px;
+  margin-top: 100px !important;
+  display: block;
+  margin-bottom: 25px;
 }
 
 #project_blocks_container img {
