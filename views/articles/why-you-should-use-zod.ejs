@@ -85,7 +85,9 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="/">Awoldt</a>
           <div class="d-flex" role="search">
-            <div style="margin-right: 20px"><a href="/articles">Articles</a></div>
+            <div style="margin-right: 20px">
+              <a href="/articles">Articles</a>
+            </div>
             <div>
               <a href="/projects" style="text-decoration: none">Projects</a>
             </div>
@@ -338,13 +340,12 @@ if (!validatedObject.success) {
 
           <div style="margin: 50px 0px 50px 0px">
             <h2 style="font-family: Silkscreen-Regular">Read more</h2>
-            <a href="/articles/how-to-make-a-calculator-with-reactjs"
-              >How to Make a Calculator App with Reactjs
-            </a>
-            <br>
-            <a href="/articles/spotify-api-with-javascript"
-              >Start accessing user’s Spotify account data with Node.js
-            </a>
+            <% if(readMoreLinks !== null) { %>
+                <% readMoreLinks.forEach(x => { %>
+                    <div><a href="/articles/<%= x.path %>"><%= x.name %></a></div>
+                    
+                <% }) %>
+            <% } %>
           </div>
         </main>
       </div>
