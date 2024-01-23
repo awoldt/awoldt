@@ -11,4 +11,4 @@ Some of my skills include:
 - AWS
 - Google Cloud
 
-Feel free to check out some of my repos and connect with me on my social networks if you're interested!
+Feel free to check out some of my repos and connect with me on LinkedIn!
