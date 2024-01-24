@@ -17,4 +17,7 @@
     <url>
         <loc>https://awoldt.dev/articles/how-to-make-a-calculator-with-reactjs</loc>
     </url>
+    <url>
+        <loc>https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs</loc>
+    </url>
 </urlset>

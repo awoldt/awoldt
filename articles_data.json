@@ -10,5 +10,9 @@
   {
     "name": "Using Spotify API with JavaScript",
     "path": "spotify-api-with-javascript"
+  },
+  {
+    "name": "How to Upload File to AWS S3 with Nodejs",
+    "path": "uploading-file-to-s3-with-nodejs"
   }
 ]
