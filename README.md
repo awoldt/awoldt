@@ -4,10 +4,10 @@ My name is Alex and I'm a passionate Full Stack Developer who loves learning new
 
 Some of my skills include:
 - JavaScript/TypeScript
+- React
 - C#
 - Nodejs
 - .NET
-- React
 - AWS
 - Google Cloud
 
