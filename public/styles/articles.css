@@ -1,0 +1,30 @@
+.article-h1-text {
+  font-family: Silkscreen-Regular;
+  font-weight: bold;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.article-img {
+  margin: 10px 0px 10px 0px;
+}
+.article-div {
+  margin-bottom: 50px;
+}
+.article-div img {
+  width: 500px !important;
+  height: 250px !important;
+  margin-bottom: 10px;
+}
+.article-info-div {
+  max-width: 950px;
+}
+.article-info-div h2 {
+  margin-top: 0px;
+}

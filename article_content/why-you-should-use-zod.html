@@ -1,0 +1,234 @@
+<div style="margin-bottom: 50px">
+  <h1 style="margin-top: 75px; font-size: 50px" class="article-h1-text">
+    Why You Should Use the Zod Library with Your Database
+  </h1>
+  <p class="text-secondary">
+    Define and enforce data schemas, validate incoming data, and gain confidence
+    that your data is in the expected format
+  </p>
+  <link
+    href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+    rel="stylesheet"
+  />
+  <div class="shareon" style="float: none">
+    <a
+      class="facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://awoldt.dev/articles/spotify-api-with-javascript"
+    ></a
+    ><a
+      href="https://www.linkedin.com/sharing/share-offsite/?url=https://awoldt.dev/articles/spotify-api-with-javascript"
+      class="linkedin"
+    ></a
+    ><a
+      class="reddit"
+      href="https://www.reddit.com/submit?url=https://awoldt.dev/articles/spotify-api-with-javascript"
+    ></a
+    ><a
+      class="twitter"
+      href="https://twitter.com/intent/tweet?url=https://awoldt.dev/articles/spotify-api-with-javascript"
+    ></a
+    ><a class="copy-url"></a>
+  </div>
+</div>
+
+<p>
+  The Zod schema validator is a fantastic tool for any JavaScript application
+  dealing with database storage. Say goodbye to the headache of wrestling with
+  errors caused by wonky data formats! Zod swoops into the rescue, making sure
+  your data is saved without a hitch. It's your secret weapon against those
+  pesky format-related glitches.
+</p>
+
+<p>
+  Here is how you can level the power of Zod to ensure correct data storage for
+  your application
+</p>
+
+<p>
+  <strong style="font-weight: normal"
+    >This article will be using Nodejs and NPM for our applications environment.
+    You can use vanilla JS or TypeScript to use Zod, although TypeScript will
+    have better type-checking capabilities.</strong
+  >
+</p>
+
+<h2>Download Zod from NPM</h2>
+
+<p>The Zod validation library can be installed with the command:</p>
+
+<pre>
+            <code class="hljs language-text">npm install zod</code>
+          </pre>
+
+<p>
+  Now with Zod installed on your machine, we can define what your data should
+  look like when stored
+</p>
+
+<h2>Create a Zod Schema</h2>
+<p>
+  Create a new TypeScript file. Below is the code that will create a new Zod
+  schema. This schema will act as the model for your data. Any objects with
+  properties that differ from this schema will throw an error during runtime.
+  This will help to prevent bad, malicious, or unwanted data from being stored
+  in your database.
+</p>
+
+<pre>
+            <code class="hljs language-js">import { z } from "zod";
+
+const ProfileModel = z.object({
+  bio: z.string().trim().nullable(),
+  created_on: z.coerce.date(),
+  email: z.string().trim().email(),
+  first_name: z.string().trim(),
+  last_name: z.string().trim(),
+  username: z.string().trim(),
+});</code>
+          </pre>
+
+<p>
+  Let's say for example we have a site where a person can sign up for an
+  account. The properties we wanted to be stored on our customers are
+  represented in the object above:
+</p>
+<ul>
+  <li>Bio</li>
+  <li>Date account created on</li>
+  <li>Email</li>
+  <li>First name</li>
+  <li>Last name</li>
+  <li>Username</li>
+</ul>
+
+<p>
+  In our TypeScript code, we can use Zod to parse the object and make sure it's
+  formatted correctly. There are two ways you can do this.
+</p>
+
+<ul>
+  <li>
+    <h3>parse</h3>
+
+    <p>
+      This function will take an object input, validate all the properties, and
+      return an object with full-type functionality. If there is a property that
+      does not line up with the schema, a new error is thrown. You can catch
+      this error inside a try/catch block.
+    </p>
+
+    <pre>
+              <code class="hljs language-js">import { z } from "zod";
+  
+const ProfileModel = z.object({
+  bio: z.string().trim().nullable(),
+  created_on: z.coerce.date(),
+  email: z.string().trim().email(),
+  first_name: z.string().trim(),
+  last_name: z.string().trim(),
+  username: z.string().trim(),
+});
+
+// you can be confident that validatedObject will be correctly formatted
+
+const validatedObject = ProfileModel.parse({
+  bio: "My name is Bob and I like to watch TV",
+  created_on: 2023-11-21T13:45:12.474+00:00,
+  email: "bob@mail.com",
+  first_name: "Bob",
+  last_name: "Smith",
+  username: "b_smith",
+});
+</code>
+            </pre>
+    <p>
+      If there was a property that did not match the Zod schema, say for
+      example, the first name being a number instead of a string, there would be
+      an error thrown.
+    </p>
+
+    <pre>
+                <code class="hljs language-js">import { z } from "zod";
+    
+const ProfileModel = z.object({
+  bio: z.string().trim().nullable(),
+  created_on: z.coerce.date(),
+  email: z.string().trim().email(),
+  first_name: z.string().trim(),
+  last_name: z.string().trim(),
+  username: z.string().trim(),
+});
+
+// first_name below is set to a number instead of a string like in the schema above
+// this code will throw a new error, which can be handled inside of a try catch block
+
+try {
+  const validatedObject = ProfileModel.parse({
+    bio: "My name is Bob and I like to watch TV",
+    created_on: 2023-11-21T13:45:12.474+00:00,
+    email: "bob@mail.com",
+    first_name: "Bob",
+    last_name: 123456,
+    username: "b_smith",
+  });
+}
+catch(e) {
+  console.log("Error while parsing object")
+}</code>
+              </pre>
+  </li>
+
+  <li>
+    <h3>safeParse</h3>
+    <p>
+      Using the safeParse function on any object will do the same thing as the
+      function above, except now you don't have to wrap inside a try/catch
+      block. After parsing the object you can check if it is valid by:
+    </p>
+
+    <pre>
+                <code>const ProfileModel = z.object({
+  bio: z.string().trim().nullable(),
+  created_on: z.coerce.date(),
+  email: z.string().trim().email(),
+  first_name: z.string().trim(),
+  last_name: z.string().trim(),
+  username: z.string().trim(),
+});
+
+const validatedObject = ProfileModel.safeParse({
+  bio: "My name is Bob and I like to watch TV",
+  created_on: 2023-11-21T13:45:12.474+00:00,
+  email: "bob@mail.com",
+  first_name: "Bob",
+  last_name: 123456,
+  username: "b_smith",
+});
+
+if (!validatedObject.success) {
+  // ERROR
+  console.log("There has been an error while parsing object");
+} else {
+  // do something
+  console.log("Successfully parsed object!");
+}</code>
+              </pre>
+  </li>
+</ul>
+
+<h2>Data Specific Validations/Transformations</h2>
+<p>
+  Zod offers plenty of validation and transformation methods across a variety of
+  data types. Validations ensure object properties are formatted correctly,
+  while transformations will alter the property in some way. For example, zod
+  can use the trim() method to remove whitespace from the beginning and end of
+  string. This is one of many differnt features zod offers to validate your
+  data.
+</p>
+
+<p style="margin-bottom: 50px; margin-top: 50px">
+  Check out
+  <a href="https://zod.dev/" target="_blank" rel="noopener noreferrer">Zod's official documentation</a>
+  to see a complete list of all the validation logic. Use Zod in your backend to
+  ensure the objects being stored are in the exact format your program needs.
+</p>

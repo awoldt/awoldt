@@ -21,7 +21,7 @@
     font-size: 100px;
   }
   #backdrop_container {
-    background-image: url(../../waves.svg);
+    background-image: url(../imgs/waves.svg);
   }
   #personal_projects_description {
     max-width: 1000px;
@@ -45,7 +45,7 @@
     font-size: 19px;
   }
   #backdrop_container {
-    background-image: url(../../waves.svg);
+    background-image: url(../imgs/waves.svg);
   }
   ul li {
     font-size: 19px;
@@ -61,7 +61,7 @@
     font-size: 75px !important;
   }
   #backdrop_container {
-    background-image: url(../../waves-sm.svg);
+    background-image: url(../imgs/waves-sm.svg);
   }
   ul li {
     font-size: 16px;
@@ -83,8 +83,8 @@ html {
   background-color: #001220;
 }
 
-.article-info-div {
-  max-width: 650px;
+body {
+  height: 100vh;
 }
 
 .container-fluid,
@@ -113,19 +113,6 @@ h2 {
 
 h3 {
   margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.article-img {
-  margin: 10px 0px 10px 0px;
-}
-
-.article-div {
-  margin-bottom: 50px;
-}
-.article-div img {
-  width: 500px !important;
-  height: 250px !important;
   margin-bottom: 10px;
 }
 
