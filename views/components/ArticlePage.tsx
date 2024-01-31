@@ -15,7 +15,7 @@ const ArticlePage: FC<{
   relatedArticles: ArticleData[] | null;
 }> = (props) => {
   return (
-    <>
+    <html lang="en">
       {/* HEAD TAG CONTENT */}
       <head dangerouslySetInnerHTML={{ __html: props.head }}></head>
       <body class="mb-5">
@@ -51,7 +51,7 @@ const ArticlePage: FC<{
           </div>
         </main>
       </body>
-    </>
+    </html>
   );
 };
 
