@@ -1,4 +1,5 @@
 import type { FC } from "hono/jsx";
+import Nav from "./components/Nav";
 
 interface ArticleData {
   name: string;
@@ -46,23 +47,7 @@ const Articles: FC<{ articles: ArticleData[] }> = (props: {
       </head>
       <body>
         <div class="container-fluid">
-          <nav class="navbar">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/">
-                Awoldt
-              </a>
-              <div class="d-flex" role="search">
-                <div style="margin-right: 20px">
-                  <a href="/articles">Articles</a>
-                </div>
-                <div>
-                  <a href="/projects" style="text-decoration: none">
-                    Projects
-                  </a>
-                </div>
-              </div>
-            </div>
-          </nav>
+          <Nav currentPage="articles"/>
           <div class="container pt-5">
             <h1
               style="

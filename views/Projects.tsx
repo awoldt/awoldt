@@ -44,7 +44,7 @@ const Projects: FC = () => {
           class="container-fluid"
           style="background: linear-gradient(#001220 , #000509); padding-bottom: 75px"
         >
-          <Nav />
+          <Nav currentPage="projects"/>
 
           <div
             class="container text-center pt-5"

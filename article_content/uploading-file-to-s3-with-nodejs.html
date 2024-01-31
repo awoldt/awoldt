@@ -27,7 +27,7 @@
       class="twitter"
       href="https://twitter.com/intent/tweet?url=https://awoldt.dev/articles/spotify-api-with-javascript"
     ></a
-    ><a class="copy-url"></a>
+    >
   </div>
 </div>
 
@@ -74,8 +74,7 @@
 </code>
           </pre>
 
-          <p>You can name the HTML and PNG file whatever you would like.</p>
-
+<p>You can name the HTML and PNG file whatever you would like.</p>
 
 <h2>Create a New S3 Bucket</h2>
 <p>
@@ -305,6 +304,25 @@ UploadFiles();</code>
   alt="permissions tab of s3 bucket"
   class="img-fluid article-img"
 />
+
+<p>
+  Your bucket should now be public, and any file inside can be accessed by a
+  public URL. Click on one of the uploaded files and and look for its
+  <i>object URL</i>.
+</p>
+
+<img
+  src="/imgs/articles/s3-file-object-url.webp"
+  alt="object url of an s3 file"
+  class="img-fluid article-img"
+/>
+
+<p>
+  Here's an example of what my uploaded file's object URL is -
+  <a href="https://491292639630-us-east-1-awoldt.s3.amazonaws.com/cat.png"
+    >https://491292639630-us-east-1-awoldt.s3.amazonaws.com/cat.png</a
+  >
+</p>
 
 <h2>Conclusion</h2>
 <p>

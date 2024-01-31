@@ -16,10 +16,11 @@ const ArticlePage: FC<{
 }> = (props) => {
   return (
     <>
+      {/* HEAD TAG CONTENT */}
       <head dangerouslySetInnerHTML={{ __html: props.head }}></head>
       <body class="mb-5">
         <header>
-          <Nav />
+          <Nav currentPage="articles" />
         </header>
         <main>
           <div
@@ -30,6 +31,7 @@ const ArticlePage: FC<{
               class="container pt-5"
               style="background: linear-gradient(#001220 , #000509);"
             >
+              {/* PAGE CONTENT */}
               <div dangerouslySetInnerHTML={{ __html: props.content }}></div>
               {props.relatedArticles && (
                 <div style="margin: 50px 0px 50px 0px">
