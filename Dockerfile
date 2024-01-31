@@ -1,7 +1,7 @@
-FROM node:20-alpine
+FROM oven/bun:latest
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install
+RUN bun install
 COPY . .
 EXPOSE 8080
-CMD ["node", "app"]
+CMD ["bun", "app.tsx"]
