@@ -1,13 +1,15 @@
-import type { FC } from "hono/jsx";
-
-const Nav: FC<{ currentPage: "articles" | "projects" }> = (props) => {
+export default function Nav({
+  currentPage,
+}: {
+  currentPage: "articles" | "projects";
+}) {
   return (
     <nav class="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
           Awoldt
         </a>
-        {props.currentPage === "articles" && (
+        {currentPage === "articles" && (
           <div class="d-flex">
             <div style="margin-right: 20px; text-decoration: underline">
               <a href="/articles">Articles</a>
@@ -19,7 +21,7 @@ const Nav: FC<{ currentPage: "articles" | "projects" }> = (props) => {
             </div>
           </div>
         )}
-        {props.currentPage === "projects" && (
+        {currentPage === "projects" && (
           <div class="d-flex">
             <div style="margin-right: 20px">
               <a href="/articles">Articles</a>
@@ -34,6 +36,4 @@ const Nav: FC<{ currentPage: "articles" | "projects" }> = (props) => {
       </div>
     </nav>
   );
-};
-
-export default Nav;
+}

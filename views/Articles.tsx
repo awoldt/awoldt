@@ -1,4 +1,3 @@
-import type { FC } from "hono/jsx";
 import Nav from "./components/Nav";
 
 interface ArticleData {
@@ -7,9 +6,7 @@ interface ArticleData {
   description: string;
 }
 
-const Articles: FC<{ articles: ArticleData[] }> = (props: {
-  articles: ArticleData[];
-}) => {
+export default function Articles({ articles }: { articles: ArticleData[] }) {
   return (
     <html lang="en">
       <head>
@@ -47,7 +44,7 @@ const Articles: FC<{ articles: ArticleData[] }> = (props: {
       </head>
       <body>
         <div class="container-fluid">
-          <Nav currentPage="articles"/>
+          <Nav currentPage="articles" />
           <div class="container pt-5">
             <h1
               style="
@@ -55,7 +52,7 @@ const Articles: FC<{ articles: ArticleData[] }> = (props: {
             font-size: 50px;
           "
             >
-              Articles ({props.articles.length})
+              Articles ({articles.length})
             </h1>
 
             <p class="mb-5">
@@ -66,7 +63,7 @@ const Articles: FC<{ articles: ArticleData[] }> = (props: {
               you'll find these pretty helpful.
             </p>
 
-            {props.articles.map((x) => {
+            {articles.map((x) => {
               return (
                 <div
                   style="background-color: #012745; padding: 20px; border-radius: 10px"
@@ -93,6 +90,4 @@ const Articles: FC<{ articles: ArticleData[] }> = (props: {
       </body>
     </html>
   );
-};
-
-export default Articles;
+}

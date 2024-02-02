@@ -28,11 +28,8 @@
     margin: auto;
     margin-bottom: 50px;
   }
-  ul li {
-    font-size: 23px;
-  }
-  ol li {
-    font-size: 23px;
+  p {
+    font-size: 20px;
   }
 }
 
@@ -41,17 +38,11 @@
   #awoldt_header {
     font-size: 100px;
   }
-  p {
-    font-size: 19px;
-  }
   #backdrop_container {
     background-image: url(../imgs/waves.svg);
   }
-  ul li {
-    font-size: 19px;
-  }
-  ol li {
-    font-size: 19px;
+  p {
+    font-size: 18px;
   }
 }
 
@@ -63,14 +54,12 @@
   #backdrop_container {
     background-image: url(../imgs/waves-sm.svg);
   }
-  ul li {
-    font-size: 16px;
-  }
-  ol li {
-    font-size: 16px;
-  }
+
   h1 {
     font-size: 35px !important;
+  }
+  p {
+    font-size: 16px;
   }
 }
 

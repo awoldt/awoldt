@@ -1,8 +1,7 @@
-import type { FC } from "hono/jsx";
 import Nav from "./components/Nav";
-import { ProjectBlock } from "./components/ProjectBlock";
+import ProjectBlock from "./components/ProjectBlock";
 
-const Projects: FC = () => {
+export default function Projects() {
   return (
     <html lang="en">
       <head>
@@ -44,7 +43,7 @@ const Projects: FC = () => {
           class="container-fluid"
           style="background: linear-gradient(#001220 , #000509); padding-bottom: 75px"
         >
-          <Nav currentPage="projects"/>
+          <Nav currentPage="projects" />
 
           <div
             class="container text-center pt-5"
@@ -137,6 +136,4 @@ const Projects: FC = () => {
       </body>
     </html>
   );
-};
-
-export default Projects;
+}

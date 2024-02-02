@@ -1,12 +1,12 @@
-import type { FC } from "hono/jsx";
-
-export const ProjectBlock: FC<{
+interface Data {
   icon: string;
   name: string;
   description: string;
   websiteUrl: string;
   githubUrl: string;
-}> = (props) => {
+}
+
+export default function ProjectBlock(props: Data) {
   return (
     <div class="project-block">
       <img src={props.icon} alt="typing icon" />
@@ -33,4 +33,4 @@ export const ProjectBlock: FC<{
       </a>
     </div>
   );
-};
+}

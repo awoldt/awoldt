@@ -1,4 +1,3 @@
-import type { FC } from "hono/jsx";
 import Nav from "./Nav";
 import type { ArticleData } from "../../utils/functions";
 
@@ -9,18 +8,20 @@ import type { ArticleData } from "../../utils/functions";
     no need to be scared :)
 */
 
-const ArticlePage: FC<{
+interface Data {
   content: string;
   head: string;
   relatedArticles: ArticleData[] | null;
-}> = (props) => {
+}
+
+export default function ArticlePage(props: Data) {
   return (
     <html lang="en">
       {/* HEAD TAG CONTENT */}
       <head dangerouslySetInnerHTML={{ __html: props.head }}></head>
       <body class="mb-5">
         <header>
-          <Nav currentPage="articles" />
+          <Nav currentPage={"articles"} />
         </header>
         <main>
           <div
@@ -53,6 +54,4 @@ const ArticlePage: FC<{
       </body>
     </html>
   );
-};
-
-export default ArticlePage;
+}
