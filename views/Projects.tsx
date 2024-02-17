@@ -20,6 +20,7 @@ export default function Projects() {
           crossorigin="anonymous"
         />
         <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/projects.css" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -60,11 +61,12 @@ export default function Projects() {
 
             <div id="project_blocks_container">
               <ProjectBlock
-                icon="/imgs/icons/stack-icon.svg"
+                icon="/imgs/icons/stack-icon.png"
                 name="Stackapp"
                 description="Visualize the techie stuff behind your app and flaunt it to others. Pick from tech categories like programming languages, databases, apis, and others. Connect your GitHub account to show off the newest changes made to the app."
                 websiteUrl="https://stackapp.xyz"
                 githubUrl="https://github.com/awoldt/Stackapp"
+                techUsed={["javascript", "mongodb", "remix"]}
               />
               <ProjectBlock
                 icon="/imgs/icons/dividend.ico"
@@ -72,6 +74,7 @@ export default function Projects() {
                 description="Effortlessly explore dividend disbursements from NASDAQ, NYSE, AMEX, ASE, and CBOE-listed companies. Developed using ASP.NET, this platform maintains dividend data in a Postgres database hosted on AWS RDS. A 24-hour cron job ensures continuous updates, keeping the database synchronized with the latest information for an always current user experience."
                 websiteUrl="https://dividome.com/"
                 githubUrl="https://github.com/awoldt/Dividome"
+                techUsed={["csharp", "postgres"]}
               />
               <ProjectBlock
                 icon="/imgs/icons/wordlebin_icon.ico"
@@ -79,6 +82,15 @@ export default function Projects() {
                 description="Unlimited word version of the popular game Wordle. There are over 5,000 words to spell, you can play as many games as you want. Built with Nextjs, reactive frontend that looks great on any screen size."
                 websiteUrl="https://unlimited-wordle.vercel.app/"
                 githubUrl="https://github.com/awoldt/Wordle-Clone"
+                techUsed={["javascript", "react"]}
+              />
+              <ProjectBlock
+                icon="/imgs/icons/htmlscraper.png"
+                name="HTML Scraper"
+                description="Extract information from HTML tags on any website, detailing attributes like href, inner text, class, src, and others"
+                websiteUrl="https://htmltagparser.com/"
+                githubUrl="https://github.com/awoldt/HTML-Scraper"
+                techUsed={["csharp", "postgres"]}
               />
               <ProjectBlock
                 icon="/imgs/icons/avatar-generator.svg"
@@ -86,6 +98,7 @@ export default function Projects() {
                 description="Create stunning avatars using OpenAI's DALL·E 2 image generation model."
                 websiteUrl="https://onlineavatargenerator.com/"
                 githubUrl="https://github.com/awoldt/Avatar-Generator"
+                techUsed={["csharp", "postgres"]}
               />
               <ProjectBlock
                 icon="/imgs/icons/githubdashboard.ico"
@@ -93,6 +106,7 @@ export default function Projects() {
                 description="Look up any GitHub account that's public and receive a rundown of all its public repositories. Each repository in the results will show the ten most recent commits. The data is fetched using the official GitHub API."
                 websiteUrl="https://git-hub-dashboard.vercel.app/"
                 githubUrl="https://github.com/awoldt/github-dashboard"
+                techUsed={["javascript", "react"]}
               />
               <ProjectBlock
                 icon="/imgs/icons/music.svg"
@@ -100,6 +114,7 @@ export default function Projects() {
                 description="See your Spotify account's listening stats using the Spotify API. Check out your favorite artists, top songs, recently played tracks, and get recommendations based on your listening habits."
                 websiteUrl="https://spotify-dashboard-ruby.vercel.app/"
                 githubUrl="https://github.com/awoldt/Spotify-Dashboard"
+                techUsed={["javascript", "nextjs"]}
               />
               <ProjectBlock
                 icon="/imgs/icons/tictactoe.svg"
@@ -107,6 +122,7 @@ export default function Projects() {
                 description="Simple tic tac toe game to play against friends with. Made with a responsive frontend using React, play as many games as you want."
                 websiteUrl="https://tic-tac-toe-seven-wine.vercel.app/"
                 githubUrl="https://github.com/awoldt/Tic-Tac-Toe"
+                techUsed={["javascript", "react"]}
               />
               <ProjectBlock
                 icon="/imgs/icons/chatbot.svg"
@@ -114,6 +130,7 @@ export default function Projects() {
                 description="Have converstaions with an AI bot powered by OpenAI's text-davinci-003 text completion model."
                 websiteUrl="https://ai-chatbot-iota.vercel.app/"
                 githubUrl="https://github.com/awoldt/AI-Chatbot"
+                techUsed={["javascript", "react"]}
               />
             </div>
 

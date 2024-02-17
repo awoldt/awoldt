@@ -1,9 +1,12 @@
+import TechUsed from "./TechUsed";
+
 interface Data {
   icon: string;
   name: string;
   description: string;
   websiteUrl: string;
   githubUrl: string;
+  techUsed: string[];
 }
 
 export default function ProjectBlock(props: Data) {
@@ -31,6 +34,7 @@ export default function ProjectBlock(props: Data) {
       >
         GitHub
       </a>
+      <TechUsed tech={props.techUsed} />
     </div>
   );
 }

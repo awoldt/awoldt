@@ -1,0 +1,11 @@
+.tech-used-div img {
+  display: inline-block !important;
+  margin-right: 10px;
+  padding: 5px;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.tech-used-div {
+  margin-top: 25px;
+}
