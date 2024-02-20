@@ -1,6 +1,6 @@
 {
   "name": "awoldt",
-  "module": "app.tsx",
+  "module": "index.tsx",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"

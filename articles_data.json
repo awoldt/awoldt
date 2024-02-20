@@ -1,5 +1,10 @@
 [
   {
+    "name": "How to Setup a Hono Server with Bun JS",
+    "path": "how-to-setup-bun-with-hono",
+    "description": "Bun and Hono provide a robust alternative to Node.js and Express"
+  },
+  {
     "name": "How to Upload File to AWS S3 with Nodejs",
     "path": "uploading-file-to-s3-with-nodejs",
     "description": "Store endless amounts of files in a public AWS S3 bucket accessible to anyone on the internet"
