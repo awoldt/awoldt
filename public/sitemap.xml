@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://awoldt.dev/</loc>
-  <lastmod>2024-01-31T15:25:55+00:00</lastmod>
-</url>
-<url>
-  <loc>https://awoldt.dev/articles</loc>
-  <lastmod>2024-01-31T15:25:55+00:00</lastmod>
-</url>
-<url>
-  <loc>https://awoldt.dev/projects</loc>
-  <lastmod>2024-01-31T15:25:55+00:00</lastmod>
-</url>
-<url>
-  <loc>https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs</loc>
-  <lastmod>2024-01-31T15:25:56+00:00</lastmod>
-</url>
-<url>
-  <loc>https://awoldt.dev/articles/how-to-make-a-calculator-with-reactjs</loc>
-  <lastmod>2024-01-31T15:25:56+00:00</lastmod>
-</url>
-<url>
-  <loc>https://awoldt.dev/articles/why-you-should-use-zod</loc>
-  <lastmod>2024-01-31T15:25:56+00:00</lastmod>
-</url>
-<url>
-  <loc>https://awoldt.dev/articles/spotify-api-with-javascript</loc>
-  <lastmod>2024-01-31T15:25:57+00:00</lastmod>
-</url>
-<url>
-  <loc>https://awoldt.dev/articles/how-to-setup-bun-with-hono</loc>
-  <lastmod>2024-02-20T15:56:40.814Z</lastmod>
-</url>
-
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://awoldt.dev/</loc>
+    <lastmod>2024-01-31T15:25:55+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/articles</loc>
+    <lastmod>2024-01-31T15:25:55+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/projects</loc>
+    <lastmod>2024-01-31T15:25:55+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs</loc>
+    <lastmod>2024-01-31T15:25:56+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/articles/how-to-make-a-calculator-with-reactjs</loc>
+    <lastmod>2024-01-31T15:25:56+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/articles/why-you-should-use-zod</loc>
+    <lastmod>2024-01-31T15:25:56+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/articles/spotify-api-with-javascript</loc>
+    <lastmod>2024-01-31T15:25:57+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/articles/how-to-setup-bun-with-hono</loc>
+    <lastmod>2024-02-20T15:56:40.814Z</lastmod>
+  </url>
+  <url>
+    <loc>https://awoldt.dev/articles/how-to-make-a-hangman-game-with-csharp</loc>
+    <lastmod>2024-03-01T02:45:28.494Z</lastmod>
+  </url>
 </urlset>

@@ -23,7 +23,7 @@ export default function ArticlePage(props: Data) {
         <header>
           <Nav currentPage={"articles"} />
         </header>
-        <main>
+        <main class="article-page">
           <div
             class="container-fluid"
             style="background: linear-gradient(#001220 , #000509); padding-bottom: 75px"

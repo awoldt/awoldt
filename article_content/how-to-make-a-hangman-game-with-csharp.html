@@ -1,0 +1,550 @@
+<div style="margin-bottom: 50px">
+  <h1 style="margin-top: 75px; font-size: 50px" class="article-h1-text">
+    How to Make a Basic Hangman Game with C#
+  </h1>
+  <p class="text-secondary">
+    Hangman is a perfect program to build while learning a new language that can
+    teach fundamentals and improve your skills
+  </p>
+  <link
+    href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+    rel="stylesheet"
+  />
+  <div class="shareon" style="float: none">
+    <a
+      class="facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://awoldt.dev/articles/how-to-make-a-hangman-game-with-csharp"
+    ></a
+    ><a
+      href="https://www.linkedin.com/sharing/share-offsite/?url=https://awoldt.dev/articles/how-to-make-a-hangman-game-with-csharp"
+      class="linkedin"
+    ></a
+    ><a
+      class="reddit"
+      href="https://www.reddit.com/submit?url=https://awoldt.dev/articles/how-to-make-a-hangman-game-with-csharp"
+    ></a
+    ><a
+      class="twitter"
+      href="https://twitter.com/intent/tweet?url=https://awoldt.dev/articles/how-to-make-a-hangman-game-with-csharp"
+    ></a>
+  </div>
+</div>
+
+<p>
+  Today, you learn how to build a C# hangman application. The player can also
+  choose a difficulty and play as many times as they want. It would be best to
+  have a basic understanding of C# before continuing.
+</p>
+
+<p>
+  Before we start, ensure you have the .NET SDK installed on your machine. You
+  can download it
+  <a href="https://dotnet.microsoft.com/en-us/download" target="_blank"
+    >here.</a
+  >
+</p>
+
+<p>
+  You can find the source code
+  <a
+    href="https://github.com/awoldt/hangman/blob/main/Program.cs"
+    target="_blank"
+    >here</a
+  >
+  if you are too lazy to read this article or would like to copy and paste the
+  program.
+</p>
+
+<h2>Generate a New Console Application</h2>
+<p>
+  First, let's get a template C# console application ready. You can create this
+  application in any directory on your computer and name the folder whatever you
+  want. Find the place on your machine where you would like to make the project
+  and run:
+</p>
+<pre><code class="hljs language-text">dotnet new console -n {WHATEVER_YOU_WANT_HERE}</code></pre>
+<p>
+  After running this command, you should have a new folder called hangman (or
+  whatever you put after -n) in the current directive. Open up that folder in
+  your text editor, and you will see a structure of files similar to this:
+</p>
+<pre><code class="hljs language-text">- bin/ 
+- obj/ 
+- hangman.csproj
+- Program.cs
+</code></pre>
+
+<p>
+  The <i>Program.cs</i> file is where all of our application's logic will be
+  held. Note that in newer versions of .NET/C#, console applications no longer
+  require a manually defined Main method. This simplification eliminates the
+  need for explicit setup, allowing developers to dive directly into coding
+  application logic. You can read more about this
+  <a
+    href="https://learn.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates"
+    target="_blank"
+    >here.</a
+  >
+</p>
+
+<h2>Create the Game Class</h2>
+<p>
+  Our entire hangman game will be handled with a new custom class we will create
+  called <i>Game</i>. This Game class will contain all the logic for the game to
+  function. Let's start by creating this class:
+</p>
+<pre><code class="hljs language-cs">public class Game {}
+</code></pre>
+
+<p>The hangman game will be split into three main parts:</p>
+<ul>
+  <li><p>Selecting a difficulty</p></li>
+  <li><p>Randomly generating a word to spell</p></li>
+  <li>
+    <p>
+      Starting the game and only exiting the program when a user no longer wants
+      to play
+    </p>
+  </li>
+</ul>
+
+<h2>Setting the Difficulty</h2>
+<p>
+  Our game will feature three difficulties: easy, medium, and hard. We will
+  create a new enum type to store all these values. Declare this somewhere
+  outside of the newly created Game class:
+</p>
+<pre><code class="hljs language-cs">public enum DifficultyLevel
+{
+    Easy, // word has length of 4 characters
+    Medium, // word has length of 7 characters
+    Hard // word has length of 10 characters
+}</code></pre>
+<p>
+  Now, inside our Game class, create a new method called
+  <i>SelectDifficulty</i>. This method will run before every game starts. The
+  word the player must spell will depend on the difficulty they select. This
+  method will display an interactive prompt in the terminal where players can
+  switch through the difficulties using the arrow keys on their keyboard. Here
+  is the code:
+</p>
+<pre><code class="hljs language-cs">public DifficultyLevel SelectDifficulty()
+{
+    int diffIndex = 0; // defaults to easy
+    string[] diff = ["Easy", "Medium", "Hard"];
+
+    while (true)
+    {
+        Console.Clear();
+        Console.WriteLine("Choose difficulty:\n");
+        for (int i = 0; i &lt; 3; i++)
+        {
+            if (diffIndex == i)
+            {
+                Console.WriteLine($"-&gt; {diff[i]}");
+                continue;
+            }
+            Console.WriteLine($"{diff[i]}");
+        }
+
+        ConsoleKeyInfo key = Console.ReadKey(true);
+
+        if (key.Key == ConsoleKey.UpArrow)
+        {
+            // cant move up if easy
+            if (diffIndex != 0)
+            {
+                diffIndex--;
+            }
+        }
+        else if (key.Key == ConsoleKey.DownArrow)
+        {
+            // cant move down if hard
+            if (diffIndex != 2)
+            {
+                diffIndex++;
+            }
+        }
+        else if (key.Key == ConsoleKey.Enter)
+        {
+            Console.Clear();
+            return diffIndex == 0 ? DifficultyLevel.Easy : diffIndex == 1 ? DifficultyLevel.Medium : DifficultyLevel.Hard;
+        }
+    }
+}</code></pre>
+
+<p>
+  Looking at the method, we can see that it will return the type
+  <i>DifficultyLevel</i>, which is the enum we declared above. The
+  <i>diff</i> array of strings (each containing a difficulty) and
+  <i>diffIndex</i> integer will keep track of what difficulty a user selects.
+  For example, the default value for <i>diffIndex</i> is 0, meaning the
+  currently selected difficulty for the game would be<i>diff[0]</i> (which is
+  easy). A "->" will be displayed next to the currently selected difficulty.
+  Pressing the up or down arrows on the keyboard will move this cursor.
+</p>
+
+<p>The selection prompt will look like this:</p>
+<img
+  src="/imgs/articles/hangman-diff-prompt.PNG"
+  alt="the selection screen for choosing a difficulty"
+  class="img-fluid article-img"
+/>
+
+<p>
+  This method will keep the player stuck in a loop until they press the
+  <i>Enter</i> key on a difficulty, returning the desired difficulty level. This
+  method uses the <i>ConsoleKeyInfo</i> C# struct to read in keys pressed. We
+  are only looking for three possible keys to be pressed:
+</p>
+
+<ul>
+  <li>Up arrow</li>
+  <li>Down arrow</li>
+  <li>Enter</li>
+</ul>
+<pre><code class="hljs language-cs">// UP ARROW    
+if (key.Key == ConsoleKey.UpArrow)
+{
+    // cant move up if easy
+    if (diffIndex != 0)
+    {
+        diffIndex--;
+    }
+}
+// DOWN ARROW
+else if (key.Key == ConsoleKey.DownArrow)
+{
+    // cant move down if hard
+    if (diffIndex != 2)
+    {
+        diffIndex++;
+    }
+}
+// ENTER
+else if (key.Key == ConsoleKey.Enter)
+{
+    Console.Clear();
+    return diffIndex == 0 ? DifficultyLevel.Easy : diffIndex == 1 ? DifficultyLevel.Medium : DifficultyLevel.Hard;
+}</code></pre>
+
+<h2>Generating a Random Word</h2>
+<p>
+  We will need to generate a random word based on the difficulty selected. In my
+  program, I have the words being generated as:
+</p>
+
+<ul>
+  <li><p>Easy words contain 4 characters</p></li>
+  <li><p>Medium words contain 7 characters</p></li>
+  <li><p>Hard words contain 10 characters</p></li>
+</ul>
+
+<p>
+  You can adjust the character lengths for your program if you wish. There is an
+  easy-to-use API for generating a random word based on a specific number of
+  characters:
+  <b>https://random-word-api.herokuapp.com/word?length={YOUR_WORD_LENGTH}</b>
+</p>
+
+<pre><code class="hljs language-cs">public async Task&lt;string?&gt; GenerateWord(DifficultyLevel diff)
+{
+    HttpClient client = new HttpClient();
+    string url = "";
+    switch (diff)
+    {
+        case DifficultyLevel.Easy:
+            {
+                url = "https://random-word-api.herokuapp.com/word?length=4";
+                break;
+            }
+
+        case DifficultyLevel.Medium:
+            {
+                url = "https://random-word-api.herokuapp.com/word?length=7";
+                break;
+            }
+
+        case DifficultyLevel.Hard:
+            {
+                url = "https://random-word-api.herokuapp.com/word?length=10";
+                break;
+            }
+    }
+
+    try
+    {
+        var req = await client.GetAsync(url);
+        req.EnsureSuccessStatusCode();
+        var res = await req.Content.ReadAsStringAsync();
+        var words = JsonSerializer.Deserialize&lt;string[]&gt;(res);
+        var RETURN_WORD = words[0];
+
+        return RETURN_WORD;
+    }
+    catch (Exception err)
+    {
+        Console.WriteLine(err);
+        return null;
+    }
+}</code></pre>
+
+<p>
+  Depending on the <i>diff</i> parameter passed into the method, a different URL
+  endpoint will be generated and stored in the <i>url</i> variable. This
+  endpoint will return a single string and vary in character length.
+  <i>RETURN_WORD</i> contains the word a player must guess to win.
+</p>
+
+<h2>Start the Game</h2>
+<p>
+  Now, we can finally start playing the game. Inside our Game class, create a
+  new method called <i>Play</i>. This method is asynchronous and will loop
+  endlessly until a player chooses not to play a new game. Here is the code:
+</p>
+<pre><code class="hljs language-cs">public async Task Play()
+{
+    bool GAMEOVER = false;
+
+    while (!GAMEOVER)
+    {
+        var attempts = 5;
+        var diff = SelectDifficulty();
+        var word = await GenerateWord(diff);
+        var guessesDisplay = new char[word.Length];
+        List&lt;char&gt; guesses = new List&lt;char&gt;();
+        // populates the default placeholder chars '_'
+        // as user spells word, placeholders will be replaced with letters
+        for (int i = 0; i &lt; word.Length; i++)
+        {
+            guessesDisplay[i] = '_';
+        }
+
+        while (attempts != 0)
+        {
+            // GAME WON
+            if (!guessesDisplay.Contains('_'))
+            {
+                Console.WriteLine("\n\nCONGRATS, YOU GUESSED THE WORD!\nThe word was " + word);
+                // play again?
+                Console.Write("\nPlay again? (y/n) ");
+                var p = Console.ReadLine().ToLower();
+                while (p != "y" && p != "n")
+                {
+                    Console.Write("Play again? (y/n) ");
+                    p = Console.ReadLine().ToLower();
+                }
+                if (p == "n")
+                {
+                    Console.Clear();
+                    GAMEOVER = true;
+                    break;
+                }
+            }
+
+            Console.WriteLine(string.Join("", guessesDisplay));
+            Console.Write("\nGuess character: ");
+            var guess = Console.ReadKey();
+            Console.WriteLine("\n");
+
+            if (!guesses.Contains(guess.KeyChar))
+            {
+                guesses.Add(guess.KeyChar);
+                // character guessed is within word to guess
+                if (word.ToCharArray().Contains(guess.KeyChar))
+                {
+                    for (int i = 0; i &lt; word.Length; i++)
+                    {
+                        if (word[i] == guess.KeyChar)
+                        {
+                            guessesDisplay[i] = guess.KeyChar;
+                        }
+                    }
+                }
+                else
+                {
+                    attempts--;
+                }
+            }
+            else
+            {
+                Console.WriteLine("- already guessed the character '" + guess.KeyChar + "'\n");
+            }
+        }
+
+        // game over, could not guess word
+        Console.WriteLine("\n-----------------------------------------------");
+        Console.WriteLine("\nThe word was '" + word + "'");
+
+        // play again?
+        Console.Write("\nPlay again? (y/n) ");
+        var playAgain = Console.ReadLine().ToLower();
+        while (playAgain != "y" && playAgain != "n")
+        {
+            Console.Write("Play again? (y/n) ");
+            playAgain = Console.ReadLine().ToLower();
+        }
+        if (playAgain == "n")
+        {
+            Console.Clear();
+            break;
+        }
+    }
+}</code></pre>
+
+<p>
+  The default value for <i>GAMEOVER</i> is false and will loop until it is true.
+  After each game, the player will be asked if they would like to play again,
+  and if "no" is selected, <i>GAMEOVER</i> will be set to true, and the program
+  will end.
+</p>
+
+<pre><code class="hljs language-cs">var attempts = 5;
+var diff = SelectDifficulty();
+var word = await GenerateWord(diff);
+var guessesDisplay = new char[word.Length];
+// populates the default placeholder chars '_'
+// as user spells word, placeholders will be replaced with letters
+for (int i = 0; i &lt; word.Length; i++)
+{
+    guessesDisplay[i] = '_';
+}
+
+List&lt;char&gt; guesses = new List&lt;char&gt;();</code></pre>
+
+<p>
+  Five things will occur before a player is allowed to start guessing
+  characters. First, we will set the <i>attempts</i> variable to 5. Once
+  <i>attempts</i> equal 0, the game will end unless a player can successfully
+  guess the word before them. Secondly, we use our
+  <i>SelectDifficulty()</i> method we created earlier to set the game's
+  difficulty, which directly impacts the third step, generating the word to
+  guess with <i>GenerateWord()</i>. Notice how we pass the <i>diff</i> variable
+  into the <i>GenerateWord()</i> method. Fourth, <i>guessesDisplay</i> is a
+  placeholder for characters to let the user know what guesses they have gotten
+  correct.
+</p>
+
+<p>
+  We initialize the <i>guessesDisplay</i> array with a length of how many
+  characters are in the <i>word</i> variable. We will need to loop and place a
+  '_' character for each character of <i>word</i> length. For example, if the
+  word to guess is 'jack', the <i>guessesDisplay</i> array would be:
+</p>
+
+<pre><code class="hljs language-cs">{'_', '_', '_', '_'}</code></pre>
+<p>Now, if the player is to guess 'sack', the array would now be:</p>
+<pre><code class="hljs language-cs">{'_', 'a', 'c', 'k'}</code></pre>
+<p>
+  This character array will be displayed after each guess to give the player
+  feedback on their guesses and help inform their next guess.
+</p>
+
+<p>
+  Lastly, we initialize a new List of type char called <i>guesses</i>. This list
+  will keep track of all guesses made so that if a player accidentally tries to
+  guess a character they have already guessed, it won't take an attempt away and
+  will display a message letting them know they have already guessed that
+  character.
+</p>
+<p>When the actual game is being played, this is the code that is looping:</p>
+<pre><code class="hljs language-cs">while (attempts != 0)
+{
+    // GAME WON
+    if (!guessesDisplay.Contains('_'))
+    {
+        Console.WriteLine("\n\nCONGRATS, YOU GUESSED THE WORD!\nThe word was " + word);
+        // play again?
+        Console.Write("\nPlay again? (y/n) ");
+        var p = Console.ReadLine().ToLower();
+        while (p != "y" && p != "n")
+        {
+            Console.Write("Play again? (y/n) ");
+            p = Console.ReadLine().ToLower();
+        }
+        if (p == "n")
+        {
+            Console.Clear();
+            GAMEOVER = true;
+            break;
+        }
+    }
+
+    Console.WriteLine(string.Join("", guessesDisplay));
+    Console.Write("\nGuess character: ");
+    var guess = Console.ReadKey();
+    Console.WriteLine("\n");
+
+    if (!guesses.Contains(guess.KeyChar))
+    {
+        guesses.Add(guess.KeyChar);
+        // character guessed is within word to guess
+        if (word.ToCharArray().Contains(guess.KeyChar))
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] == guess.KeyChar)
+                {
+                    guessesDisplay[i] = guess.KeyChar;
+                }
+            }
+        }
+        else
+        {
+            attempts--;
+        }
+    }
+    else
+    {
+        Console.WriteLine("- already guessed the character '" + guess.KeyChar + "'\n");
+    }
+}</code></pre>
+
+<p>
+  Once the program detects that <i>guessesDisplay</i> does not have a '_'
+  character, a user has successfully guessed every character of the
+  <i>word</i> variable (aka, they won the game). Until that happens (or when
+  attempts equal 0), the user will enter a character one by one using C#'s
+  <i>Console.ReadKey()</i> method. If a character guessed is within the word to
+  spell, <i>guessesDisplay</i> will replace the '_' with the correct character
+  at the specified index.
+</p>
+
+<h2>Endgame</h2>
+<p>
+  Once a player guesses the word or attempts is 0, the player will be prompted
+  to play again:
+</p>
+<pre><code class="hljs language-cs">Console.Write("\nPlay again? (y/n) ");
+var p = Console.ReadLine().ToLower();
+while (p != "y" && p != "n")
+{
+    Console.Write("Play again? (y/n) ");
+    p = Console.ReadLine().ToLower();
+}
+if (p == "n")
+{
+    Console.Clear();
+    GAMEOVER = true;
+    break;
+}</code></pre>
+
+<p>
+  This play again code can appear in two different places in the program, one
+  <u>during</u> the game if the player correctly guesses the word before the
+  attempts equal 0 or <u>after</u> the game ends and the player cannot guess the
+  word. The only difference between the two code snippets is that the first
+  mentioned one will set <i>GAMEOVER</i> to true (the above code), which will
+  break the player out of the while loop that asks for input and out of the
+  parent while loop that keeps them stuck in the game, ending the program
+  entirely.
+</p>
+
+<h2>Conclusion</h2>
+<p>
+  🎉 You have just built your first simple hangman game with C#! Take the time
+  to read through the code given and try to understand how the game works from a
+  developer's perspective. You can adjust parts of this program to tailor it to
+  how you want it to work and add new features to make it more interesting. If
+  you found this article helpful, share it with others!
+</p>
