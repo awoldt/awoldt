@@ -12,7 +12,7 @@ export default function Index(props: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Alex Breckwoldt | Full Stack Developer</title>
+        <title>awoldt | Full Stack Developer</title>
         <meta
           name="description"
           content="My name is Alex and I&#x27;m a Full Stack Developer from Charlotte NC. I like to code."
@@ -160,13 +160,6 @@ export default function Index(props: PageProps) {
                   icon="dividome.png"
                 />
                 <ProjectBlock
-                  name="LyricDump"
-                  description="A collection of the funniest song lyrics of all time. This site gets a substantial amount of organic traffic. New lyrics are added constantly."
-                  websiteUrl="https://lyricdump.com/"
-                  githubUrl="https://github.com/awoldt/LyricDump"
-                  icon="lyricdump.png"
-                />
-                <ProjectBlock
                   name="AI ChatBot"
                   description="Have converstaions with an AI bot powered by OpenAI's GPT-3.5 Turbo text completion model."
                   websiteUrl="https://ai-chatbot-iota.vercel.app/"
@@ -180,6 +173,16 @@ export default function Index(props: PageProps) {
                   githubUrl="https://github.com/awoldt/HTML-Scraper"
                   icon="html-scrape.png"
                 />
+              </div>
+              <div style="background-color: white; width: 200px; padding: 10px; margin: auto; margin-top: 25px">
+                <a
+                  href="https://github.com/awoldt?tab=repositories"
+                  style="color: black"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View all projects
+                </a>
               </div>
             </div>
             {props.articles === null && (
