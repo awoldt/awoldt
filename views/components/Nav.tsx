@@ -5,7 +5,7 @@ export default function Nav() {
       <nav class="navbar">
         <div
           class="container-fluid"
-          style="background-color: #003863 !important;"
+          style="background-color: #001b30  !important;"
         >
           <div class="container navbar">
             <a class="navbar-brand" href="/" style="font-weight: 700">

@@ -86,12 +86,11 @@ li::before {
   color: white !important;
 }
 nav {
-  height: 58px !important;
-  background-color: #003863;
+  background-color: #001b30;
 }
 
 nav .navbar {
-  background-color: #003863 !important;
+  background-color: #001b30 !important;
 }
 
 /* LG AND ABOVE */
