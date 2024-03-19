@@ -4,22 +4,40 @@ import path from "path";
 
 import Articles from "./views/Articles.tsx";
 import ArticlePage from "./views/components/ArticlePage.tsx";
-import { GetRelatedArticleLinks } from "./utils/functions.ts";
-import Projects from "./views/Projects.tsx";
+import { GetRelatedArticleLinks, type ArticleData } from "./utils/functions.ts";
+import Index from "./views/Homepage.tsx";
 
 const app = new Hono();
 
 app.use("/*", serveStatic({ root: "./public" }));
 
 app.get("/", async (c) => {
-  const homepage = Bun.file(path.join(process.cwd(), "views", "index.html"));
-  return c.html(homepage.text());
+  const articleFiles = Bun.file(
+    path.join(process.cwd(), "utils", "article_data.json")
+  );
+  let articleData: ArticleData[] | null = JSON.parse(await articleFiles.text());
+
+  if (articleData != null) {
+    articleData = articleData.slice(0, 3);
+  }
+
+  return c.html(<Index articles={articleData} />);
 });
 
 app.get("/articles", async (c) => {
-  const articles = Bun.file(path.join(process.cwd(), "articles_data.json"));
+  const articleFiles = Bun.file(
+    path.join(process.cwd(), "utils", "article_data.json")
+  );
+  const articleData: ArticleData[] | null = JSON.parse(
+    await articleFiles.text()
+  );
 
-  return c.html(<Articles articles={await articles.json()} />);
+  if (articleData === null) {
+    c.status(500);
+    return c.text("There was an error while fetching articles :(");
+  }
+
+  return c.html(<Articles articles={articleData} />);
 });
 
 app.get("/articles/:article_title", async (c) => {
@@ -36,7 +54,19 @@ app.get("/articles/:article_title", async (c) => {
     )
   );
 
-  const relatedArticles = await GetRelatedArticleLinks(articleTitle);
+  const articleFiles = Bun.file(
+    path.join(process.cwd(), "utils", "article_data.json")
+  );
+  const currentArticleData: ArticleData = JSON.parse(
+    await articleFiles.text()
+  ).find((x: ArticleData) => {
+    return x.file_name === articleTitle;
+  });
+
+  const relatedArticles = await GetRelatedArticleLinks(
+    articleTitle,
+    currentArticleData.tags
+  );
 
   return c.html(
     <ArticlePage
@@ -45,10 +75,6 @@ app.get("/articles/:article_title", async (c) => {
       relatedArticles={relatedArticles}
     />
   );
-});
-
-app.get("/projects", (c) => {
-  return c.html(<Projects />);
 });
 
 Bun.serve({

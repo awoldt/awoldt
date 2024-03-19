@@ -1,68 +1,3 @@
-@font-face {
-  font-family: Silkscreen-Regular;
-  src: url("./fonts/Silkscreen-Regular.ttf");
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* LG AND ABOVE */
-@media screen and (min-width: 992px) {
-  p {
-    font-size: 20px;
-  }
-  #awoldt_header {
-    font-size: 100px;
-  }
-  #backdrop_container {
-    background-image: url(../imgs/waves.svg);
-  }
-  #personal_projects_description {
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 50px;
-  }
-  p {
-    font-size: 20px;
-  }
-}
-
-/* MD */
-@media (min-width: 768px) and (max-width: 991px) {
-  #awoldt_header {
-    font-size: 100px;
-  }
-  #backdrop_container {
-    background-image: url(../imgs/waves.svg);
-  }
-  p {
-    font-size: 18px;
-  }
-}
-
-/* SM AND SMALLER */
-@media screen and (max-width: 766px) {
-  #awoldt_header {
-    font-size: 75px !important;
-  }
-  #backdrop_container {
-    background-image: url(../imgs/waves-sm.svg);
-  }
-
-  h1 {
-    font-size: 35px !important;
-  }
-  p {
-    font-size: 16px;
-  }
-}
-
 li p {
   margin: 0px;
 }
@@ -138,11 +73,9 @@ li::before {
 
 .navbar a {
   color: white;
-  font-family: Silkscreen-Regular;
 }
 .navbar div {
   color: white;
-  font-family: Silkscreen-Regular;
 }
 
 .navbar-brand {
@@ -154,119 +87,23 @@ li::before {
 }
 nav {
   height: 58px !important;
+  background-color: #003863;
 }
 
-#backdrop_container {
-  background-size: cover;
-  padding-top: 400px;
-  padding-left: 0px;
-  padding-right: 0px;
+nav .navbar {
+  background-color: #003863 !important;
 }
 
-#main_container {
-  color: white;
-  animation: fadein 0.5s;
+/* LG AND ABOVE */
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 20px;
+  }
 }
 
-#awoldt_header {
-  font-family: Silkscreen-Regular;
-}
-
-#github_link_btn {
-  margin-right: 5px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-#linkedin_link_btn {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  margin-right: 5px;
-}
-
-.prof-social-link {
-  text-decoration: none;
-  color: black;
-}
-
-.prof-social-icon {
-  margin-right: 5px;
-}
-
-.prof-personal-link {
-  width: 166.165px;
-  margin: auto;
-  margin-top: 25px;
-  font-family: Silkscreen-Regular !important;
-  color: white !important;
-}
-.prof-personal-link:hover {
-  background-color: #002c4f !important;
-}
-
-#tech_frame_banner {
-  font-family: Silkscreen-Regular !important;
-  text-align: center;
-  margin-top: 75px;
-}
-
-.project-div p {
-  font-size: 16px;
-}
-
-.proj-card-link {
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  background-color: #025aa1;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  display: inline-block;
-  width: 100px;
-  font-weight: 900;
-  font-weight: 900;
-  margin-right: 25px;
-}
-
-.proj-card-link:hover {
-  background-color: #011e36 !important;
-}
-
-#project_blocks_container div {
-  text-align: start;
-}
-
-.attribution-link {
-  font-size: 13px;
-  margin-top: 100px !important;
-  display: block;
-  margin-bottom: 25px;
-}
-
-#project_blocks_container img {
-  height: 100px;
-  width: 100px;
-  margin-bottom: 25px;
-  display: block;
-}
-
-#project_blocks_container p {
-  max-width: 950px;
-}
-
-#project_blocks_container h2 {
-  font-family: Silkscreen-Regular !important;
-}
-
-.project-block {
-  padding: 25px;
-  background-color: #012847 !important;
-  border-radius: 10px;
-  border: 10px solid #011e36;
-  margin-bottom: 50px;
+/* MD AND SMALLER */
+@media screen and (max-width: 991px) {
+  p {
+    font-size: 18px;
+  }
 }

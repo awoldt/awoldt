@@ -6,35 +6,34 @@ interface Data {
   description: string;
   websiteUrl: string;
   githubUrl: string;
-  techUsed: string[];
 }
 
 export default function ProjectBlock(props: Data) {
   return (
-    <div class="project-block">
-      <img src={props.icon} alt="typing icon" />
-      <h2 style="display: inline-block; color: white">{props.name}</h2>
-      <p style="color: white">{props.description}</p>
-      <hr />
+    <div class="col-xl-4 project-div">
+      <div class="project-wrapper"><div style="margin: 10px">
+        <div style="display: flex; align-items: center; justify-content:center; margin-bottom: 10px">
+          <img src={`/imgs/icons/${props.icon}`} alt={`${props.name} icon`} />
+          <span style="display: inline-block; margin-left: 10px">
+            {props.name}
+          </span>
+        </div>
 
-      <a
-        href={props.websiteUrl}
-        target="blank"
-        rel="noreferrer"
-        class="proj-card-link"
-      >
-        Visit
-      </a>
-
-      <a
-        class="proj-card-link"
-        href={props.githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
-      <TechUsed tech={props.techUsed} />
+        <p>{props.description}</p>
+        <div class="project-btn-links">
+          <div>
+            <a href={props.websiteUrl} target="_blank">
+              Visit
+            </a>
+          </div>
+          <div>
+            <a href={props.githubUrl} target="_blank">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div></div>
+      
     </div>
   );
 }

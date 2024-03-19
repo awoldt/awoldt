@@ -1,5 +1,4 @@
 .article-h1-text {
-  font-family: Silkscreen-Regular;
   font-weight: bold;
   font-display: swap;
 }
@@ -32,10 +31,11 @@ h6 {
 }
 
 pre {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
-/* definitely didnt copy from chatgpt below */
+/* definitely didnt copy from chatgpt */
+/* puts a <hr> above each h2 on article page */
 .article-page h2:before {
   content: "";
   display: block;

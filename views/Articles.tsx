@@ -1,10 +1,5 @@
+import type { ArticleData } from "../utils/functions";
 import Nav from "./components/Nav";
-
-interface ArticleData {
-  name: string;
-  path: string;
-  description: string;
-}
 
 export default function Articles({ articles }: { articles: ArticleData[] }) {
   return (
@@ -43,17 +38,12 @@ export default function Articles({ articles }: { articles: ArticleData[] }) {
         />
       </head>
       <body>
+        <header>
+          <Nav />
+        </header>
         <div class="container-fluid">
-          <Nav currentPage="articles" />
           <div class="container pt-5">
-            <h1
-              style="
-            font-family: Silkscreen-Regular;
-            font-size: 50px;
-          "
-            >
-              Articles ({articles.length})
-            </h1>
+            <h1 style="font-size: 50px;">Articles ({articles.length})</h1>
 
             <p class="mb-5">
               Check out these articles if you're looking to get the hang of
@@ -70,7 +60,7 @@ export default function Articles({ articles }: { articles: ArticleData[] }) {
                     class="article-div"
                   >
                     <a
-                      href={`/articles/${x.path}`}
+                      href={`/articles/${x.file_name}`}
                       style="text-decoration: none"
                     >
                       <div>
@@ -81,7 +71,6 @@ export default function Articles({ articles }: { articles: ArticleData[] }) {
                           <h2 style="font-size: 30px; color: white; font-weight: 900">
                             {x.name}
                           </h2>
-                          <p>{x.description}</p>
                         </div>
                       </div>
                     </a>

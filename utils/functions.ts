@@ -3,35 +3,67 @@ import path from "path";
 
 export interface ArticleData {
   name: string;
-  path: string;
-  description: string;
+  posted_on: string;
+  file_name: string;
+  tags: string[];
 }
 
-export async function GetRelatedArticleLinks(currentArticleName: string) {
+export async function GetRelatedArticleLinks(
+  currentArticle: string,
+  articleTags: string[]
+): Promise<{
+  relatedArticles: ArticleData[];
+  otherArticles: ArticleData[];
+} | null> {
   /* 
-        Gets a most 6 links from articles_data.json file to 
-        display at the bottom of each article
+        Gets related and recent article links to showcase at bottom 
+        of each article
 
-        Will exclude the article currently being viewed
+        Related are articles with similar tags, while recent just goes in order
+        from newest article posted
+
+        MUST exclude the current article being viewed from being returned
     */
 
   try {
-    const jsonData = await fs.readFile(
-      path.join(process.cwd(), "articles_data.json"),
-      { encoding: "utf-8" }
+    const fileData = Bun.file(
+      path.join(process.cwd(), "utils", "article_data.json")
     );
-    const data: ArticleData[] = await JSON.parse(jsonData);
 
-    const relatedAricles: ArticleData[] = [];
+    // every article OTHER than the current one being viewed
+    const articles: ArticleData[] = JSON.parse(await fileData.text()).filter(
+      (x: ArticleData) => {
+        return x.file_name !== currentArticle;
+      }
+    );
 
-    for (let i = 0; i < data.length; i++) {
-      if (relatedAricles.length === 6) break;
-      if (data[i].path !== currentArticleName) {
-        relatedAricles.push(data[i]);
+    // articles with the same tags as current one being viewed
+    const relatedArticles = articles.filter((x) => {
+      for (let i = 0; i < x.tags.length; i++) {
+        if (articleTags.includes(x.tags[i])) {
+          return x;
+        }
+      }
+    });
+
+    const otherArticles: ArticleData[] = [];
+    for (let i = 0; i < articles.length; i++) {
+      let a = true;
+      for (let k = 0; k < relatedArticles.length; k++) {
+        if (relatedArticles[k].file_name === articles[i].file_name) {
+          a = false;
+          break;
+        }
+      }
+      if (a) {
+        otherArticles.push(articles[i]);
       }
     }
 
-    return relatedAricles;
+    return {
+      relatedArticles: relatedArticles,
+      otherArticles: otherArticles,
+    };
   } catch (err) {
     console.log(err);
     return null;
