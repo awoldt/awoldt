@@ -8,11 +8,11 @@ interface PageProps {
 
 export default function Index(props: PageProps) {
   return (
-    <>
+    <html lang="en">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>awoldt | Full Stack Developer</title>
+        <title>Alex Breckwoldt | Full Stack Developer</title>
         <meta
           name="description"
           content="My name is Alex and I&#x27;m a Full Stack Developer from Charlotte NC. I like to code."
@@ -174,10 +174,10 @@ export default function Index(props: PageProps) {
                   icon="html-scrape.png"
                 />
               </div>
-              <div style="background-color: white; width: 200px; padding: 10px; margin: auto; margin-top: 25px">
+              <div style="background-color: white; width: 200px; padding: 10px; margin: auto; margin-top: 25px; border-radius: 10px">
                 <a
                   href="https://github.com/awoldt?tab=repositories"
-                  style="color: black"
+                  style="color: black;"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -191,10 +191,10 @@ export default function Index(props: PageProps) {
             {props.articles !== null && (
               <div class="text-center" style="margin-top: 100px">
                 <h2>Recent Articles</h2>
-                <div>
+                <div id="recent_article_links">
                   {props.articles.map((x) => {
                     return (
-                      <div class="article-link">
+                      <div>
                         <a href={`/articles/${x.file_name}`}>
                           <span>{x.name}</span>
                         </a>
@@ -212,6 +212,6 @@ export default function Index(props: PageProps) {
           </div>
         </div>
       </body>
-    </>
+    </html>
   );
 }
