@@ -160,6 +160,13 @@ export default function Index(props: PageProps) {
                   icon="dividome.png"
                 />
                 <ProjectBlock
+                  name="Stackapp"
+                  description="A platform to visualize your application's tech stack"
+                  websiteUrl="https://stackapp.xyz/"
+                  githubUrl="https://github.com/awoldt/Stackapp"
+                  icon="stackapp.png"
+                />
+                <ProjectBlock
                   name="AI ChatBot"
                   description="Have converstaions with an AI bot powered by OpenAI's GPT-3.5 Turbo text completion model."
                   websiteUrl="https://ai-chatbot-iota.vercel.app/"
