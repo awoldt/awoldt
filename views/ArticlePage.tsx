@@ -1,5 +1,5 @@
-import Nav from "./Nav";
-import type { ArticleData } from "../../utils/functions";
+import Nav from "./components/Nav";
+import type { ArticleData } from "../utils/functions";
 
 /* 
     The html string being passed into dangerouslySetInnerHTML is coming 

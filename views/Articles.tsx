@@ -1,5 +1,6 @@
 import type { ArticleData } from "../utils/functions";
 import Nav from "./components/Nav";
+import RecentArticles from "./components/RecentArticles";
 
 export default function Articles({ articles }: { articles: ArticleData[] }) {
   return (
@@ -52,32 +53,8 @@ export default function Articles({ articles }: { articles: ArticleData[] }) {
               simple and clear, so even if you're just starting out in coding,
               you'll find these pretty helpful.
             </p>
-            <div style="padding-bottom: 50px">
-              {articles.map((x) => {
-                return (
-                  <div
-                    style="background-color: #012745; padding: 20px; border-radius: 10px;"
-                    class="article-div"
-                  >
-                    <a
-                      href={`/articles/${x.file_name}`}
-                      style="text-decoration: none"
-                    >
-                      <div>
-                        <div
-                          style="display: inline-block"
-                          class="article-info-div"
-                        >
-                          <h2 style="font-size: 30px; color: white; font-weight: 900">
-                            {x.name}
-                          </h2>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                );
-              })}
-            </div>
+
+            <RecentArticles articles={articles} />
           </div>
         </div>
       </body>

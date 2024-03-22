@@ -105,4 +105,15 @@
 
 #recent_article_links span {
   font-size: 24px;
+  display: block;
+  margin: auto;
+  max-width: 250px;
+}
+
+#recent_article_links img {
+  width: 250px;
+}
+
+.article-thumbnail {
+  width: 200px;
 }

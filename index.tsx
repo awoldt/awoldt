@@ -3,7 +3,7 @@ import { serveStatic } from "hono/bun";
 import path from "path";
 
 import Articles from "./views/Articles.tsx";
-import ArticlePage from "./views/components/ArticlePage.tsx";
+import ArticlePage from "./views/ArticlePage.tsx";
 import { GetRelatedArticleLinks, type ArticleData } from "./utils/functions.ts";
 import Index from "./views/Homepage.tsx";
 

@@ -34,6 +34,17 @@ pre {
   margin-bottom: 1.25rem;
 }
 
+#recent_article_links span {
+  font-size: 24px;
+  display: block;
+  max-width: 250px;
+  margin: auto;
+}
+
+#recent_article_links img {
+  width: 250px;
+}
+
 /* definitely didnt copy from chatgpt */
 /* puts a <hr> above each h2 on article page */
 .article-page h2:before {

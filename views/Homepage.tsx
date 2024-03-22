@@ -1,5 +1,6 @@
 import type { ArticleData } from "../utils/functions";
 import ProjectBlock from "./components/ProjectBlock";
+import RecentArticles from "./components/RecentArticles";
 import SkillsGrid from "./components/SkillsGrid";
 
 interface PageProps {
@@ -197,17 +198,9 @@ export default function Index(props: PageProps) {
             )}
             {props.articles !== null && (
               <div class="text-center" style="margin-top: 100px">
-                <h2>Recent Articles</h2>
-                <div id="recent_article_links">
-                  {props.articles.map((x) => {
-                    return (
-                      <div>
-                        <a href={`/articles/${x.file_name}`}>
-                          <span>{x.name}</span>
-                        </a>
-                      </div>
-                    );
-                  })}
+                <h2 class="mb-4">Recent Articles</h2>
+                <div>
+                  <RecentArticles articles={props.articles} />
                   <div style="background-color: white; width: 200px; padding: 10px; margin: auto; margin-top: 25px">
                     <a href="/articles" style="color: black">
                       View all articles
