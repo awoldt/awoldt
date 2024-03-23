@@ -52,7 +52,7 @@ export default function Index(props: PageProps) {
           style="padding-bottom: 50px"
         >
           <div class="container" id="main_container">
-            <div class="row text-center mt-5">
+            <div class="row text-center" style="margin-top: 100px">
               <div class="col-xl-6" style="padding: 40px">
                 <h1>👋 Hey</h1>
 
