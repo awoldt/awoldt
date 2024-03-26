@@ -1,0 +1,233 @@
+<div style="margin-bottom: 50px">
+  <h1 style="margin-top: 75px; font-size: 50px" class="article-h1-text">
+    How to Write a Lambda Function with Nodejs
+  </h1>
+  <p class="text-secondary">
+    Writing AWS Lambda functions with JavaScript is easy, and you can have
+    code up and running quickly
+  </p>
+  <link
+    href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+    rel="stylesheet"
+  />
+  <div class="shareon" style="float: none">
+    <a
+      class="facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://awoldt.dev/articles/how-to-write-a-nodejs-lamda-function"
+    ></a
+    ><a
+      href="https://www.linkedin.com/sharing/share-offsite/?url=https://awoldt.dev/articles/how-to-write-a-nodejs-lamda-function"
+      class="linkedin"
+    ></a
+    ><a
+      class="reddit"
+      href="https://www.reddit.com/submit?url=https://awoldt.dev/articles/how-to-write-a-nodejs-lamda-function"
+    ></a
+    ><a
+      class="twitter"
+      href="https://twitter.com/intent/tweet?url=https://awoldt.dev/articles/how-to-write-a-nodejs-lamda-function"
+    ></a>
+  </div>
+</div>
+
+<p>
+  AWS Lambda provides a powerful way to execute code in the cloud without
+  worrying about any underlying infrastructure. You can create lambda functions
+  with multiple languages, but today, we will focus on JavaScript (Nodejs).
+</p>
+
+<p>
+  Creating and deploying Lambda functions is very easy. All you need is a couple
+  of lines of code and an AWS account. Our function will do the bare minimum and
+  log some lines in our console. As of this writing, the latest version of
+  Nodejs lambda support is v20. It also supports v18 and v16, but v16 will be
+  depreciated in June.
+</p>
+
+<div>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-format="fluid"
+    data-ad-layout-key="-gw-3+1f-3d+2z"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="6054250727"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<h2>Create Default Entrypoint File</h2>
+<p>
+  Creating a lambda function will first require you to create an
+  <i>index.js</i> in the root of your project. This file will serve as the entry
+  point when your lambda function is invoked. The default Nodejs template we
+  will work with should look like this:
+</p>
+
+<pre><code class="hljs language-js">// Handler
+// this is the function that will execute
+exports.handler = async function(context) {
+    console.log('## CONTEXT: ' + JSON.stringify(context));
+    console.log("\nHELLO WORLD!");
+    
+    return null;
+}</code></pre>
+
+<p>
+  Notice the "handler" function that is exported. This is important as AWS will
+  look for this function in your code. This function is passed a
+  <i>context</i> object, which will provide information about the invocation and
+  execution environment of your function.
+</p>
+
+<p>
+  At the end of this function, we can return null, indicating to AWS Lambda that
+  your function was completed successfully but has not produced any meaningful
+  result. We now have a function that is ready to deploy to AWS. It is this
+  simple!
+</p>
+
+<div>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-format="fluid"
+    data-ad-layout-key="-gw-3+1f-3d+2z"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="6054250727"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<h2>ZIP Files and Deploy to AWS</h2>
+<p>
+  We will deploy our code to AWS by uploading a ZIP folder. Another way to do
+  this would be through the terminal, which is a little more complicated and not
+  what this article is for. The files zipped in this folder must contain:
+</p>
+<ul>
+  <li>The <i>index.js</i> file we created in the step above</li>
+  <li>A default<i>package.json</i></li>
+</ul>
+
+<p>
+  To generate a <i>package.json</i> file automatically, execute this npm
+  command:
+</p>
+
+<pre><code class="hljs language-text">npm init -y</code></pre>
+
+<p>
+  Once these two files are zipped, you can name the folder anything you want.
+</p>
+
+<div>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-format="fluid"
+    data-ad-layout-key="-gw-3+1f-3d+2z"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="6054250727"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<h2>Upload ZIP Folder to AWS Lambda</h2>
+<p>
+  As the last step, you will upload your zipped file containing your source
+  code, and we can then run the function! Log into your AWS console and find the
+  Lambda section. Once here, create a new function, choose the
+  <i>Author from scratch</i> template, name your function whatever you want to,
+  then choose any of the Nodejs runtimes, and hit create function.
+</p>
+
+<img
+  src="/imgs/articles/lambda_console.jpg"
+  alt="AWS lambda console"
+  class="img-fluid article-img"
+/>
+
+<p>
+  Once the function is created, click the upload from dropdown and select
+  <i>.zip file</i>
+</p>
+
+<img
+  src="/imgs/articles/lambda_upload_from.jpg"
+  alt="AWS lambda upload from source"
+  class="img-fluid article-img"
+/>
+
+<p>
+  Once your zipped file is uploaded, we can test this function and check the
+  logs to see if your code works and if nothing blows up on the server. To
+  invoke a test on your function, click the blue Test button and click Invoke at
+  the bottom. You don't have to worry much about the Event JSON data; you can
+  keep it as is. This JSON data is passed into your function and is accessible
+  from the <i>context</i> object mentioned above.
+</p>
+<img
+  src="/imgs/articles/lambda_invoke_function.jpg"
+  alt="invoke a test on your lambda function"
+  class="img-fluid article-img"
+/>
+<p>If the function has run successfully, you should see this in the console:</p>
+<img
+  src="/imgs/articles/lambda_console_function_invoke.jpg"
+  alt="successful lambda function execution"
+  class="img-fluid article-img"
+/>
+<p>
+  Notice the hello world log and the <i>context</i> object's data. We now know
+  this Lambda function has successfully run! From here, you could use AWS API
+  Gateway to handle this lambda function or scheduled tasks like cron jobs.
+</p>
+
+<div>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-format="fluid"
+    data-ad-layout-key="-gw-3+1f-3d+2z"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="6054250727"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<h2>Conclusion</h2>
+<p>
+  🎉 Congratulations, you now have a Nodejs Lambda function ready to execute in
+  your AWS account. Creating the same function we created above with other
+  languages such as Python, Go, Java, and others would be very easy. Lambda can
+  be the entire backend of your next application if you want.
+</p>

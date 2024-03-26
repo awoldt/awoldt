@@ -209,6 +209,9 @@ export default function Index(props: PageProps) {
                 </div>
               </div>
             )}
+            <div class="text-center mt-5 mb-5">
+              <a href="/privacy">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </body>

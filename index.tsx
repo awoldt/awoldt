@@ -6,6 +6,7 @@ import Articles from "./views/Articles.tsx";
 import ArticlePage from "./views/ArticlePage.tsx";
 import { GetRelatedArticleLinks, type ArticleData } from "./utils/functions.ts";
 import Index from "./views/Homepage.tsx";
+import PrivacyPage from "./views/Privacy.tsx";
 
 const app = new Hono();
 
@@ -75,6 +76,10 @@ app.get("/articles/:article_title", async (c) => {
       relatedArticles={relatedArticles}
     />
   );
+});
+
+app.get("/privacy", (c) => {
+  return c.html(<PrivacyPage />);
 });
 
 Bun.serve({
