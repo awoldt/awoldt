@@ -1,5 +1,5 @@
 <div style="margin-bottom: 50px">
-  <h1 style="margin-top: 75px; font-size: 50px"  class="article-h1-text">
+  <h1 style="margin-top: 75px; font-size: 50px" class="article-h1-text">
     Using Spotify API with JavaScript
   </h1>
   <p class="text-secondary">
@@ -25,8 +25,7 @@
     ><a
       class="twitter"
       href="https://twitter.com/intent/tweet?url=https://awoldt.dev/articles/spotify-api-with-javascript"
-    ></a
-    >
+    ></a>
   </div>
 </div>
 <p>
@@ -64,11 +63,11 @@
   ></script>
   <ins
     class="adsbygoogle"
-    style="display: block"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
     data-ad-format="fluid"
-    data-ad-layout-key="-gw-3+1f-3d+2z"
     data-ad-client="ca-pub-4106301283765460"
-    data-ad-slot="6054250727"
+    data-ad-slot="5458282521"
   ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
@@ -80,10 +79,18 @@
   Keep in mind that you need a Spotify account already created to make a
   developer account. This is required to access user data. First, log in to your
   Spotify account at<!-- -->
-  <a href="https://developer.spotify.com/dashboard/" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"
+  <a
+    href="https://developer.spotify.com/dashboard/"
+    target="_blank"
+    rel="noopener noreferrer"
+    rel="noopener noreferrer"
     >https://developer.spotify.com/dashboard/</a
   >, then head over to<!-- -->
-  <a href="https://developer.spotify.com/dashboard/applications" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"
+  <a
+    href="https://developer.spotify.com/dashboard/applications"
+    target="_blank"
+    rel="noopener noreferrer"
+    rel="noopener noreferrer"
     >https://developer.spotify.com/dashboard/applications</a
   >
   <!-- -->and hit “Create app” and follow the instructions given. Give the app
@@ -104,11 +111,11 @@
   ></script>
   <ins
     class="adsbygoogle"
-    style="display: block"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
     data-ad-format="fluid"
-    data-ad-layout-key="-gw-3+1f-3d+2z"
     data-ad-client="ca-pub-4106301283765460"
-    data-ad-slot="6054250727"
+    data-ad-slot="5458282521"
   ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
@@ -146,11 +153,11 @@ app.get(&quot;/&quot;, (req, res) =&gt; {
   ></script>
   <ins
     class="adsbygoogle"
-    style="display: block"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
     data-ad-format="fluid"
-    data-ad-layout-key="-gw-3+1f-3d+2z"
     data-ad-client="ca-pub-4106301283765460"
-    data-ad-slot="6054250727"
+    data-ad-slot="5458282521"
   ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
@@ -311,6 +318,7 @@ app.get(&quot;/&quot;, (req, res) =&gt; {
   alt="the login screen users who want to use your app will have to sign into"
   class="img-fluid article-img"
 />
+
 <div>
   <script
     async
@@ -319,16 +327,17 @@ app.get(&quot;/&quot;, (req, res) =&gt; {
   ></script>
   <ins
     class="adsbygoogle"
-    style="display: block"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
     data-ad-format="fluid"
-    data-ad-layout-key="-gw-3+1f-3d+2z"
     data-ad-client="ca-pub-4106301283765460"
-    data-ad-slot="6054250727"
+    data-ad-slot="5458282521"
   ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
+
 <h2>Use response code to retrieve access token</h2>
 <p>
   Once the user accepts or declines data, Spotify should send the user back to
@@ -379,6 +388,7 @@ app.get(&quot;/account&quot;, async (req, res) =&gt; {
   (and decoded in the Spotify developer app’s settings). Now we finally have the
   code that will allow us to request an access token from Spotify.
 </p>
+
 <div>
   <script
     async
@@ -387,16 +397,17 @@ app.get(&quot;/account&quot;, async (req, res) =&gt; {
   ></script>
   <ins
     class="adsbygoogle"
-    style="display: block"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
     data-ad-format="fluid"
-    data-ad-layout-key="-gw-3+1f-3d+2z"
     data-ad-client="ca-pub-4106301283765460"
-    data-ad-slot="6054250727"
+    data-ad-slot="5458282521"
   ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
+
 <h2>Exchange code for an access token</h2>
 <p>
   We will now send a POST request from our server to<!-- -->
@@ -474,7 +485,8 @@ app.get(&quot;/account&quot;, async (req, res) =&gt; {
               <a
                 href="https://www.base64encode.org/"
                 title="Base 64 encode your authorization header value"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 rel="noopener noreferrer"
                 >Base 64 encoded</a
               >
@@ -545,6 +557,7 @@ app.get(&quot;/account&quot;, async (req, res) =&gt; {
   alt="response from spotify api that contains access code"
   class="img-fluid article-img"
 />
+
 <div>
   <script
     async
@@ -553,16 +566,17 @@ app.get(&quot;/account&quot;, async (req, res) =&gt; {
   ></script>
   <ins
     class="adsbygoogle"
-    style="display: block"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
     data-ad-format="fluid"
-    data-ad-layout-key="-gw-3+1f-3d+2z"
     data-ad-client="ca-pub-4106301283765460"
-    data-ad-slot="6054250727"
+    data-ad-slot="5458282521"
   ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
+
 <h2>Start making API requests</h2>
 <p>
   Finally, after all of that, we have the access token required to make Spotify

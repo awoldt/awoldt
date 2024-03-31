@@ -6,15 +6,27 @@
     With a few lines of code, you can quickly start uploading all of your files
     into the S3 buckets
   </p>
-  <link href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css"
+    rel="stylesheet"
+  />
   <div class="shareon" style="float: none">
-    <a class="facebook"
-      href="https://www.facebook.com/sharer/sharer.php?u=https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs"></a><a
+    <a
+      class="facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs"
+    ></a
+    ><a
       href="https://www.linkedin.com/sharing/share-offsite/?url=https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs"
-      class="linkedin"></a><a class="reddit"
-      href="https://www.reddit.com/submit?url=https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs"></a><a
+      class="linkedin"
+    ></a
+    ><a
+      class="reddit"
+      href="https://www.reddit.com/submit?url=https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs"
+    ></a
+    ><a
       class="twitter"
-      href="https://twitter.com/intent/tweet?url=https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs"></a>
+      href="https://twitter.com/intent/tweet?url=https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs"
+    ></a>
   </div>
 </div>
 
@@ -48,10 +60,19 @@
           </pre>
 
 <div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
-    crossorigin="anonymous"></script>
-  <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z"
-    data-ad-client="ca-pub-4106301283765460" data-ad-slot="6054250727"></ins>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="5458282521"
+  ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
@@ -72,12 +93,20 @@
           </pre>
 
 <p>You can name the HTML and PNG file whatever you would like.</p>
-
 <div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
-    crossorigin="anonymous"></script>
-  <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z"
-    data-ad-client="ca-pub-4106301283765460" data-ad-slot="6054250727"></ins>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="5458282521"
+  ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
@@ -89,7 +118,11 @@
   search bar at the top of the page. Once we are on the S3 page, click the
   Create Bucket button.
 </p>
-<img src="/imgs/articles/create-bucket-button.png" alt="AWS S3 create bucket button" class="img-fluid article-img" />
+<img
+  src="/imgs/articles/create-bucket-button.png"
+  alt="AWS S3 create bucket button"
+  class="img-fluid article-img"
+/>
 <p>
   Once we are on the Create Bucket page, you will have some things to do. First,
   select the region you want to host your bucket. AWS regions specify what
@@ -98,7 +131,11 @@
   regions closest to them, but you can pick any. I will use US East (N.
   Virginia), better known as us-east-1.
 </p>
-<img src="/imgs/articles/aws-bucket-region.png" alt="selecting s3 bucket region" class="img-fluid article-img" />
+<img
+  src="/imgs/articles/aws-bucket-region.png"
+  alt="selecting s3 bucket region"
+  class="img-fluid article-img"
+/>
 <p>
   Now, name your bucket. This name must be globally unique, meaning it cannot
   have the same name as any other bucket in the region you selected.
@@ -109,8 +146,11 @@
   <i>Block Public Access settings for this bucket</i>.
 </p>
 
-<img src="/imgs/articles/block-public-access-bucket.png" alt="block public access section of creating new s3 bucket"
-  class="img-fluid article-img" />
+<img
+  src="/imgs/articles/block-public-access-bucket.png"
+  alt="block public access section of creating new s3 bucket"
+  class="img-fluid article-img"
+/>
 <p>
   We want to have this option <b>unchecked</b>. This will allow all files
   uploaded to this bucket to be accessible online so you can share links to your
@@ -122,24 +162,36 @@
 </p>
 
 <div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
-    crossorigin="anonymous"></script>
-  <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z"
-    data-ad-client="ca-pub-4106301283765460" data-ad-slot="6054250727"></ins>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="5458282521"
+  ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
-
 <h2>Initialize the S3 Client</h2>
 
 <p>
   To communicate with AWS S3, you need an S3 client in your code that uses your
   specific AWS account's credentials to connect. You can find more about where
   to locate these credentials
-  <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html" target="_blank"
-    rel="noopener noreferrer" rel="noopener noreferrer">here</a>. These credentials will consist of an access key and a
-  secret access key
+  <a
+    href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html"
+    target="_blank"
+    rel="noopener noreferrer"
+    rel="noopener noreferrer"
+    >here</a
+  >. These credentials will consist of an access key and a secret access key
   specific to your account.
 </p>
 
@@ -168,17 +220,30 @@ const awsS3Client = new S3Client({
   parameters: the credentials object (containing our access keys) and the region
   the bucket is hosted (the region you choose to host your bucket). A list of
   all the region names can be found
-  <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
-    target="_blank" rel="noopener noreferrer" rel="noopener noreferrer">here</a>. Use the shorthand name for the region
-  for the parameter here. For example,
+  <a
+    href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
+    target="_blank"
+    rel="noopener noreferrer"
+    rel="noopener noreferrer"
+    >here</a
+  >. Use the shorthand name for the region for the parameter here. For example,
   US East (N. Virginia) would be <i>us-east-1</i>.
 </p>
 
 <div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
-    crossorigin="anonymous"></script>
-  <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z"
-    data-ad-client="ca-pub-4106301283765460" data-ad-slot="6054250727"></ins>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="5458282521"
+  ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
@@ -266,15 +331,23 @@ UploadFiles();</code>
           </pre>
 
 <div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
-    crossorigin="anonymous"></script>
-  <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z"
-    data-ad-client="ca-pub-4106301283765460" data-ad-slot="6054250727"></ins>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="5458282521"
+  ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
-
 <h2>Make Files Accessible to the Internet</h2>
 
 <p>
@@ -284,7 +357,11 @@ UploadFiles();</code>
   next step. Make sure to copy it.
 </p>
 
-<img src="/imgs/articles/aws-arn.png" alt="aws s3 buckets arn" class="img-fluid article-img" />
+<img
+  src="/imgs/articles/aws-arn.png"
+  alt="aws s3 buckets arn"
+  class="img-fluid article-img"
+/>
 <p>
   We need to change the bucket policy now. Don't worry too much about what any
   of this means; just know it is needed for the bucket to have public URLs for
@@ -315,8 +392,11 @@ UploadFiles();</code>
   paste and hit save changes.
 </p>
 
-<img src="/imgs/articles/permissions-tab-s3-bucket.png" alt="permissions tab of s3 bucket"
-  class="img-fluid article-img" />
+<img
+  src="/imgs/articles/permissions-tab-s3-bucket.png"
+  alt="permissions tab of s3 bucket"
+  class="img-fluid article-img"
+/>
 
 <p>
   Your bucket should now be public, and any file inside can be accessed by a
@@ -324,19 +404,33 @@ UploadFiles();</code>
   <i>object URL</i>.
 </p>
 
-<img src="/imgs/articles/s3-file-object-url.webp" alt="object url of an s3 file" class="img-fluid article-img" />
+<img
+  src="/imgs/articles/s3-file-object-url.webp"
+  alt="object url of an s3 file"
+  class="img-fluid article-img"
+/>
 
 <p>
   Here's an example of what my uploaded file's object URL is -
-  <a
-    href="https://491292639630-us-east-1-awoldt.s3.amazonaws.com/cat.png">https://491292639630-us-east-1-awoldt.s3.amazonaws.com/cat.png</a>
+  <a href="https://491292639630-us-east-1-awoldt.s3.amazonaws.com/cat.png"
+    >https://491292639630-us-east-1-awoldt.s3.amazonaws.com/cat.png</a
+  >
 </p>
 
 <div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
-    crossorigin="anonymous"></script>
-  <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z"
-    data-ad-client="ca-pub-4106301283765460" data-ad-slot="6054250727"></ins>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4106301283765460"
+    crossorigin="anonymous"
+  ></script>
+  <ins
+    class="adsbygoogle"
+    style="display: block; text-align: center"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-4106301283765460"
+    data-ad-slot="5458282521"
+  ></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
