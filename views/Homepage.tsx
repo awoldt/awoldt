@@ -119,9 +119,9 @@ export default function Index(props: PageProps) {
               <h3>Projects</h3>
               <div class="row text-center justify-content-center">
                 <ProjectBlock
-                  name="Wordle Clone"
+                  name="Unlimited Wordle"
                   description="Unlimited word version of the popular game Wordle. There are over 5,000 words to spell, you can play as many games as you want. Features a responsive react frontend that looks great on any screen size."
-                  websiteUrl="https://unlimited-wordle.vercel.app/"
+                  websiteUrl="https://unlimitedwordle.app/"
                   githubUrl="https://github.com/awoldt/Wordle-Clone"
                   icon="wordle-clone.png"
                 />
