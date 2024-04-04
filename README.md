@@ -1,6 +1,6 @@
 # 👋 Hey
 
-My name is Alex and I'm a passionate Full Stack Developer who loves learning new technologies and working on personal projects.
+My name is Alex and I'm a passionate Software Developer
 
 Some of my skills include:
 - JavaScript/TypeScript

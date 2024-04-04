@@ -6,7 +6,7 @@ export default function Nav() {
         style="background-color: #001b30 !important;"
       >
         <div class="container navbar">
-          <a class="navbar-brand" href="/" style="font-weight: 700">
+          <a class="navbar-brand" href="/" style="font-weight: 900">
             Awoldt
           </a>
 

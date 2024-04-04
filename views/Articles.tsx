@@ -47,11 +47,10 @@ export default function Articles({ articles }: { articles: ArticleData[] }) {
             <h1 style="font-size: 50px;">Articles ({articles.length})</h1>
 
             <p class="mb-5">
-              Check out these articles if you're looking to get the hang of
-              different tech stuff. They've got examples and bits of code to
-              make things easier to understand. I've tried to keep everything
-              simple and clear, so even if you're just starting out in coding,
-              you'll find these pretty helpful.
+              Explore these articles for insights into various tech topics. They
+              include examples and code snippets to facilitate understanding.
+              I've aimed for simplicity and clarity, making them accessible even
+              for beginners in coding.
             </p>
 
             <RecentArticles articles={articles} />

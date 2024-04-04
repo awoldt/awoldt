@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   #backdrop_container {
     background-image: none !important;
     padding-top: 75px !important;
@@ -17,8 +17,12 @@
 
 #social_btns_parent_div {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 30px;
+}
+
+#social_btns_parent_div div {
+  font-weight: 700;
 }
 
 #github_link_btn {
@@ -116,4 +120,16 @@
 
 .article-thumbnail {
   width: 200px;
+}
+
+.project-btn-link {
+  background-color: 698CFA;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.project-btn-link a {
+  text-decoration: none;
+  color: white;
 }
