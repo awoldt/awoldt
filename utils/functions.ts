@@ -8,7 +8,7 @@ export interface ArticleData {
   tags: string[];
 }
 
-export async function GetRelatedArticleLinks(
+export async function GetMoreArticleLinks(
   currentArticle: string,
   articleTags: string[]
 ): Promise<{

@@ -1,5 +1,6 @@
 import Nav from "./components/Nav";
 import type { ArticleData } from "../utils/functions";
+import MoreArticlesLinks from "./components/MoreArticlesLinks";
 
 /* 
     The html string being passed into dangerouslySetInnerHTML is coming 
@@ -11,7 +12,7 @@ import type { ArticleData } from "../utils/functions";
 interface Data {
   content: string;
   head: string;
-  relatedArticles: {
+  moreArticles: {
     relatedArticles: ArticleData[];
     otherArticles: ArticleData[];
   } | null;
@@ -37,41 +38,8 @@ export default function ArticlePage(props: Data) {
             >
               {/* PAGE CONTENT */}
               <div dangerouslySetInnerHTML={{ __html: props.content }}></div>
-              {props.relatedArticles && (
-                <div style="margin: 50px 0px 50px 0px">
-                  {props.relatedArticles.relatedArticles.length > 0 && (
-                    <>
-                      <span style="color: white">Related Articles</span>
-                      {props.relatedArticles.relatedArticles.map((x, index) => {
-                        return (
-                          <div>
-                            <a href={x.file_name} key={index}>
-                              {x.name}
-                            </a>
-                          </div>
-                        );
-                      })}
-                    </>
-                  )}
 
-                  {props.relatedArticles.otherArticles.length > 0 && (
-                    <>
-                      <span style="color: white; display: block; margin-top: 20px">
-                        Other Articles
-                      </span>
-                      {props.relatedArticles.otherArticles.map((x, index) => {
-                        return (
-                          <div>
-                            <a href={x.file_name} key={index}>
-                              {x.name}
-                            </a>
-                          </div>
-                        );
-                      })}
-                    </>
-                  )}
-                </div>
-              )}
+              <MoreArticlesLinks moreArticles={props.moreArticles} />
             </div>
           </div>
         </main>

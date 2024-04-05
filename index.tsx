@@ -4,7 +4,7 @@ import path from "path";
 
 import Articles from "./views/Articles.tsx";
 import ArticlePage from "./views/ArticlePage.tsx";
-import { GetRelatedArticleLinks, type ArticleData } from "./utils/functions.ts";
+import { GetMoreArticleLinks, type ArticleData } from "./utils/functions.ts";
 import Index from "./views/Homepage.tsx";
 import PrivacyPage from "./views/Privacy.tsx";
 
@@ -64,7 +64,7 @@ app.get("/articles/:article_title", async (c) => {
     return x.file_name === articleTitle;
   });
 
-  const relatedArticles = await GetRelatedArticleLinks(
+  const moreArticles = await GetMoreArticleLinks(
     articleTitle,
     currentArticleData.tags
   );
@@ -73,7 +73,7 @@ app.get("/articles/:article_title", async (c) => {
     <ArticlePage
       content={await articleContent.text()}
       head={await articlesHeaders.text()}
-      relatedArticles={relatedArticles}
+      moreArticles={moreArticles}
     />
   );
 });

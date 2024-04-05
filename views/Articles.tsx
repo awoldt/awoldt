@@ -10,7 +10,7 @@ export default function Articles({ articles }: { articles: ArticleData[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>Articles</title>
-        <meta name="description" content="Read development articles" />
+        <meta name="description" content="Discover articles on web development and tech topics. Stay informed and empowered. Explore software development, programming languages, and more." />
         <link rel="canonical" href="https://awoldt.dev/articles" />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
@@ -44,7 +44,8 @@ export default function Articles({ articles }: { articles: ArticleData[] }) {
         </header>
         <div class="container-fluid">
           <div class="container pt-5">
-            <h1 style="font-size: 50px;">Articles ({articles.length})</h1>
+            <h1 style="font-size: 50px;">Articles</h1>
+            <p><b>There are currently {articles.length} articles</b></p>
 
             <p class="mb-5">
               Explore these articles for insights into various tech topics. They

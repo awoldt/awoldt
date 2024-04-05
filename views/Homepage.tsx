@@ -15,7 +15,7 @@ export default function Index(props: PageProps) {
         <title>Alex Breckwoldt | Software Developer</title>
         <meta
           name="description"
-          content="My name is Alex and I&#x27;m a Software Developer from Charlotte NC. I like to code."
+          content="My name is Alex and I&#x27;m a Software Developer from Charlotte NC. My favorite language is JavaScript and I love learning new technologies."
         />
         <link rel="canonical" href="https://awoldt.dev/" />
         <link

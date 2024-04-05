@@ -55,3 +55,12 @@ pre {
   border-top: 4px solid #243c54;
   padding-top: 20px;
 }
+
+.more-article-div img {
+  height: 150px;
+}
+
+.more-article-div span {
+  display: block;
+  max-width: 220px;
+}
