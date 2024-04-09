@@ -123,7 +123,7 @@ export default function Index(props: PageProps) {
                 <h2 class="mb-4">Recent Articles</h2>
                 <div>
                   <RecentArticles articles={props.articles} />
-                  <div style="background-color: white; width: 200px; padding: 10px; margin: auto; margin-top: 25px">
+                  <div style="background-color: white; width: 200px; padding: 10px; margin: auto; margin-top: 25px; border-radius: 10px">
                     <a href="/articles" style="color: black">
                       View all articles
                     </a>
