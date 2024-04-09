@@ -9,7 +9,7 @@ export default function RecentArticles(props: PageProps) {
     <div class="row text-center">
       {props.articles.map((x) => {
         return (
-          <div class="col-lg-4 mb-4" id="recent_article_links">
+          <div class="col-lg-4 mb-4 recent_article_links">
             <a href={`/articles/${x.file_name}`}>
               <img
                 src={`/imgs/articles/${x.file_name}.png`}

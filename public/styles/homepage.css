@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  #recent_article_links span {
+  .recent_article_links span {
     font-size: 16px !important;
   }
 }
@@ -107,15 +107,16 @@
   width: 45px;
 }
 
-#recent_article_links span {
+.recent_article_links span {
   font-size: 24px;
   display: block;
   margin: auto;
   max-width: 340px;
 }
 
-#recent_article_links img {
+.recent_article_links img {
   width: 250px;
+  border-radius: 10px;
 }
 
 .article-thumbnail {

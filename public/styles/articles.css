@@ -34,14 +34,14 @@ pre {
   margin-bottom: 1.25rem;
 }
 
-#recent_article_links span {
+.recent_article_links span {
   font-size: 24px;
   display: block;
   max-width: 250px;
   margin: auto;
 }
 
-#recent_article_links img {
+.recent_article_links img {
   width: 250px;
 }
 
