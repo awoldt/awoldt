@@ -6,31 +6,4 @@
   <url>
     <loc>https://awoldt.dev/</loc>
   </url>
-  <url>
-    <loc>https://awoldt.dev/privacy</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles/uploading-file-to-s3-with-nodejs</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles/how-to-make-a-calculator-with-reactjs</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles/why-you-should-use-zod</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles/spotify-api-with-javascript</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles/how-to-setup-bun-with-hono</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles/how-to-make-a-hangman-game-with-csharp</loc>
-  </url>
-  <url>
-    <loc>https://awoldt.dev/articles/how-to-write-a-nodejs-lamda-function</loc>
-  </url>
 </urlset>

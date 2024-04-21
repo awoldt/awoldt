@@ -1,13 +1,7 @@
 @media screen and (max-width: 1199px) {
   #backdrop_container {
+    padding-top: 0px !important;
     background-image: none !important;
-    padding-top: 75px !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .recent_article_links span {
-    font-size: 16px !important;
   }
 }
 
@@ -78,59 +72,101 @@
   margin-bottom: 25px;
 }
 
-.project-btn-links {
-  display: flex;
-  justify-content: space-evenly;
+li p {
+  margin: 0px;
 }
 
-.project-btn-links div {
-  display: inline-block;
+body,
+html {
+  background-color: #001220;
 }
 
-.project-wrapper {
-  background-color: #012847 !important;
-  margin: 10px;
-  height: 100%;
-  padding: 15px;
-  border-radius: 10px;
+body {
+  height: 100vh;
 }
 
-.project-wrapper span {
-  font-weight: 600;
+.container-fluid,
+.container {
+  background-color: #001220 !important;
 }
 
-.project-div {
-  padding: 10px;
+main {
+  padding: 0px !important;
 }
 
-.project-div img {
-  width: 45px;
+h1,
+h2,
+h3,
+p,
+code,
+li,
+b {
+  color: white !important;
 }
 
-.recent_article_links span {
-  font-size: 24px;
-  display: block;
-  margin: auto;
-  max-width: 340px;
+h2 {
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 
-.recent_article_links img {
-  width: 250px;
-  border-radius: 10px;
+h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
-.article-thumbnail {
-  width: 200px;
+ol,
+ul {
+  margin: 0px 0px 35px 0px !important;
 }
 
-.project-btn-link {
-  background-color: 698CFA;
-  padding: 10px;
-  border-radius: 10px;
-  font-weight: 700;
+hr {
+  border: none;
+  height: 5px;
+  background: #014982;
 }
-
-.project-btn-link a {
+a {
   text-decoration: none;
+}
+
+#awoldt_description {
+  margin-bottom: 25px;
+  padding-top: 25px;
+}
+
+.hover-btn {
+  background-color: #011d33;
+}
+
+.shareon {
+  float: right;
+}
+
+li::before {
+  color: #002c4f !important;
+}
+
+.navbar a {
   color: white;
+}
+.navbar div {
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 25px !important;
+  color: inherit;
+}
+.navbar-brand:hover {
+  color: white !important;
+}
+nav {
+  background-color: #001b30;
+}
+
+nav .navbar {
+  background-color: #001b30 !important;
+}
+
+p {
+  font-size: 20px;
 }

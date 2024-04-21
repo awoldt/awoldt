@@ -2,7 +2,7 @@ export default function SkillsGrid() {
   return (
     <div class="row justify-content-center" style="padding-bottom: 50px">
       <h2 style="margin-bottom: 25px">Skills</h2>
-      <div class="col-xs-6 col-lg-3 col-sm-4" style="margin-bottom: 25px">
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
         <img
           src="/imgs/icons/aws-icon.svg"
           style="width: 85px; height: 85px"
@@ -12,7 +12,7 @@ export default function SkillsGrid() {
           AWS
         </span>
       </div>
-      <div class="col-xs-6 col-lg-3 col-sm-4" style="margin-bottom: 25px">
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
         <img
           src="/imgs/icons/c-sharp-icon.svg"
           alt="C# icon"
@@ -22,7 +22,17 @@ export default function SkillsGrid() {
           C#
         </span>
       </div>
-      <div class="col-xs-6 col-lg-3 col-sm-4" style="margin-bottom: 25px">
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
+        <img
+          src="/imgs/icons/docker-icon.svg"
+          alt="Docker icon"
+          style="width: 85px; height: 85px"
+        />
+        <span style="display: block; font-weight: bold" class="text-secondary">
+          Docker
+        </span>
+      </div>
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
         <img
           src="/imgs/icons/google-cloud-icon.svg"
           alt="Google Cloud icon"
@@ -32,7 +42,7 @@ export default function SkillsGrid() {
           Google Cloud
         </span>
       </div>
-      <div class="col-xs-6 col-lg-3 col-sm-4" style="margin-bottom: 25px">
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
         <img
           src="/imgs/icons/js-icon.svg"
           alt="JavaScript icon"
@@ -42,7 +52,7 @@ export default function SkillsGrid() {
           JavaScript
         </span>
       </div>
-      <div class="col-xs-6 col-lg-3 col-sm-4" style="margin-bottom: 25px">
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
         <img
           src="/imgs/icons/mongodb.svg"
           alt="Mongodb icon"
@@ -52,7 +62,7 @@ export default function SkillsGrid() {
           Mongodb
         </span>
       </div>
-      <div class="col-xs-6 col-lg-3 col-sm-4" style="margin-bottom: 25px">
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
         <img
           src="/imgs/icons/postgresql-icon.svg"
           alt="postgres icon"
@@ -62,7 +72,7 @@ export default function SkillsGrid() {
           Postgres
         </span>
       </div>
-      <div class="col-xs-6 col-lg-3 col-sm-4" style="margin-bottom: 25px">
+      <div class="col-lg-3 col-sm-4 col-6" style="margin-bottom: 25px">
         <img
           src="/imgs/icons/reactjs-icon.svg"
           alt="React js icon"

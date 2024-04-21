@@ -1,12 +1,6 @@
-import type { ArticleData } from "../utils/functions";
-import RecentArticles from "./components/RecentArticles";
 import SkillsGrid from "./components/SkillsGrid";
 
-interface PageProps {
-  articles: ArticleData[] | null;
-}
-
-export default function Index(props: PageProps) {
+export default function Index() {
   return (
     <html lang="en">
       <head>
@@ -24,7 +18,6 @@ export default function Index(props: PageProps) {
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
           crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="/styles/global.css" />
         <link rel="stylesheet" href="/styles/homepage.css" />
         <link
           rel="apple-touch-icon"
@@ -51,86 +44,70 @@ export default function Index(props: PageProps) {
           style="padding-bottom: 50px"
         >
           <div class="container" id="main_container">
-            <div class="row text-center" style="margin-top: 100px">
-              <div class="col-xl-6" style="padding: 40px">
-                <h1>👋 Hey</h1>
+            <main>
+              <div class="row text-center" style="margin-top: 100px">
+                <div class="col-xl-6" style="padding: 40px">
+                  <h1>👋 Hey</h1>
 
-                <p class="mt-4">
-                  My name is Alex an I'm a Software Developer from Charlotte,
-                  NC. I have a passion for coding, and I'm always eager to learn
-                  new technologies and frameworks. JavaScript is my favorite
-                  language and the area where I excel the most.
-                </p>
+                  <p class="mt-4 mx-auto" style={{maxWidth: "500px"}}>
+                    My name is Alex an I'm a Software Developer from Charlotte,
+                    NC. I have a passion for coding, and I'm always eager to
+                    learn new technologies and frameworks.
+                  </p>
 
-                <div id="social_btns_parent_div">
-                  <div class="btn btn-light" id="github_link_btn">
-                    <a
-                      href="https://github.com/awoldt?tab=repositories"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="View all my code on GitHub"
-                      class="prof-social-link"
-                    >
-                      <img
-                        alt="Github icon"
-                        loading="lazy"
-                        width="20"
-                        height="20"
-                        decoding="async"
-                        data-nimg="1"
-                        class="prof-social-icon"
-                        style="color: transparent"
-                        src="/imgs/icons/github-icon.svg"
-                      />
-                      <span style="color: black">GitHub</span>
-                    </a>
-                  </div>
+                  <div id="social_btns_parent_div">
+                    <div class="btn btn-light" id="github_link_btn">
+                      <a
+                        href="https://github.com/awoldt?tab=repositories"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="View all my code on GitHub"
+                        class="prof-social-link"
+                      >
+                        <img
+                          alt="Github icon"
+                          loading="lazy"
+                          width="20"
+                          height="20"
+                          decoding="async"
+                          data-nimg="1"
+                          class="prof-social-icon"
+                          style="color: transparent"
+                          src="/imgs/icons/github-icon.svg"
+                        />
+                        <span style="color: black">GitHub</span>
+                      </a>
+                    </div>
 
-                  <div class="btn btn-light" id="linkedin_link_btn">
-                    <a
-                      href="https://www.linkedin.com/in/awoldt/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="Visit my LinkedIn profile"
-                      class="prof-social-link"
-                    >
-                      <img
-                        alt="Linkedin icon"
-                        loading="lazy"
-                        width="20"
-                        height="20"
-                        decoding="async"
-                        data-nimg="1"
-                        class="prof-social-icon"
-                        style="color: transparent"
-                        src="/imgs/icons/linkedin-icon.svg"
-                      />
-                      <span style="color: black">Follow me</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-6" style="padding: 40px">
-                <SkillsGrid />
-              </div>
-            </div>
-
-            {props.articles === null && (
-              <p>There was an error while fetching articles :(</p>
-            )}
-            {props.articles !== null && (
-              <div class="text-center" style="margin-top: 50px">
-                <h2 class="mb-4">Recent Articles</h2>
-                <div>
-                  <RecentArticles articles={props.articles} />
-                  <div style="background-color: white; width: 200px; padding: 10px; margin: auto; margin-top: 25px; border-radius: 10px">
-                    <a href="/articles" style="color: black">
-                      View all articles
-                    </a>
+                    <div class="btn btn-light" id="linkedin_link_btn">
+                      <a
+                        href="https://www.linkedin.com/in/awoldt/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Visit my LinkedIn profile"
+                        class="prof-social-link"
+                      >
+                        <img
+                          alt="Linkedin icon"
+                          loading="lazy"
+                          width="20"
+                          height="20"
+                          decoding="async"
+                          data-nimg="1"
+                          class="prof-social-icon"
+                          style="color: transparent"
+                          src="/imgs/icons/linkedin-icon.svg"
+                        />
+                        <span style="color: black">Follow me</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
+                <div class="col-xl-6" style="padding: 40px">
+                  <SkillsGrid />
+                </div>
               </div>
-            )}
+            </main>
           </div>
         </div>
       </body>
