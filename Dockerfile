@@ -4,4 +4,4 @@ COPY package.json package-lock.json ./
 RUN bun install
 COPY . .
 EXPOSE 8080
-CMD ["bun", "run", "index.tsx"]
+CMD ["bun", "run", "index.ts"]

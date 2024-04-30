@@ -1,14 +1,15 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/bun";
-
-import Index from "./views/Homepage.tsx";
+import path from "path";
 
 const app = new Hono();
 
 app.use("/*", serveStatic({ root: "./public" }));
 
 app.get("/", async (c) => {
-  return c.html(<Index />);
+  const file = Bun.file(path.join(process.cwd(), "index.html"));
+  const txt = await file.text();
+  return c.html(txt);
 });
 
 Bun.serve({
