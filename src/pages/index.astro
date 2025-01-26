@@ -1,0 +1,52 @@
+---
+import ProjectShowcase from "../components/ProjectShowcase.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Alex Breckwoldt | Software Developer">
+  <main class="p-8 max-w-2xl mx-auto">
+    <header class="mb-12">
+      <h1 class="text-3xl font-bold mb-6 flex items-center gap-3">
+        <span role="img" aria-label="waving hand">👋</span> Hi, I'm Alex
+      </h1>
+
+      <!-- Social Icons -->
+      <div class="flex items-center gap-4 mb-6">
+        <a href="https://github.com/awoldt" target="_blank">
+          <img
+            src="/public/imgs/icons/github.svg"
+            alt="GitHub logo"
+            class="w-6 h-6 hover:opacity-80 transition-opacity"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/awoldt/" target="_blank">
+          <img
+            src="/public/imgs/icons/linkedin.svg"
+            alt="LinkedIn logo"
+            class="w-6 h-6 hover:opacity-80 transition-opacity"
+          />
+        </a>
+        <a href="mailto:abreckwoldt23@gmail.com">
+          <img
+            src="/public/imgs/icons/email.svg"
+            alt="Email icon"
+            class="w-6 h-6 hover:opacity-80 transition-opacity"
+          />
+        </a>
+      </div>
+
+      <!-- Bio -->
+      <div class="space-y-4 text-zinc-400">
+        <p class="leading-relaxed">
+          I’m a Software Developer based in Charlotte, NC. I have a deep
+          enthusiasm for coding, constantly exploring new technologies and
+          frameworks to improve my skills.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <ProjectShowcase />
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,68 @@
+---
+export interface Project {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+export const projects: Project[] = [
+  {
+    title: "DividendSpot",
+    description: "Explore Dividend Data for Publicly Traded Companies",
+    image: "/public/imgs/dividendspot_screenshot.png",
+    link: "https://dividendspot.com",
+  },
+  {
+    title: "Wordle Clone",
+    description: "Remake of the popular web game Wordle",
+    image: "/public/imgs/wordle_clone_screenshot.png",
+    link: "https://word-game-lovat.vercel.app/",
+  },
+  {
+    title: "UrbanCodebase",
+    description: "Explore the human side of coding",
+    image: "/public/imgs/urbancodebase_screenshot.png",
+    link: "https://urbancodebase.com/",
+  },
+  {
+    title: "Avatar Generator",
+    description: "Easily generate AI avatars for your online profiles",
+    image: "/public/imgs/onlineavatargenerator_screenshot.png",
+    link: "https://onlineavatargenerator.com/",
+  },
+];
+---
+
+<section class="mt-8 mb-10">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-xl font-semibold">Projects</h2>
+    <a
+      href="https://github.com/awoldt?tab=repositories"
+      class="text-sm text-zinc-400 hover:text-zinc-300"
+      title="View all my public projects on GitHub"
+    >
+      See all projects
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    {
+      projects.map((project) => (
+        <a href={project.link}>
+          <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden transition-transform hover:scale-105 hover:bg-zinc-800 flex flex-col h-full">
+            <img
+              src={project.image}
+              alt={project.title}
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-4 flex flex-col flex-1">
+              <h3 class="text-lg font-medium mb-2">{project.title}</h3>
+              <p class="text-sm text-zinc-400">{project.description}</p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</section>
