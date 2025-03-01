@@ -1,0 +1,55 @@
+/* Reset & box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container centering and spacing */
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Heading style */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Social link container */
+.social-links {
+  margin-bottom: 1.5rem;
+}
+
+/* Individual social links */
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #aaaaaa;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
