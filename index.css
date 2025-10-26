@@ -27,7 +27,6 @@ main {
 }
 
 .container {
-  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -68,34 +67,6 @@ p {
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
-}
-
-.skills {
-  text-align: center;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
-}
-
-.skills h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.skills-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.skills-icons img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
-}
-
-.skills-icons img:hover {
-  transform: scale(1.1);
 }
 
 :root {
