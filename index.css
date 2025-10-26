@@ -89,11 +89,71 @@ p {
 }
 
 .skills-icons img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   transition: transform 0.3s ease;
 }
 
 .skills-icons img:hover {
   transform: scale(1.1);
+}
+
+:root {
+  --accent: #8a5cf6;
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --card-border: rgba(255, 255, 255, 0.04);
+}
+
+.projects-cta {
+  display: block;
+  text-align: center;
+  margin: 1.5rem auto 0;
+  padding: 0;
+}
+
+.projects-cta a {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    var(--card-bg),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  white-space: normal;
+}
+
+.projects-cta a:hover,
+.projects-cta a:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(138, 92, 246, 0.08);
+  outline: none;
+}
+
+.projects-cta a::after {
+  content: none !important;
+}
+
+.projects-cta a:focus {
+  outline: 3px solid rgba(138, 92, 246, 0.12);
+  outline-offset: 6px;
+  border-radius: 12px;
+}
+
+@media (max-width: 520px) {
+  .projects-cta a {
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
 }
