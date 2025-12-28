@@ -1,6 +1,6 @@
 /* Inherit core variables and base styles */
 :root {
-  --accent: #8a5cf6;
+  --accent: orange;
   --bg-color: #1d1d1d;
   --text-color: #ffffff;
   --text-muted: #aaaaaa;
