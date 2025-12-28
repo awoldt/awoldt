@@ -1,35 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 18px;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1d1d1d;
-  color: #ffffff;
-  line-height: 1.6;
-  padding: 0;
-  margin: 0;
-}
-
-main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 1rem;
-}
-
-.container {
-  margin-bottom: 3rem;
-}
-
+/* Index specific styles */
 h1 {
   font-size: 3.5rem;
   margin-bottom: 2rem;
@@ -41,8 +10,9 @@ h2 {
 }
 
 p {
-  font-size: 1.1rem;
-  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -59,20 +29,12 @@ p {
 }
 
 .social-links a:hover {
-  color: #aaaaaa;
+  color: var(--accent);
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-:root {
-  --accent: #8a5cf6;
-  --card-bg: rgba(255, 255, 255, 0.02);
-  --card-border: rgba(255, 255, 255, 0.04);
+.social-links img {
+    width: 24px;
+    height: 24px;
 }
 
 .projects-cta {

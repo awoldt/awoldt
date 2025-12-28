@@ -1,97 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First Golang Project</title>
-    <link rel="stylesheet" href="/public/styles/blog.css" />
-  </head>
-  <body>
-    <main>
-      <article>
-        <h1>A Basic Database Migration Tool</h1>
-        <p>
-          I just finished my first real project with Go and so far have really
-          enjoyed this programming language. It’s called “gograte” (go +
-          migrate), its a simple database migration CLI tool. For the longest
-          time I’ve focused mainly on JavaScript/TypeScript and web dev stuff,
-          and I finally decided it's time to learn a new language and level up
-          my programming skills. Go seemed powerful and easy enough to learn,
-          and at this point in my software developer journey I’m much more
-          interested in backend stuff. I want to puke at the thought of having
-          to write react components or positioning a stupid button at just the
-          perfect spot on the UI, I’ll leave the frontend code to AI at this
-          point.
-        </p>
+<h1>A Basic Database Migration Tool</h1>
+<p>
+  I just finished my first real project with Go and so far have really enjoyed
+  this programming language. It’s called “gograte” (go + migrate), its a simple
+  database migration CLI tool. For the longest time I’ve focused mainly on
+  JavaScript/TypeScript and web dev stuff, and I finally decided it's time to
+  learn a new language and level up my programming skills. Go seemed powerful
+  and easy enough to learn, and at this point in my software developer journey
+  I’m much more interested in backend stuff. I want to puke at the thought of
+  having to write react components or positioning a stupid button at just the
+  perfect spot on the UI, I’ll leave the frontend code to AI at this point.
+</p>
 
-        <p>
-          Many times I've had the problem of wanting to clone an entire sql
-          schema from a remote database to my local db and it's always a pain in
-          the ass. I use Datagrip for my database migration and it works nice
-          but sometimes it's just too much or confusing while using it. I wanted
-          to have a command to run in the terminal to do it quickly and this was
-          a perfect opportunity to build a Go CLI program. Working on projects
-          like this is the best way to learn in my opinion.
-        </p>
+<p>
+  Many times I've had the problem of wanting to clone an entire sql schema from
+  a remote database to my local db and it's always a pain in the ass. I use
+  Datagrip for my database migration and it works nice but sometimes it's just
+  too much or confusing while using it. I wanted to have a command to run in the
+  terminal to do it quickly and this was a perfect opportunity to build a Go CLI
+  program. Working on projects like this is the best way to learn in my opinion.
+</p>
 
-        <h2>What i love about GO</h2>
-        <ul>
-          <li>
-            It is so easy to read and write. I could come back from a night of
-            not working on this project and instantly understand the context of
-            the code after glancing at it. Sometimes with javascript I would
-            have to read it a couple times over to understand what's going on,
-            but something about reading Go code is so simple and I love that.
-            Writing it felt like a breeze, and contrary to what's online I LOVE
-            the error handling. Having if err != nil on almost every other line
-            is such a nice way to handle errors and know exactly what's going
-            wrong.
-          </li>
-          <li>
-            Importing packages. Being able to just find any github repo and
-            import into the project was strange at first but awesome. It's so
-            easy. The standard library is already powerful enough but some
-            really awesome package like CLI and PGX made this project so much
-            fun to work with
-          </li>
-          <li>
-            Single binary file. It's cool having a single executable file that
-            can easily be used in a docker container to run programs is awesome.
-            Not having to think about a node modules folder is nice, and you can
-            easily build the executable file for any operating system and CPU
-            architecture which is super cool.
-          </li>
-        </ul>
+<h2>What i love about GO</h2>
+<ul>
+  <li>
+    It is so easy to read and write. I could come back from a night of not
+    working on this project and instantly understand the context of the code
+    after glancing at it. Sometimes with javascript I would have to read it a
+    couple times over to understand what's going on, but something about reading
+    Go code is so simple and I love that. Writing it felt like a breeze, and
+    contrary to what's online I LOVE the error handling. Having if err != nil on
+    almost every other line is such a nice way to handle errors and know exactly
+    what's going wrong.
+  </li>
+  <li>
+    Importing packages. Being able to just find any github repo and import into
+    the project was strange at first but awesome. It's so easy. The standard
+    library is already powerful enough but some really awesome package like CLI
+    and PGX made this project so much fun to work with
+  </li>
+  <li>
+    Single binary file. It's cool having a single executable file that can
+    easily be used in a docker container to run programs is awesome. Not having
+    to think about a node modules folder is nice, and you can easily build the
+    executable file for any operating system and CPU architecture which is super
+    cool.
+  </li>
+</ul>
 
-        <h2>What i dont like about Go</h2>
-        <ul>
-          <li>
-            I HATE how Go doesn't have a ternary operator. I use ternary
-            operators all the time in javascript. Having to have a ugly if/else
-            bracket when I could have just done it in a single line pisses me
-            off.
-          </li>
-          <li>
-            The struct tags format is so ugly. At first I would always forget
-            how to set it up in my struct and it just looks off.
-          </li>
-          <li>
-            The whole concept of public vs private. Having to capitalize a
-            function or struct that I want to use outside of a package is just
-            dumb. I would like to have an explicit “public” modifier or a
-            "export" declaration to clearly show something is being used
-            elsewhere.
-          </li>
-        </ul>
+<h2>What i dont like about Go</h2>
+<ul>
+  <li>
+    I HATE how Go doesn't have a ternary operator. I use ternary operators all
+    the time in javascript. Having to have a ugly if/else bracket when I could
+    have just done it in a single line pisses me off.
+  </li>
+  <li>
+    The struct tags format is so ugly. At first I would always forget how to set
+    it up in my struct and it just looks off.
+  </li>
+  <li>
+    The whole concept of public vs private. Having to capitalize a function or
+    struct that I want to use outside of a package is just dumb. I would like to
+    have an explicit “public” modifier or a "export" declaration to clearly show
+    something is being used elsewhere.
+  </li>
+</ul>
 
-        <p>
-          So far I’m liking Go and plan to work on other projects in the future.
-          <br />
-          <br />
-          You can find the source code for this project
-          <a href="https://github.com/awoldt/gograte" target="_blank">here</a>
-        </p>
-      </article>
-    </main>
-  </body>
-</html>
+<p>
+  So far I’m liking Go and plan to work on other projects in the future.
+  <br />
+  <br />
+  You can find the source code for this project
+  <a href="https://github.com/awoldt/gograte" target="_blank">here</a>
+</p>

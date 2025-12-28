@@ -1,14 +1,19 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/bun";
+import Article from "./components/Article";
+import BlogsList from "./components/BlogsList";
+import Home from "./components/Home";
 
 const app = new Hono();
 
 app.use("/public/*", serveStatic({ root: "./" }));
 
-app.get("/", async (c) => {
-  const file = Bun.file("./index.html");
-  const text = await file.text();
-  return c.html(text);
+app.get("/", (c) => {
+  return c.html(<Home />);
+});
+
+app.get("/blogs", (c) => {
+  return c.html(<BlogsList />);
 });
 
 app.get("/blogs/:blogname", async (c) => {
@@ -21,7 +26,9 @@ app.get("/blogs/:blogname", async (c) => {
   }
 
   const text = await file.text();
-  return c.html(text);
+  return c.html(
+    <Article html={text} title="My First Go Project - Database Migration CLI" />
+  );
 });
 
 export default app;
