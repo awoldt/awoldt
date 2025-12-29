@@ -10,8 +10,8 @@ export interface ArticleMetadata {
   title: string;
   shortDescription: string;
   publishedOn: string;
-  route: string
-  tags: string[]
+  route: string;
+  tags: string[];
 }
 
 const app = new Hono();
@@ -55,7 +55,7 @@ app.get("/articles", async (c) => {
         __dirname,
         "articles",
         articleFolder.name,
-        "metadata.json"
+        "metadata.json",
       );
       const metadataFile = Bun.file(metadataPath);
       if (await metadataFile.exists()) {
@@ -90,8 +90,8 @@ app.get("/articles/:articlename", async (c) => {
       title="My First Go Project - Database Migration CLI"
       description={metadata.shortDescription}
       url={`/articles/${name}`}
-      thumbnail={null}
-    />
+      thumbnail={`/public/imgs/${name}.png`}
+    />,
   );
 });
 

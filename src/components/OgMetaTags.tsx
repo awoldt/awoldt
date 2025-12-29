@@ -18,7 +18,7 @@ export default function OgMetaTags({
       <meta property="og:type" content="article" />
       <meta property="og:url" content={url} />
       {image !== null && (
-        <meta property="og:image" content="https://example.com/og/go.png" />
+        <meta property="og:image" content={`https://awoldt.dev${image}`} />
       )}
     </>
   );
