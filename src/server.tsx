@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/bun";
 import Article from "./components/Article";
-import BlogsList from "./components/BlogsList";
+import ArticleList from "./components/ArticleList";
 import Home from "./components/Home";
 
 const app = new Hono();
@@ -12,13 +12,13 @@ app.get("/", (c) => {
   return c.html(<Home />);
 });
 
-app.get("/blogs", (c) => {
-  return c.html(<BlogsList />);
+app.get("/articles", (c) => {
+  return c.html(<ArticleList />);
 });
 
-app.get("/blogs/:blogname", async (c) => {
-  const name = c.req.param("blogname");
-  const file = Bun.file(`./blogs/${name}.html`);
+app.get("/articles/:articlename", async (c) => {
+  const name = c.req.param("articlename");
+  const file = Bun.file(`./articles/${name}.html`);
   const exists = await file.exists();
   if (!exists) {
     c.status(404);

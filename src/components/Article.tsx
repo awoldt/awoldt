@@ -13,7 +13,7 @@ export default function Article({ html, title }: ArticleProps) {
           <meta charset="UTF-8" />
           <title>{title}</title>
           <link rel="stylesheet" href="/public/styles/global.css" />
-          <link rel="stylesheet" href="/public/styles/blog.css" />
+          <link rel="stylesheet" href="/public/styles/article.css" />
           <link rel="icon" type="image/png" href="/public/imgs/code.png" />
           <meta
             name="viewport"

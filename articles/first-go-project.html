@@ -8,7 +8,7 @@
   and easy enough to learn, and at this point in my software developer journey
   I’m much more interested in backend stuff. I want to puke at the thought of
   having to write react components or positioning a stupid button at just the
-  perfect spot on the UI, I’ll leave the frontend code to AI at this point.
+  perfect spot on a UI, I’ll leave the frontend code to AI at this point.
 </p>
 
 <p>
@@ -33,17 +33,19 @@
     what's going wrong.
   </li>
   <li>
-    Importing packages. Being able to just find any github repo and import into
-    the project was strange at first but awesome. It's so easy. The standard
-    library is already powerful enough but some really awesome package like CLI
-    and PGX made this project so much fun to work with
+    Importing packages. Being able to simply put an import statement at the top
+    of a file with a gitHub url is so clean and easy. Instead of building the
+    CLI logic from the ground up (flags and command parsing from user input for
+    example) I used this
+    <a href="https://cli.urfave.org/" target="_blank">awesome package</a> to get
+    a major jumpstart.
   </li>
   <li>
-    Single binary file. It's cool having a single executable file that can
-    easily be used in a docker container to run programs is awesome. Not having
-    to think about a node modules folder is nice, and you can easily build the
-    executable file for any operating system and CPU architecture which is super
-    cool.
+    Single standalone executable file. No node_modules or any bs when attempting
+    to run your program, it all just works. I also love how you can easily build
+    the executable file for any operating system and CPU architecture which is
+    super cool. You don't even need to have Go installed on the target machine,
+    just run the file and your good.
   </li>
 </ul>
 
@@ -51,12 +53,15 @@
 <ul>
   <li>
     I HATE how Go doesn't have a ternary operator. I use ternary operators all
-    the time in javascript. Having to have a ugly if/else bracket when I could
-    have just done it in a single line pisses me off.
+    the time in JavaScript. Having an ugly if/else bracket when I could have
+    just done it in a single line pisses me off.
   </li>
   <li>
-    The struct tags format is so ugly. At first I would always forget how to set
-    it up in my struct and it just looks off.
+    The struct tags format is so ugly. I have no idea if I formatted it correct
+    until the program runs and then gets mad at me. I've gotten more used to it
+    over time, but i would constanly forget the format when I first started
+    writing in Go. Also why tf does it need to be surrounded in tick marks? So
+    dumb.
   </li>
   <li>
     The whole concept of public vs private. Having to capitalize a function or
@@ -67,7 +72,8 @@
 </ul>
 
 <p>
-  So far I’m liking Go and plan to work on other projects in the future.
+  So far I’m loving Go and plan to work on other projects in the future with it.
+  My next project will more than likely be some type of REST API.
   <br />
   <br />
   You can find the source code for this project

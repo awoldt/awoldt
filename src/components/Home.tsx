@@ -1,5 +1,3 @@
-import Navbar from "./Navbar";
-
 export default function Home() {
   return (
     <html lang="en">
@@ -17,7 +15,6 @@ export default function Home() {
         ></script>
       </head>
       <body>
-        <Navbar />
         <main class="container centered-layout">
           <section>
             <h1>👋 Hi, I'm Alex</h1>
@@ -45,14 +42,16 @@ export default function Home() {
               </a>
             </div>
             <p>
-              I'm Alex, a software developer with a passion for coding and all
-              things web dev related. I work on both the frontend and backend, and a
-              little bit in between.
+              I'm Alex, a software developer with a passion for coding and
+              learning new technologies. I work on both the frontend and
+              backend, and a little bit in between.
             </p>
+            <div class="projects-cta">
+              <a href="/articles">Articles</a>
+            </div>
           </section>
         </main>
       </body>
     </html>
   );
 }
-
