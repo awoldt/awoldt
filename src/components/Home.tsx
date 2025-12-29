@@ -1,0 +1,57 @@
+export default function Home() {
+  return (
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>awoldt</title>
+        <link rel="stylesheet" href="/public/styles/global.css" />
+        <link rel="stylesheet" href="/public/styles/index.css" />
+        <link rel="icon" type="image/png" href="/public/imgs/code.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="fcb7ec96-c1a5-4f43-b563-16ed74fbea63"
+        ></script>
+      </head>
+      <body>
+        <main class="container centered-layout">
+          <section>
+            <h1>👋 Hi, I'm Alex</h1>
+            <div class="social-links">
+              <a
+                href="https://github.com/awoldt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/public/imgs/github.svg" alt="github icon" />
+              </a>
+              <a
+                href="mailto:abreckwoldt23@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/public/imgs/email.svg" alt="email icon" />
+              </a>
+              <a
+                href="https://linkedin.com/in/awoldt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/public/imgs/linkedin.svg" alt="linkedin icon" />
+              </a>
+            </div>
+            <p>
+              I'm Alex, a software developer with a passion for coding and
+              learning new technologies. I work on both the frontend and
+              backend, and a little bit in between.
+            </p>
+            <div class="projects-cta">
+              <a href="/articles">Articles</a>
+            </div>
+          </section>
+        </main>
+      </body>
+    </html>
+  );
+}
