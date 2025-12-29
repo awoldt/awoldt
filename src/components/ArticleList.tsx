@@ -1,13 +1,11 @@
+import { ArticleMetadata } from "../server";
 import Navbar from "./Navbar";
 
-interface ArticleMetadata {
-  route: string;
-  title: string;
-  shortDescription: string;
-  publishedOn: string;
-}
-
-export default function ArticleList({ articles }: { articles: ArticleMetadata[] }) {
+export default function ArticleList({
+  articles,
+}: {
+  articles: ArticleMetadata[];
+}) {
   return (
     <html lang="en">
       <head>

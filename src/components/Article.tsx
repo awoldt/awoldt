@@ -1,11 +1,21 @@
 import Navbar from "./Navbar";
+import OgMetaTags from "./OgMetaTags";
 
 interface ArticleProps {
   html: string;
   title: string;
+  description: string;
+  thumbnail: string | null;
+  url: string;
 }
 
-export default function Article({ html, title }: ArticleProps) {
+export default function Article({
+  html,
+  title,
+  description,
+  thumbnail,
+  url,
+}: ArticleProps) {
   return (
     <>
       <html lang="en">
@@ -24,6 +34,12 @@ export default function Article({ html, title }: ArticleProps) {
             src="https://cloud.umami.is/script.js"
             data-website-id="fcb7ec96-c1a5-4f43-b563-16ed74fbea63"
           ></script>
+          <OgMetaTags
+            title={title}
+            description={description}
+            url={`https://awoldt.dev/articles${url}`}
+            image={thumbnail}
+          />
         </head>
         <body>
           <Navbar />

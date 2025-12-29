@@ -1,0 +1,7 @@
+{
+  "title": "My First Go Project - Database Migration CLI",
+  "shortDescription": "How I built my first Go project and things I like and don't like about the language",
+  "publishedOn": "2025-12-29",
+  "tags": ["go", "database"],
+  "route": "/first-go-project"
+}
