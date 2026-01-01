@@ -7,50 +7,68 @@
     to learn a new language and level up my programming skills. Go seemed
     powerful and easy enough to learn, and at this point in my software
     developer journey I’m much more interested in backend stuff. I want to puke
-    at the thought of having to write react components or positioning a stupid
-    button at just the perfect spot on a UI, I’ll leave the frontend code to AI
-    at this point.
+    at the thought of having to write react components or design a UI, I’ll
+    leave the frontend code to AI at this point (Gemini is 3 pro is a BEAST).
 </p>
 
 <p>
     Many times I've had the problem of wanting to clone an entire sql schema
-    from a remote database to my local db and it's always a pain in the ass. I
-    use Datagrip for my database migration and it works nice, I just needed an
-    excuse to build this tool. I wanted to have a command to run in the terminal
-    to do it quickly and this was a perfect opportunity to build a Go CLI
-    program. Working on projects like this is the best way to learn in my
-    opinion.
+    from a remote database to my local db and it's always a pain. I use Datagrip
+    for my database migration and it works great, I just needed an excuse to
+    build this tool. I wanted to have a command to run in the terminal to do it
+    quickly and this was a perfect opportunity to build a Go CLI program.
+    Working on projects like this is the best way to learn in my opinion.
 </p>
 
-<h2>What I love about GO</h2>
+<p>
+    The main idea is there is a "target" and "source" database. The source
+    database is where all table schemas sit, and the target is the database to
+    add these new schemas to. This program features two main commands:
+</p>
+
 <ul>
     <li>
-        It is so easy to read and write. I could come back from a night of not
-        working on this project and instantly understand the context of the code
-        after glancing at it. Sometimes with javascript I would have to read it
-        a couple times over to understand what's going on, but something about
-        reading Go code is so simple and I love that. Writing it felt like a
-        breeze, and contrary to what's online I LOVE the error handling. Having
-        if err != nil on almost every other line is such a nice way to handle
-        errors and know exactly what's going wrong.
+        <i>replace</i>
+        <p>
+            <b>Replace</b> will delete everything in the "target" database
+            (deleting all tables and columns within) and replacing with the
+            current table/column structure being used on the "source" database.
+            All queries executed are wrapped in a transaction so if anything
+            goes wrong nothing will be messed up.
+        </p>
     </li>
     <li>
-        Importing packages. Being able to put an import statement at the top of
-        a file with a GitHub URL as the package to import is so clean and easy.
-        Instead of building the CLI logic from the ground up (flags and command
-        parsing from user input for example). I used this
-        <a href="https://cli.urfave.org/" target="_blank">awesome package</a> to
-        get a major jumpstart. The Go website for package docs also is super
-        helful. Anything you want to know about the standard library or any 3rd
-        party package will have nice documentaion (or at least the ones I've
-        used so far).
+        <i>diff</i>
+        <p>
+            <b>Diff</b> will show the new, removed, and existing tables between
+            the two databases. New will be tables that exist in the source but
+            not the target, removed will be tables that exist in target but not
+            source, and existing will show changes in a table's column that
+            exists in both databases.
+        </p>
+    </li>
+</ul>
+
+<h2>What I like about GO</h2>
+<ul>
+    <li>
+        Multiple return values from a function is awesome. The pattern of
+        returing an error along with the actual value is a really concise way to
+        error handle. There's something that makes me very confident in the code
+        I'm writing that I've never felt with JavaScript.
+    </li>
+    <li>
+        It is so easy to read and write. It just feels so simple due to the
+        small set of keywords for the language.
+    </li>
+    <li>
+        Importing packages and hosting your Go codebase on GitHub accessible for
+        anyone to download is cool.
     </li>
     <li>
         Executable files that have all the dependencies baked in. No
-        node_modules or bloat to the final program, just a single file. You
-        don't even need to have Go installed on the target machine. With
-        JavaScript, once you were done with a project, acutally building it and
-        hosting it on a container somewhere was not always straightfoward.
+        node_modules or bloat to the final program, just a single file. So easy
+        to throw into a docker container and run something in the cloud.
     </li>
 </ul>
 
@@ -64,18 +82,14 @@
 
     <li>
         The struct tags format is so ugly. I have no idea if I formatted it
-        correctly until the program runs and then gets mad at me. I've gotten
-        more used to it over time, but I would constanly forget the format when
-        I first started writing in Go. Also why tf does it need to be surrounded
-        in tick marks? So dumb.
+        correctly until the program runs and then gets mad at me. Why does it
+        need to be surrounded in tick marks? So dumb.
     </li>
     <li>
         The whole concept of public vs private. Having to capitalize a function
-        or struct that I want to use outside of a package is just dumb. Also if
-        I remember correctly the individual fields on structs that need to be
-        used outside the package also need to be capital, so dumb. I would like
-        to have an explicit “public” modifier or a "export" declaration to
-        clearly show something is being used elsewhere.
+        or struct that I want to use outside of a package is just stupid. I
+        would like to have an explicit “public” modifier or a "export"
+        declaration to clearly show something is being used elsewhere.
     </li>
 </ul>
 
